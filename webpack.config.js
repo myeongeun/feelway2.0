@@ -31,7 +31,7 @@ module.exports = {
     ],
   },
   plugins: [
-    // new UglifyJSPlugin(),
+    new UglifyJSPlugin(),
     new HtmlWebpackPlugin({
       title: 'Output Management',
     }),
@@ -40,14 +40,14 @@ module.exports = {
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
-      filename: devMode ? '[name].css' : '[name].[hash].css',
-      chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
+      filename: devMode ? '[name].[hash].css' : '[name].[hash].css',
+      chunkFilename: devMode ? '[id].[hash].css' : '[id].[hash].css',
     }),
   ],
   output: {
-    filename: '[name].[hash].js',
+    filename: devMode ? '[name].[hash].js' : '[name].[hash].js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
+    publicPath: './',
   },
   optimization: {
     splitChunks: {
