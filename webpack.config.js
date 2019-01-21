@@ -9,7 +9,6 @@ const webpack = require('webpack');
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.js',
   devtool: 'source-map',
   devServer: {
     contentBase: './dist',
@@ -19,9 +18,21 @@ module.exports = {
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          'sass-loader',
+          {
+            loader: MiniCssExtractPlugin.loader,
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true
+            },
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true
+            },
+          },
         ],
       },
       {
@@ -29,6 +40,14 @@ module.exports = {
         use: ['file-loader'],
       },
     ],
+  },
+  entry: {
+    application: './src/index.js'
+  },
+  output: {
+    filename: devMode ? '[name].[hash].js' : '[name].[hash].js',
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: './',
   },
   plugins: [
     new UglifyJSPlugin(),
@@ -44,11 +63,6 @@ module.exports = {
       chunkFilename: devMode ? '[id].[hash].css' : '[id].[hash].css',
     }),
   ],
-  output: {
-    filename: devMode ? '[name].[hash].js' : '[name].[hash].js',
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: './',
-  },
   optimization: {
     splitChunks: {
       cacheGroups: {
