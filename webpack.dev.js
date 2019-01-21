@@ -8,7 +8,7 @@ const devMode = process.env.NODE_ENV !== 'production';
 const webpack = require('webpack');
 
 module.exports = {
-	mode: 'production',
+	mode: 'development',
 	devtool: 'source-map',
 	devServer: {
 		contentBase: './dist',
@@ -36,6 +36,10 @@ module.exports = {
 			{
 				test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
 				use: ['file-loader'],
+			},
+			{
+				test: /\.(png|jpg|gif)$/,
+				use: 'file-loader',
 			},
 		],
 	},
