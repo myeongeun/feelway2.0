@@ -8,7 +8,7 @@ const devMode = process.env.NODE_ENV !== 'production';
 const webpack = require('webpack');
 
 module.exports = {
-	mode: 'development',
+	mode: 'production',
 	devtool: 'source-map',
 	devServer: {
 		contentBase: './dist',
