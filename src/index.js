@@ -1,3 +1,3 @@
 import _ from 'lodash';
-import 'bootstrap';
-import './apps.scss';
+import 'bootstrap/dist/js/bootstrap';
+import './application.scss';
