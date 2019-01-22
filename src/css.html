@@ -12,19 +12,19 @@
       <script src="../components/html5shiv/dist/html5shiv.js"></script>
       <script src="../components/respond/dest/respond.min.js"></script>
     <![endif]-->
-    <script>
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-23019901-1']);
-      _gaq.push(['_setDomainName', "bootswatch.com"]);
-      _gaq.push(['_setAllowLinker', true]);
-      _gaq.push(['_trackPageview']);
+  <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-23019901-1']);
+    _gaq.push(['_setDomainName', "bootswatch.com"]);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
 
-      (function () {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
+    (function () {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
 </head>
 
 <body>
@@ -1302,7 +1302,8 @@
           <div class="modal-body">
             <pre id="toClipboard"></pre>
           </div>
-          <div class="modal-footer"><button class="btn btn-primary" onclick="copyToClipboard('#toClipboard')">Copy Source</button></div>
+          <div class="modal-footer"><button class="btn btn-primary" onclick="copyToClipboard('#toClipboard')">Copy
+              Source</button></div>
         </div>
       </div>
     </div>
@@ -1316,12 +1317,12 @@
   <script>
     function copyToClipboard(element) {
       var $temp = $("<input>");
-        $("body").append($temp);
-        $temp.val($(element).text()).select();
-       document.execCommand("copy");
-        $temp.remove();
-       alert("클립보드로 복사됐습니다.");
-      }
+      $("body").append($temp);
+      $temp.val($(element).text()).select();
+      document.execCommand("copy");
+      $temp.remove();
+      alert("클립보드로 복사됐습니다.");
+    }
   </script>
 
 </body>
