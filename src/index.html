@@ -6,11 +6,25 @@
   <title></title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="stylesheet" href="../src/custom.min.css">
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
       <script src="../components/html5shiv/dist/html5shiv.js"></script>
       <script src="../components/respond/dest/respond.min.js"></script>
     <![endif]-->
+    <script>
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-23019901-1']);
+      _gaq.push(['_setDomainName', "bootswatch.com"]);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+      (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
 </head>
 
 <body>
@@ -25,23 +39,12 @@
         </button>
       </div>
       <div class="navbar-collapse collapse" id="navbar-main">
-        <ul class="nav navbar-nav">
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Themes List<span class="caret"></span></a>
-            <ul class="dropdown-menu" aria-labelledby="themes">
-              <li><a href="/">Project-Default</a></li>
-              <li><a href="/">Project-2</a></li>
-              <li><a href="javascript:$(this.alert('See you soon~!'));">Project-?</a></li>
-            </ul>
-          </li>
-        </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="javascript:$(this.alert('See you soon~!'));" target="_blank">Guide</a></li>
         </ul>
       </div>
     </div>
   </div>
-
 
   <div class="container">
 
@@ -53,8 +56,7 @@
         </div>
         <div class="col-lg-4 col-md-5 col-sm-6">
           <div class="sponsor">
-            <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=bootswatchcom"
-              id="_carbonads_js"></script>
+            <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=bootswatchcom" id="_carbonads_js"></script>
           </div>
         </div>
       </div>
@@ -1250,7 +1252,7 @@
   </div>
 
   <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-  <script src="../src/js/bootstrap.min.js"></script>
+  <script src="../src/js/bootstrap.js"></script>
   <script src="../src/js/custom.js"></script>
 </body>
 
