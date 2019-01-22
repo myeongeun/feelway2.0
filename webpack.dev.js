@@ -1,71 +1,84 @@
-const webpack = require('webpack');
 const path = require('path');
-
-/*
- * SplitChunksPlugin is enabled by default and replaced
- * deprecated CommonsChunkPlugin. It automatically identifies modules which
- * should be splitted of chunk by heuristics using module duplication count and
- * module category (i. e. node_modules). And splits the chunks…
- *
- * It is safe to remove "splitChunks" from the generated configuration
- * and was added as an educational example.
- *
- * https://webpack.js.org/plugins/split-chunks-plugin/
- *
- */
-
-/*
- * We've enabled UglifyJSPlugin for you! This minifies your app
- * in order to load faster and run less javascript.
- *
- * https://github.com/webpack-contrib/uglifyjs-webpack-plugin
- *
- */
-
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const devMode = process.env.NODE_ENV !== 'production';
+const webpack = require('webpack');
 
 module.exports = {
+	mode: 'development',
+	devtool: 'source-map',
+	devServer: {
+		contentBase: './dist',
+	},
 	module: {
 		rules: [
 			{
-				test: /\.(scss|css)$/,
-
+				test: /\.(sa|sc|c)ss$/,
 				use: [
+					MiniCssExtractPlugin.loader,
 					{
-						loader: 'style-loader'
+						loader: 'css-loader',
+						options: {
+							sourceMap: true
+						},
 					},
 					{
-						loader: 'css-loader'
+						loader: 'sass-loader',
+						options: {
+							sourceMap: true
+						},
 					},
-					{
-						loader: 'sass-loader'
-					}
-				]
-			}
-		]
+				],
+			},
+			{
+				test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
+				use: ['file-loader'],
+			},
+			{
+				test: /\.(png|jpg|gif)$/,
+				use: 'file-loader',
+			},
+		],
 	},
-
+	entry: {
+		application: './src/index.js'
+	},
 	output: {
-		chunkFilename: '[name].[chunkhash].js',
-		filename: '[name].[chunkhash].js'
+		filename: devMode ? '[name]-[hash].js' : '[name]-[hash].js',
+		path: path.resolve(__dirname, 'dist'),
+		publicPath: './',
 	},
-
-	mode: 'development',
-	plugins: [new UglifyJSPlugin()],
-
+	plugins: [
+		new UglifyJSPlugin(),
+		new HtmlWebpackPlugin({
+			title: 'Output Management',
+			filename: 'index.html',
+			template: './src/index.html',
+		}),
+		new CleanWebpackPlugin(['dist']),
+		new webpack.HotModuleReplacementPlugin(),
+		new MiniCssExtractPlugin({
+			// Options similar to the same options in webpackOptions.output
+			// both options are optional
+			filename: devMode ? '[name]-[hash].css' : '[name]-[hash].css',
+			chunkFilename: devMode ? '[id]-[hash].css' : '[id]-[hash].css',
+		}),
+	],
 	optimization: {
 		splitChunks: {
 			cacheGroups: {
 				vendors: {
 					priority: -10,
-					test: /[\\/]node_modules[\\/]/
-				}
+					test: /[\\/]node_modules[\\/]/,
+				},
 			},
-
 			chunks: 'async',
 			minChunks: 1,
 			minSize: 30000,
-			name: true
-		}
-	}
+			name: true,
+		},
+	},
 };

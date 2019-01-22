@@ -1,2 +1,2 @@
-import 'bootstrap';
-import './apps.scss';
+import _ from 'lodash';
+import './application.scss';

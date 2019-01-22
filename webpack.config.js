@@ -8,8 +8,7 @@ const devMode = process.env.NODE_ENV !== 'production';
 const webpack = require('webpack');
 
 module.exports = {
-  mode: 'development',
-  entry: './src/index.js',
+  mode: 'production',
   devtool: 'source-map',
   devServer: {
     contentBase: './dist',
@@ -20,35 +19,54 @@ module.exports = {
         test: /\.(sa|sc|c)ss$/,
         use: [
           MiniCssExtractPlugin.loader,
-          'css-loader',
-          'sass-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true
+            },
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true
+            },
+          },
         ],
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
         use: ['file-loader'],
       },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: 'file-loader',
+      },
     ],
+  },
+  entry: {
+    application: './src/index.js'
+  },
+  output: {
+    filename: devMode ? '[name]-[hash].js' : '[name]-[hash].js',
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: './',
   },
   plugins: [
     new UglifyJSPlugin(),
     new HtmlWebpackPlugin({
       title: 'Output Management',
+      filename: 'index.html',
+      template: './src/index.html',
     }),
     new CleanWebpackPlugin(['dist']),
     new webpack.HotModuleReplacementPlugin(),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
-      filename: devMode ? '[name].[hash].css' : '[name].[hash].css',
-      chunkFilename: devMode ? '[id].[hash].css' : '[id].[hash].css',
+      filename: devMode ? '[name]-[hash].css' : '[name]-[hash].css',
+      chunkFilename: devMode ? '[id]-[hash].css' : '[id]-[hash].css',
     }),
   ],
-  output: {
-    filename: devMode ? '[name].[hash].js' : '[name].[hash].js',
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: './',
-  },
   optimization: {
     splitChunks: {
       cacheGroups: {
