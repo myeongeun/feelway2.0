@@ -55,6 +55,14 @@ module.exports = {
     new UglifyJSPlugin({
       sourceMap: true,
     }),
+    new CleanWebpackPlugin(['dist']),
+    new webpack.HotModuleReplacementPlugin(),
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // both options are optional
+      filename: devMode ? 'css/[name]-[hash].css' : 'css/[name]-[hash].css',
+      chunkFilename: devMode ? 'css/[id]-[hash].css' : 'css/[id]-[hash].css',
+    }),
     new HtmlWebpackPlugin({
       title: 'index',
       inject: true,
@@ -90,6 +98,27 @@ module.exports = {
       filename: 'layouts.html',
       template: './views/layouts.html',
     }),
+      new HtmlWebpackPlugin({
+        title: 'Left Layout',
+        inject: true,
+        chunks: ['layouts'],
+        filename: 'layouts-left.html',
+        template: './views/layouts/layouts-left.html',
+      }),
+      new HtmlWebpackPlugin({
+        title: 'Right Layout',
+        inject: true,
+        chunks: ['layouts'],
+        filename: 'layouts-right.html',
+        template: './views/layouts/layouts-right.html',
+      }),
+      new HtmlWebpackPlugin({
+        title: 'Center Layout',
+        inject: true,
+        chunks: ['layouts'],
+        filename: 'layouts-center.html',
+        template: './views/layouts/layouts-center.html',
+      }),
     new HtmlWebpackPlugin({
       title: 'guide',
       inject: true,
@@ -97,19 +126,12 @@ module.exports = {
       filename: 'guide.html',
       template: './views/guide.html',
     }),
-    new CleanWebpackPlugin(['dist']),
-    new webpack.HotModuleReplacementPlugin(),
-    new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // both options are optional
-      filename: devMode ? 'css/[name]-[hash].css' : 'css/[name]-[hash].css',
-      chunkFilename: devMode ? 'css/[id]-[hash].css' : 'css/[id]-[hash].css',
-    }),
   ],
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: './',
     filename: devMode ? 'js/[name]-[hash].js' : 'js/[name]-[hash].js',
+    chunkFilename: devMode ? 'js/[id]-[hash].js' : 'js/[id]-[hash].js',
   },
   optimization: {
     splitChunks: {
