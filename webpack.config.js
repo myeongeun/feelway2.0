@@ -44,15 +44,17 @@ module.exports = {
     ],
   },
   entry: {
-    'index': './index.js',
-    'css': './index.js',
-    'javascript': './index.js',
-    'components': './index.js',
-    'layouts': './index.js',
-    'guide': './index.js',
+    index: './index.js',
+    css: './index.js',
+    javascript: './index.js',
+    components: './index.js',
+    layouts: './index.js',
+    guide: './index.js',
   },
   plugins: [
-    new UglifyJSPlugin(),
+    new UglifyJSPlugin({
+      sourceMap: true,
+    }),
     new HtmlWebpackPlugin({
       title: 'index',
       inject: true,

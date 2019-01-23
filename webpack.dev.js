@@ -52,7 +52,10 @@ module.exports = {
 		'guide': './index.js',
   },
   plugins: [
-    new UglifyJSPlugin(),
+    // new UglifyJSPlugin(),
+    new UglifyJSPlugin({
+      sourceMap: true,
+    }),
 		new HtmlWebpackPlugin({
       title: 'index',
 			inject: true,
@@ -108,6 +111,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     publicPath: './',
     filename: devMode ? 'js/[name]-[hash].js' : 'js/[name]-[hash].js',
+    chunkFilename: devMode ? 'js/[id]-[hash].js' : 'js/[id]-[hash].js',
   },
   optimization: {
     splitChunks: {
