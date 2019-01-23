@@ -45,10 +45,11 @@ module.exports = {
   },
   entry: {
     'index': './index.js',
-    'css': './css.js',
-    'javascript': './javascript.js',
-    'components': './components.js',
-    'guide': './guide.js',
+    'css': './index.js',
+    'javascript': './index.js',
+    'components': './index.js',
+    'layouts': './index.js',
+    'guide': './index.js',
   },
   plugins: [
     new UglifyJSPlugin(),
@@ -79,6 +80,13 @@ module.exports = {
       chunks: ['components'],
       filename: 'components.html',
       template: './views/components.html',
+    }),
+    new HtmlWebpackPlugin({
+      title: 'layouts',
+      inject: true,
+      chunks: ['layouts'],
+      filename: 'layouts.html',
+      template: './views/layouts.html',
     }),
     new HtmlWebpackPlugin({
       title: 'guide',
