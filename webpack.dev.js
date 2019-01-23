@@ -44,30 +44,63 @@ module.exports = {
     ],
   },
   entry: {
-    application: './src/index.js',
-  },
-  output: {
-    filename: devMode ? '[name]-[hash].js' : '[name]-[hash].js',
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: './',
+		'index': './index.js',
+		'css': './css.js',
+		'javascript': './javascript.js',
+		'components': './components.js',
+		'guide': './guide.js',
   },
   plugins: [
     new UglifyJSPlugin(),
-    new HtmlWebpackPlugin({
-      title: 'Output Management',
-      filename: 'index.html',
-      template: [
-        './src/index.html',
-			],
-    }),
+		new HtmlWebpackPlugin({
+      title: 'index',
+			inject: true,
+			chunks: ['index'],
+			filename: 'index.html',
+			template: './views/index.html',
+		}),
+		new HtmlWebpackPlugin({
+      title: 'css',
+			inject: true,
+			chunks: ['css'],
+			filename: 'css.html',
+			template: './views/css.html',
+		}),
+		new HtmlWebpackPlugin({
+      title: 'javascript',
+			inject: true,
+			chunks: ['javascript'],
+			filename: 'javascript.html',
+			template: './views/javascript.html',
+		}),
+		new HtmlWebpackPlugin({
+      title: 'components',
+			inject: true,
+			chunks: ['components'],
+			filename: 'components.html',
+			template: './views/components.html',
+		}),
+		new HtmlWebpackPlugin({
+      title: 'guide',
+			inject: true,
+			chunks: ['guide'],
+			filename: 'guide.html',
+			template: './views/guide.html',
+		}),
+		new CleanWebpackPlugin(['dist']),
     new webpack.HotModuleReplacementPlugin(),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
-      filename: devMode ? '[name]-[hash].css' : '[name]-[hash].css',
-      chunkFilename: devMode ? '[id]-[hash].css' : '[id]-[hash].css',
+      filename: devMode ? 'css/[name]-[hash].css' : 'css/[name]-[hash].css',
+      chunkFilename: devMode ? 'css/[id]-[hash].css' : 'css/[id]-[hash].css',
     }),
   ],
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: './',
+    filename: devMode ? 'js/[name]-[hash].js' : 'js/[name]-[hash].js',
+  },
   optimization: {
     splitChunks: {
       cacheGroups: {
