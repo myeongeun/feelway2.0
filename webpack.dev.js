@@ -46,7 +46,7 @@ module.exports = {
   entry: {
     index: './index.js',
     css: './index.js',
-    javascript: './index.js',
+    helper: './index.js',
     components: './index.js',
     layouts: './index.js',
     guide: './index.js',
@@ -60,12 +60,8 @@ module.exports = {
     new MiniCssExtractPlugin({
       // filename: devMode ? 'css/[name]-[hash].css' : 'css/[name]-[hash].css',
       // chunkFilename: devMode ? 'css/[id]-[hash].css' : 'css/[id]-[hash].css',
-      filename: devMode
-        ? 'css/applications-[hash].css'
-        : 'css/applications-[hash].css',
-      chunkFilename: devMode
-        ? 'css/applications-[hash].css'
-        : 'css/applications-[hash].css',
+      filename: devMode ? 'css/applications-[hash].css': 'css/applications-[hash].css',
+      chunkFilename: devMode ? 'css/applications-[hash].css': 'css/applications-[hash].css',
     }),
     new HtmlWebpackPlugin({
       title: 'index',
@@ -82,11 +78,11 @@ module.exports = {
       template: './views/css.html',
     }),
     new HtmlWebpackPlugin({
-      title: 'javascript',
+      title: 'helper',
       inject: true,
-      chunks: ['javascript'],
-      filename: 'javascript.html',
-      template: './views/javascript.html',
+      chunks: ['helper'],
+      filename: 'helper.html',
+      template: './views/helper.html',
     }),
     new HtmlWebpackPlugin({
       title: 'components',
