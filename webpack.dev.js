@@ -58,17 +58,21 @@ module.exports = {
     new CleanWebpackPlugin(['dist']),
     new webpack.HotModuleReplacementPlugin(),
     new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // both options are optional
-      filename: devMode ? 'css/[name]-[hash].css' : 'css/[name]-[hash].css',
-      chunkFilename: devMode ? 'css/[id]-[hash].css' : 'css/[id]-[hash].css',
+      // filename: devMode ? 'css/[name]-[hash].css' : 'css/[name]-[hash].css',
+      // chunkFilename: devMode ? 'css/[id]-[hash].css' : 'css/[id]-[hash].css',
+      filename: devMode
+        ? 'css/applications-[hash].css'
+        : 'css/applications-[hash].css',
+      chunkFilename: devMode
+        ? 'css/applications-[hash].css'
+        : 'css/applications-[hash].css',
     }),
     new HtmlWebpackPlugin({
       title: 'index',
       inject: true,
       chunks: ['index'],
       filename: 'index.html',
-      template: './views/index.html',
+      template: './views/main.html',
     }),
     new HtmlWebpackPlugin({
       title: 'css',
@@ -98,27 +102,6 @@ module.exports = {
       filename: 'layouts.html',
       template: './views/layouts.html',
     }),
-      new HtmlWebpackPlugin({
-        title: 'Left Layout',
-        inject: true,
-        chunks: ['layouts'],
-        filename: 'layouts-left.html',
-        template: './views/layouts/layouts-left.html',
-      }),
-      new HtmlWebpackPlugin({
-        title: 'Right Layout',
-        inject: true,
-        chunks: ['layouts'],
-        filename: 'layouts-right.html',
-        template: './views/layouts/layouts-right.html',
-      }),
-      new HtmlWebpackPlugin({
-        title: 'Center Layout',
-        inject: true,
-        chunks: ['layouts'],
-        filename: 'layouts-center.html',
-        template: './views/layouts/layouts-center.html',
-      }),
     new HtmlWebpackPlugin({
       title: 'guide',
       inject: true,
@@ -146,5 +129,13 @@ module.exports = {
       minSize: 30000,
       name: true,
     },
+    minimizer: [
+      new UglifyJSPlugin({
+        cache: true,
+        parallel: true,
+        sourceMap: true,
+      }),
+      new OptimizeCSSAssetsPlugin({}),
+    ],
   },
 };
