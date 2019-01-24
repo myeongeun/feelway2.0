@@ -44,70 +44,77 @@ module.exports = {
     ],
   },
   entry: {
-		'index': './index.js',
-		'css': './index.js',
-		'javascript': './index.js',
-		'components': './index.js',
-		'layouts': './index.js',
-		'guide': './index.js',
+    index: './index.js',
+    css: './index.js',
+    javascript: './index.js',
+    components: './index.js',
+    layouts: './index.js',
+    guide: './index.js',
   },
   plugins: [
-    new UglifyJSPlugin(),
-		new HtmlWebpackPlugin({
-      title: 'index',
-			inject: true,
-			chunks: ['index'],
-			filename: 'index.html',
-			template: './views/index.html',
-		}),
-		new HtmlWebpackPlugin({
-      title: 'css',
-			inject: true,
-			chunks: ['css'],
-			filename: 'css.html',
-			template: './views/css.html',
-		}),
-		new HtmlWebpackPlugin({
-      title: 'javascript',
-			inject: true,
-			chunks: ['javascript'],
-			filename: 'javascript.html',
-			template: './views/javascript.html',
-		}),
-		new HtmlWebpackPlugin({
-      title: 'components',
-			inject: true,
-			chunks: ['components'],
-			filename: 'components.html',
-			template: './views/components.html',
-		}),
-		new HtmlWebpackPlugin({
-      title: 'layouts',
-			inject: true,
-			chunks: ['layouts'],
-			filename: 'layouts.html',
-			template: './views/layouts.html',
-		}),
-		new HtmlWebpackPlugin({
-      title: 'guide',
-			inject: true,
-			chunks: ['guide'],
-			filename: 'guide.html',
-			template: './views/guide.html',
-		}),
-		new CleanWebpackPlugin(['dist']),
+    new UglifyJSPlugin({
+      sourceMap: true,
+    }),
+    new CleanWebpackPlugin(['dist']),
     new webpack.HotModuleReplacementPlugin(),
     new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // both options are optional
-      filename: devMode ? 'css/[name]-[hash].css' : 'css/[name]-[hash].css',
-      chunkFilename: devMode ? 'css/[id]-[hash].css' : 'css/[id]-[hash].css',
+      // filename: devMode ? 'css/[name]-[hash].css' : 'css/[name]-[hash].css',
+      // chunkFilename: devMode ? 'css/[id]-[hash].css' : 'css/[id]-[hash].css',
+      filename: devMode
+        ? 'css/applications-[hash].css'
+        : 'css/applications-[hash].css',
+      chunkFilename: devMode
+        ? 'css/applications-[hash].css'
+        : 'css/applications-[hash].css',
+    }),
+    new HtmlWebpackPlugin({
+      title: 'index',
+      inject: true,
+      chunks: ['index'],
+      filename: 'index.html',
+      template: './views/main.html',
+    }),
+    new HtmlWebpackPlugin({
+      title: 'css',
+      inject: true,
+      chunks: ['css'],
+      filename: 'css.html',
+      template: './views/css.html',
+    }),
+    new HtmlWebpackPlugin({
+      title: 'javascript',
+      inject: true,
+      chunks: ['javascript'],
+      filename: 'javascript.html',
+      template: './views/javascript.html',
+    }),
+    new HtmlWebpackPlugin({
+      title: 'components',
+      inject: true,
+      chunks: ['components'],
+      filename: 'components.html',
+      template: './views/components.html',
+    }),
+    new HtmlWebpackPlugin({
+      title: 'layouts',
+      inject: true,
+      chunks: ['layouts'],
+      filename: 'layouts.html',
+      template: './views/layouts.html',
+    }),
+    new HtmlWebpackPlugin({
+      title: 'guide',
+      inject: true,
+      chunks: ['guide'],
+      filename: 'guide.html',
+      template: './views/guide.html',
     }),
   ],
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: './',
     filename: devMode ? 'js/[name]-[hash].js' : 'js/[name]-[hash].js',
+    chunkFilename: devMode ? 'js/[id]-[hash].js' : 'js/[id]-[hash].js',
   },
   optimization: {
     splitChunks: {
@@ -122,5 +129,13 @@ module.exports = {
       minSize: 30000,
       name: true,
     },
+    minimizer: [
+      new UglifyJSPlugin({
+        cache: true,
+        parallel: true,
+        sourceMap: true,
+      }),
+      new OptimizeCSSAssetsPlugin({}),
+    ],
   },
 };

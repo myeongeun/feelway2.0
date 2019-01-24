@@ -12,23 +12,24 @@
       <script src="../components/html5shiv/dist/html5shiv.js"></script>
       <script src="../components/respond/dest/respond.min.js"></script>
     <![endif]-->
-  <script>
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-23019901-1']);
-    _gaq.push(['_setDomainName', "bootswatch.com"]);
-    _gaq.push(['_setAllowLinker', true]);
-    _gaq.push(['_trackPageview']);
+    <script>
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-23019901-1']);
+      _gaq.push(['_setDomainName', "bootswatch.com"]);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
 
-    (function () {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
+      (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
 </head>
 
 <body>
   <div class="navbar navbar-default navbar-fixed-top">
+    <!-- Header-Area -->
     <div class="container">
       <div class="navbar-header">
         <a href="/" class="navbar-brand">STUnitas Conects-Dev-Lab</a>
@@ -121,11 +122,11 @@
           </li>
         </ul>
       </div>
-    </div>
+    </div><!-- // Header-Area -->
   </div>
 
   <div class="container">
-
+    <!-- Contents-Area -->
     <div class="page-header" id="banner">
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12">
@@ -135,99 +136,98 @@
       </div>
       <div class="row">
         <div class="col-lg-3 col-md-3 col-sm-6">
-          <h2>LAYOUTS</h2>
+          <h2>CSS</h2>
           <div class="list-group table-of-contents">
-            <a class="list-group-item" href="layouts.html#layoutLeft">Left</a>
-            <a class="list-group-item" href="layouts.html#layoutRight">Right</a>
-            <a class="list-group-item" href="layouts.html#layoutCenter">Center</a>
+            <a class="list-group-item" href="css.html#navbar">Navbar</a>
+            <a class="list-group-item" href="css.html#buttons">Buttons</a>
+            <a class="list-group-item" href="css.html#typography">Typography</a>
+            <a class="list-group-item" href="css.html#tables">Tables</a>
+            <a class="list-group-item" href="css.html#forms">Forms</a>
+            <a class="list-group-item" href="css.html#navs">Navs</a>
+            <a class="list-group-item" href="css.html#indicators">Indicators</a>
+            <a class="list-group-item" href="css.html#progress-bars">Progress bars</a>
+            <a class="list-group-item" href="css.html#containers">Containers</a>
+            <a class="list-group-item" href="css.html#dialogs">Dialogs</a>
             <a class="list-group-item" href="javascript:$(this.alert('See you soon~!'));">now working :)</a>
           </div>
         </div>
-      </div>
-    </div>
-
-    <!-- Emmet
-      ================================================== -->
-    <!--
-      .bs-docs-section>.row>.col-lg-12>.page-header>#^.bs-component
-    -->
-
-    <!-- Notice
-      ================================================== -->
-    <div class="bs-docs-section">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="page-header">
-            <h1 id="notice">참고사항</h1>
+        <!-- <div class="col-lg-3 col-md-3 col-sm-6">
+          <h2>JAVASCRIPT</h2>
+          <div class="list-group table-of-contents">
+            <a class="list-group-item" href="javascript.html#transitions">Transitions</a>
+            <a class="list-group-item" href="javascript.html#modal">Modal</a>
+            <a class="list-group-item" href="javascript.html#dropdown">Dropdown</a>
+            <a class="list-group-item" href="javascript.html#scrollspy">Scrollspy</a>
+            <a class="list-group-item" href="javascript.html#tab">Tab</a>
+            <a class="list-group-item" href="javascript.html#tooltip">Tooltip</a>
+            <a class="list-group-item" href="javascript.html#popover">Popover</a>
+            <a class="list-group-item" href="javascript.html#alert">Alert</a>
+            <a class="list-group-item" href="javascript.html#button">Button</a>
+            <a class="list-group-item" href="javascript.html#collapse">Collapse</a>
+            <a class="list-group-item" href="javascript.html#carousel">Carousel</a>
+            <a class="list-group-item" href="javascript.html#affix">Affix</a>
+            <a class="list-group-item" href="javascript:$(this.alert('See you soon~!'));">now working :)</a>
           </div>
-          <ol>
-            <!-- <li>
-              모달창에서 Copy Source를 통해 코드를 복사하는 경우 코드구성이 깨지게 됩니다.<br>
-              코드구성을 유지하고자 한다면 모달창에 노출되는 코드를 직접복사해서 사용하시기 바랍니다.
-            </li> -->
-            <li>
-              커스텀클래스를 추가하고자 하는 경우 부트스트랩 클래스를 작성한 뒤에 커스텀클래스를 추가하여 스타일링해주시기 바랍니다.
-              <div class="well well-sm">ex) &lt;div class="container <code>custom</code>"&gt;example&lt;/div&gt;</div>
-            </li>
-          </ol>
+        </div> -->
+        <div class="col-lg-3 col-md-3 col-sm-6">
+          <h2>COMPONENTS</h2>
+          <div class="list-group table-of-contents">
+            <a class="list-group-item" href="components.html#dropdowns">Dropdowns</a>
+            <a class="list-group-item" href="components.html#button-groups">Button groups</a>
+            <a class="list-group-item" href="components.html#button-dropdowns">Button dropdowns</a>
+            <a class="list-group-item" href="components.html#input-groups">Input groups</a>
+            <a class="list-group-item" href="components.html#navs">Navs</a>
+            <a class="list-group-item" href="components.html#navbar">Navbar</a>
+            <a class="list-group-item" href="components.html#breadcrumbs">Breadcrumbs</a>
+            <a class="list-group-item" href="components.html#pagination">Pagination</a>
+            <a class="list-group-item" href="components.html#labels">Labels</a>
+            <a class="list-group-item" href="components.html#badges">Badges</a>
+            <a class="list-group-item" href="components.html#jumbotron">Jumbotron</a>
+            <a class="list-group-item" href="components.html#page-header">Page header</a>
+            <a class="list-group-item" href="components.html#thumbnails">Thumbnails</a>
+            <a class="list-group-item" href="components.html#alerts">Alerts</a>
+            <a class="list-group-item" href="components.html#progress bars">Progress bars</a>
+            <a class="list-group-item" href="components.html#media-object">Media object</a>
+            <a class="list-group-item" href="components.html#list-group">List group</a>
+            <a class="list-group-item" href="components.html#panels">Panels</a>
+            <a class="list-group-item" href="components.html#responsive-embed">Responsive embed</a>
+            <a class="list-group-item" href="components.html#wells">Wells</a>
+            <a class="list-group-item" href="javascript:$(this.alert('See you soon~!'));">now working :)</a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6">
+          <h2>LAYOUTS</h2>
+          <div class="list-group table-of-contents">
+            <a class="list-group-item" href="layouts.html#Left">Left fix</a>
+            <a class="list-group-item" href="layouts.html#Right">Right fix</a>
+            <a class="list-group-item" href="layouts.html#Center">Center fix</a>
+            <a class="list-group-item" href="javascript:$(this.alert('See you soon~!'));">now working :)</a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6">
+          <h2>HOW TO USE</h2>
+          <div class="list-group table-of-contents">
+            <a class="list-group-item" href="guide.html#css">Css</a>
+            <a class="list-group-item" href="guide.html#components">Components</a>
+            <a class="list-group-item" href="guide.html#layouts">Layouts</a>
+          </div>
         </div>
       </div>
-    </div>
+    </div><!-- // Contents-Area -->
 
-    <!-- Layout-Left
-      ================================================== -->
-    <div class="bs-docs-section">
+    <!-- Example
+          ================================================== -->
+    <div class="bs-docs-section clearfix">
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-12"></div>
           <div class="page-header">
-            <h1 id="layoutLeft">Left Layout</h1>
+            <h1 id="">Example</h1>
           </div>
+
           <div class="bs-component">
-            <div class="container-fluid">
-              <div class="pull-left">왼쪽고정영역</div>
-              <div class="container-fluid">반응영역</div>
-            </div>
+            <!-- Example Here -->
+            <!-- // Example Here -->
           </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Layout-Right
-      ================================================== -->
-    <div class="bs-docs-section">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="page-header">
-            <h1 id="layoutRight">Right Layout</h1>
-          </div>
-          <div class="bs-component">
-            <div class="container-fluid">
-              <div class="pull-right">오른쪽고정영역</div>
-              <div class="container-fluid">반응영역</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Layout-Right
-      ================================================== -->
-    <div class="bs-docs-section">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="page-header">
-            <h1 id="layoutCenter">Center Layout</h1>
-          </div>
-          <div class="bs-component">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-2 col-md-2 col-sm-12">왼쪽고정영역</div>
-                <div class="col-lg-8 col-md-2 col-sm-12 container">중앙</div>
-                <div class="col-lg-2 col-md-2 col-sm-12">오른쪽 고정영역</div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -241,8 +241,7 @@
           <div class="modal-body">
             <pre id="toClipboard"></pre>
           </div>
-          <div class="modal-footer"><button class="btn btn-primary" onclick="copyToClipboard('#toClipboard')">Copy
-              Source</button></div>
+          <div class="modal-footer"><button class="btn btn-primary" onclick="copyToClipboard('#toClipboard')">Copy Source</button></div>
         </div>
       </div>
     </div>
@@ -256,12 +255,12 @@
   <script>
     function copyToClipboard(element) {
       var $temp = $("<input>");
-      $("body").append($temp);
-      $temp.val($(element).text()).select();
-      document.execCommand("copy");
-      $temp.remove();
-      alert("클립보드로 복사됐습니다.");
-    }
+        $("body").append($temp);
+        $temp.val($(element).text()).select();
+       document.execCommand("copy");
+        $temp.remove();
+       alert("클립보드로 복사됐습니다.");
+      }
   </script>
 
 </body>
