@@ -61,8 +61,8 @@ module.exports = {
     new MiniCssExtractPlugin({
       // filename: devMode ? 'css/[name]-[hash].css' : 'css/[name]-[hash].css',
       // chunkFilename: devMode ? 'css/[id]-[hash].css' : 'css/[id]-[hash].css',
-      filename: devMode ? 'dist/applications-[hash].css' : 'applications-[hash].css',
-      chunkFilename: devMode ? 'dist/applications-[hash].css' : 'applications-[hash].css',
+      filename: devMode ? 'css/applications-[hash].css' : 'applications-[hash].css',
+      chunkFilename: devMode ? 'css/applications-[hash].css' : 'applications-[hash].css',
     }),
     new HtmlWebpackPlugin({
       title: 'applications',
@@ -110,8 +110,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: devMode ? '' : 'dist',
-    filename: devMode ? 'dist/[name]-[hash].js' : '[name]-[hash].js',
-    chunkFilename: devMode ? 'dist/[id]-[hash].js' : '[id]-[hash].js',
+    filename: devMode ? 'js/[name]-[hash].js' : '[name]-[hash].js',
+    chunkFilename: devMode ? 'js/[id]-[hash].js' : '[id]-[hash].js',
   },
   optimization: {
     splitChunks: {
