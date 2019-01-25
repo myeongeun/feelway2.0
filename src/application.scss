@@ -1,9 +1,8 @@
 // Default
-// @import "././scss/flatly/variables";
+@import "././scss/flatly/variables";
 @import "./scss/theme";
-// @import "./scss/flatly/bootswatch";
+@import "./scss/flatly/bootswatch";
 
 // Custom
-
-@import "./scss/fontface";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&subset=korean');
 @import "./scss/pages";
