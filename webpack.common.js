@@ -7,12 +7,10 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const devMode = process.env.NODE_ENV !== 'production';
 const webpack = require('webpack');
 
+// const merge = require('webpack-merge');
+// const common = require('webpack.common.js');
+
 module.exports = {
-  mode: 'development',
-  devtool: 'source-map',
-  devServer: {
-    contentBase: './dist',
-  },
   module: {
     rules: [
       {
@@ -35,13 +33,15 @@ module.exports = {
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
-        use: [{
-          loader: 'file-loader',
-          options: {
-            name: '[name].[ext]',
-            outputPath: './fonts/',
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: './fonts/',
+            },
           },
-        }],
+        ],
       },
       {
         test: /\.(png|jpg|gif)$/,
@@ -61,8 +61,10 @@ module.exports = {
     new MiniCssExtractPlugin({
       // filename: devMode ? 'css/[name]-[hash].css' : 'css/[name]-[hash].css',
       // chunkFilename: devMode ? 'css/[id]-[hash].css' : 'css/[id]-[hash].css',
-      filename: devMode ? 'applications-[hash].css': 'applications-[hash].css',
-      chunkFilename: devMode ? 'applications-[hash].css': 'applications-[hash].css',
+      filename: devMode ? 'applications-[hash].css' : 'applications-[hash].css',
+      chunkFilename: devMode
+        ? 'applications-[hash].css'
+        : 'applications-[hash].css',
     }),
     new HtmlWebpackPlugin({
       title: 'application',
@@ -117,22 +119,13 @@ module.exports = {
     splitChunks: {
       cacheGroups: {
         vendors: {
-          test: /[\\/]node_modules[\\/]/,
           priority: -10,
-        },
-        default: {
-          minChunks: 2,
-          priority: -20,
-          reuseExistingChunk: true,
+          test: /[\\/]node_modules[\\/]/,
         },
       },
       chunks: 'async',
-      minSize: 30000,
-      maxSize: 0,
       minChunks: 1,
-      maxAsyncRequests: 5,
-      maxInitialRequests: 3,
-      automaticNameDelimiter: '~',
+      minSize: 30000,
       name: true,
     },
     minimizer: [
@@ -141,10 +134,7 @@ module.exports = {
         parallel: true,
         sourceMap: true,
       }),
-      new OptimizeCSSAssetsPlugin({
-        minimize: true,
-        sourceMap : true,
-      }),
+      new OptimizeCSSAssetsPlugin({}),
     ],
   },
 };

@@ -35,7 +35,13 @@ module.exports = {
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
-        use: ['file-loader'],
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: './fonts/',
+          },
+        }],
       },
       {
         test: /\.(png|jpg|gif)$/,
@@ -55,8 +61,8 @@ module.exports = {
     new MiniCssExtractPlugin({
       // filename: devMode ? 'css/[name]-[hash].css' : 'css/[name]-[hash].css',
       // chunkFilename: devMode ? 'css/[id]-[hash].css' : 'css/[id]-[hash].css',
-      filename: devMode ? 'css/applications-[hash].css' : 'css/applications-[hash].css',
-      chunkFilename: devMode ? 'css/applications-[hash].css' : 'css/applications-[hash].css',
+      filename: devMode ? 'applications-[hash].css' : 'applications-[hash].css',
+      chunkFilename: devMode ? 'applications-[hash].css' : 'applications-[hash].css',
     }),
     new HtmlWebpackPlugin({
       title: 'application',
@@ -104,20 +110,29 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: './',
-    filename: devMode ? 'js/[name]-[hash].js' : 'js/[name]-[hash].js',
-    chunkFilename: devMode ? 'js/[id]-[hash].js' : 'js/[id]-[hash].js',
+    filename: devMode ? '[name]-[hash].js' : '[name]-[hash].js',
+    chunkFilename: devMode ? '[id]-[hash].js' : '[id]-[hash].js',
   },
   optimization: {
     splitChunks: {
       cacheGroups: {
         vendors: {
-          priority: -10,
           test: /[\\/]node_modules[\\/]/,
+          priority: -10,
+        },
+        default: {
+          minChunks: 2,
+          priority: -20,
+          reuseExistingChunk: true,
         },
       },
       chunks: 'async',
-      minChunks: 1,
       minSize: 30000,
+      maxSize: 0,
+      minChunks: 1,
+      maxAsyncRequests: 5,
+      maxInitialRequests: 3,
+      automaticNameDelimiter: '~',
       name: true,
     },
     minimizer: [
@@ -126,7 +141,10 @@ module.exports = {
         parallel: true,
         sourceMap: true,
       }),
-      new OptimizeCSSAssetsPlugin({}),
+      new OptimizeCSSAssetsPlugin({
+        minimize: true,
+        sourceMap: true,
+      }),
     ],
   },
 };
