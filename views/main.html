@@ -80,12 +80,12 @@
               <li><a href="javascript:$(this.alert('See you soon~!'));">Now Working</a></li>
             </ul>
           </li>
-          <li class="dropdown">
+          <!-- <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">CSS <span class="caret"></span></a>
             <ul class="dropdown-menu" aria-labelledby="themes">
               <li><a href="javascript:$(this.alert('See you soon~!'));">Now Working</a></li>
             </ul>
-          </li>
+          </li> -->
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">HELPER <span class="caret"></span></a>
             <ul class="dropdown-menu" aria-labelledby="themes">
@@ -153,12 +153,12 @@
             <a class="list-group-item" href="javascript:$(this.alert('See you soon~!'));">now working :)</a>
           </div>
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-6">
+        <!-- <div class="col-lg-3 col-md-3 col-sm-6">
           <h2>CSS</h2>
           <div class="list-group table-of-contents">
             <a class="list-group-item" href="javascript:$(this.alert('See you soon~!'));">now working :)</a>
           </div>
-        </div>
+        </div> -->
         <div class="col-lg-3 col-md-3 col-sm-6">
           <h2>HELPER</h2>
           <div class="list-group table-of-contents">
@@ -195,23 +195,100 @@
       </div>
     </div><!-- // Contents-Area -->
 
-    <!-- Example
+    <!-- 소개
       ================================================== -->
     <div class="bs-docs-section clearfix">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="page-header">
+            <h2 id="">소개</h2>
+          </div>
+
+          <!-- Code Here -->
+          <div class="row">
+            <ul class="clearfix">
+              <li class="col-lg-12 col-md-12 col-sm-12">커넥츠 개발실 내 프로젝트에서 공용으로 사용 될 목적을 가진 컴포넌트의 저장소입니다.</li>
+              <li class="col-lg-12 col-md-12 col-sm-12">저장소는 깃허브를 이용했으며 주소는 <a href="https://github.com/Opti-kjh/Theme-Conects">https://github.com/Opti-kjh/Theme-Conects</a>입니다.</li>
+              <li class="col-lg-12 col-md-12 col-sm-12">원격저장소는 <code>git@github.com:Opti-kjh/Theme-Conects.git</code>입니다.</li>
+            </ul>
+          </div>
+          <!-- // Code Here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- 구성
+      ================================================== -->
+    <div class="bs-docs-section clearfix">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="page-header">
+            <h2 id="">구성</h2>
+          </div>
+
+          <!-- Code Here -->
+          <div class="row">
+            <p class="col-lg-12 col-md-12 col-sm-12">이 테마와 컴포넌트를 구성하는데에 사용 된 <code>Dependencies</code>는 아래와 같습니다.</p>
+            <ul class="clearfix">
+              <li class="col-lg-12 col-md-12 col-sm-12">
+                <dl>
+                  <dt>Webpack</dt>
+                  <dd>Webpack <span class="small">@4.28.4</span></dd>
+                  <dd>Webpack-cli <span class="small">@3.2.1</span></dd>
+                </dl>
+              </li>
+              <li class="col-lg-12 col-md-12 col-sm-12">
+                <dl>
+                  <dt>Style</dt>
+                  <dd>Bootstrap <span class="small">@3.3.7</span></dd>
+                  <dd>Node-Sass<code class="small">(scss)</code> <span class="small">@4.11.0</span></dd>
+                </dl>
+              </li>
+              <li class="col-lg-12 col-md-12 col-sm-12">
+                <dl>
+                  <dt>Loader</dt>
+                  <dd>style-loader <span class="small">@0.23.1</span></dd>
+                  <dd>css-loader <span class="small">@2.1.0</span></dd>
+                  <dd>sass-loader <span class="small">@7.1.0</span></dd>
+                  <dd>file-loader <span class="small">@3.0.1</span></dd>
+                </dl>
+              </li>
+              <li class="col-lg-12 col-md-12 col-sm-12">
+                <dl>
+                  <dt>Plugins</dt>
+                  <dd>Webpack-merge <span class="small">@4.2.1</span></dd>
+                  <dd>babel-plugin-syntax-dynamic-import <span class="small">@6.18.0</span></dd>
+                  <dd>uglifyjs-webpack-plugin <span class="small">@2.1.1</span></dd>
+                  <dd>clean-webpack-plugin <span class="small">@1.0.1</span></dd>
+                  <dd>mini-css-extract-plugin <span class="small">@0.5.0</span></dd>
+                  <dd>optimize-css-assets-webpack-plugin <span class="small">@5.0.1</span></dd>
+                  <dd>html-webpack-plugin <span class="small">@3.2.0</span></dd>
+                </dl>
+              </li>
+            </ul>
+          </div>
+          <!-- // Code Here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Example
+      ================================================== -->
+    <!-- <div class="bs-docs-section clearfix">
       <div class="row">
         <div class="col-lg-12">
           <div class="page-header">
             <h2 id="">Example</h2>
           </div>
 
-          <div class="bs-component">
-            <!-- Code Here -->
+          <div class="row">
+            <div class="bs-component">
 
-            <!-- // Code Here -->
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Modal
       ================================================== -->
@@ -220,7 +297,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title">Source Code</h4>
+            <h4 class="modal-title">참고 소스</h4>
           </div>
           <div class="modal-body">
             <pre id="toClipboard"></pre>
