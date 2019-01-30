@@ -80,12 +80,14 @@
               <li><a href="javascript:$(this.alert('See you soon~!'));">Now Working</a></li>
             </ul>
           </li>
-          <!-- <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">CSS <span class="caret"></span></a>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">CHARTS <span class="caret"></span></a>
             <ul class="dropdown-menu" aria-labelledby="themes">
+              <li><a href="charts.html#chart">Chart</a></li>
+              <!-- <li><a href="charts.html#axis">axis</a></li> -->
               <li><a href="javascript:$(this.alert('See you soon~!'));">Now Working</a></li>
             </ul>
-          </li> -->
+          </li>
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">HELPER <span class="caret"></span></a>
             <ul class="dropdown-menu" aria-labelledby="themes">
@@ -137,7 +139,7 @@
       </div>
       <div class="row">
         <div class="col-lg-3 col-md-3 col-sm-6">
-          <h2>Component</h2>
+          <h2>Charts</h2>
           <div class="list-group table-of-contents">
             <a class="list-group-item" href="javascript:$(this.alert('See you soon~!'));">now working :)</a>
           </div>
@@ -154,7 +156,7 @@
     <div class="bs-docs-section clearfix">
       <div class="row">
         <div class="col-lg-12">
-          <div class="page-header"><h2 id="">Charts</h2></div>
+          <div class="page-header"><h2 id="chart">Charts</h2></div>
 
           <div class="col-lg-6">
             <div class="page-header"><h3 id="line">Charts: Line</h3></div>
@@ -301,30 +303,6 @@
           </div>
 
           <div class="col-lg-6">
-            <div class="page-header"><h3 id="scatter">Charts: scatter</h3></div>
-            <div class="row">
-              <div class="bs-component">
-                <!-- Code Here -->
-                <svg class="chartscatter" style="width: 100%;min-height: 400px;"></svg>
-                <script>
-                  var chartscatter = c3.generate({
-                    bindto: d3.select('.chartscatter'),
-                    data: {
-                      columns: [
-                        ['data1', 30, 200, 100, 400, 150, 250],
-                        ['data2', 50, 20, 10, 40, 15, 25],
-                        ['data3', 350, 150, 250, 120, 450, 850]
-                      ],
-                      type: 'scatter'
-                    }
-                  });
-                </script>
-                <!-- // Code Here -->
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
             <div class="page-header"><h3 id="pie">Charts: pie</h3></div>
             <div class="row">
               <div class="bs-component">
@@ -364,6 +342,30 @@
                         ['data3', 350, 150, 250, 120, 450, 850]
                       ],
                       type: 'donut'
+                    }
+                  });
+                </script>
+                <!-- // Code Here -->
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="page-header"><h3 id="scatter">Charts: scatter</h3></div>
+            <div class="row">
+              <div class="bs-component">
+                <!-- Code Here -->
+                <svg class="chartscatter" style="width: 100%;min-height: 400px;"></svg>
+                <script>
+                  var chartscatter = c3.generate({
+                    bindto: d3.select('.chartscatter'),
+                    data: {
+                      columns: [
+                        ['data1', 30, 200, 100, 400, 150, 250],
+                        ['data2', 50, 20, 10, 40, 15, 25],
+                        ['data3', 350, 150, 250, 120, 450, 850]
+                      ],
+                      type: 'scatter'
                     }
                   });
                 </script>
@@ -458,7 +460,7 @@
           <div class="modal-body">
             <pre id="toClipboard"></pre>
           </div>
-          <div class="modal-footer"><button class="btn btn-primary" onclick="copyToClipboard('#toClipboard')">Copy
+          <div class="modal-footer"><button class="btn btn-sm btn-block btn-primary" onclick="copyToClipboard('#toClipboard')">Copy
               Source</button></div>
         </div>
       </div>
