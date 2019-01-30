@@ -77,8 +77,8 @@ module.exports = {
       title: 'applications',
       inject: true,
       chunks: ['applications'],
-      filename: 'css.html',
-      template: './views/css.html',
+      filename: 'charts.html',
+      template: './views/charts.html',
     }),
     new HtmlWebpackPlugin({
       title: 'applications',
