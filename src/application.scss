@@ -1,8 +1,10 @@
 // Default
-@import "././scss/themes/yeti/variables";
+@import "./scss/themes/yeti/variables";
 @import "./scss/theme";
 @import "./scss/themes/yeti/bootswatch";
 
 // Custom
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&subset=korean');
+// @import "./scss/ver-4.2.1.scss";
 @import "./scss/pages";
+@import "~jquery.steps/dist/jquery-steps.css";

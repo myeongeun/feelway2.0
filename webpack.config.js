@@ -35,13 +35,15 @@ module.exports = {
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
-        use: [{
-          loader: 'file-loader',
-          options: {
-            name: '[name].[ext]',
-            outputPath: './fonts/',
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: './fonts/',
+            },
           },
-        }],
+        ],
       },
       {
         test: /\.(png|jpg|gif)$/,
@@ -105,6 +107,13 @@ module.exports = {
       chunks: ['applications'],
       filename: 'guide.html',
       template: './views/guide.html',
+    }),
+    new HtmlWebpackPlugin({
+      title: 'applications',
+      inject: true,
+      chunks: ['applications'],
+      filename: 'steps-basic.html',
+      template: './views/steps-basic.html',
     }),
   ],
   output: {

@@ -1,8 +1,13 @@
 // Common
 import _ from 'lodash';
-import './src/application.scss';
+// import 'chosen-js';
+// import 'c3';
 import './src/js/bootstrap';
-import './src/js/custom';
+import './src/application.scss';
+import 'jquery';
+import 'jquery.steps';
+// import 'jquery-validation';
+// import './src/js/custom';
 
 // Entry
 import './main';

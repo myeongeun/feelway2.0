@@ -6,25 +6,26 @@
   <title></title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <link rel="stylesheet" href="../src/custom.min.css">
+  <!-- <link rel="stylesheet" href="../src/custom.min.css"> -->
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
-      <script src="../components/html5shiv/dist/html5shiv.js"></script>
-      <script src="../components/respond/dest/respond.min.js"></script>
-    <![endif]-->
-    <script>
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-23019901-1']);
-      _gaq.push(['_setDomainName', "bootswatch.com"]);
-      _gaq.push(['_setAllowLinker', true]);
-      _gaq.push(['_trackPageview']);
+    <script src="../plugins/html5shiv/dist/html5shiv.js"></script>
+    <script src="../plugins/respond/dest/respond.min.js"></script>
+  <![endif]-->
+  <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-23019901-1']);
+    _gaq.push(['_setDomainName', "bootswatch.com"]);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
 
-      (function () {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
+    (function () {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  <link rel="stylesheet" href="../plugins/jquery.steps/jquery-steps.css">
 </head>
 
 <body>
@@ -137,7 +138,7 @@
       </div>
       <div class="row">
         <div class="col-lg-3 col-md-3 col-sm-6">
-          <h2>CSS</h2>
+          <h2>Component</h2>
           <div class="list-group table-of-contents">
             <a class="list-group-item" href="javascript:$(this.alert('See you soon~!'));">now working :)</a>
           </div>
@@ -150,12 +151,64 @@
     <div class="bs-docs-section clearfix">
       <div class="row">
         <div class="col-lg-12">
-          <div class="page-header"><h2 id="">Example</h2></div>
+          <div class="page-header"><h2 id="steps">Steps</h2></div>
 
           <div class="row">
             <div class="bs-component">
               <!-- Code Here -->
 
+              <!-- // Code Here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Example
+      ================================================== -->
+    <div class="bs-docs-section clearfix">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="page-header"><h2 id="">Example</h2></div>
+
+          <div class="row">
+            <div class="bs-component">
+              <!-- Code Here -->
+              <div id="demo">
+                <div class="step-app">
+                  <ul class="step-steps">
+                    <li><a href="#step1">Step 1</a></li>
+                    <li><a href="#step2">Step 2</a></li>
+                    <li><a href="#step3">Step 3</a></li>
+                  </ul>
+                  <div class="step-content">
+                    <div class="step-tab-panel" id="step1">
+                      ...
+                    </div>
+                    <div class="step-tab-panel" id="step2">
+                      ...
+                    </div>
+                    <div class="step-tab-panel" id="step3">
+                      ...
+                    </div>
+                  </div>
+                  <div class="step-footer">
+                    <button data-direction="prev" class="step-btn">Previous</button>
+                    <button data-direction="next" class="step-btn">Next</button>
+                    <button data-direction="finish" class="step-btn">Finish</button>
+                  </div>
+                </div>
+              </div>
+
+              <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+              <script src="../plugins/jquery.steps/jquery-steps.js"></script>
+              <script>
+                $('#demo').steps({
+                  onFinish: function () {
+                    alert('Wizard Completed');
+                  }
+                });
+              </script>
               <!-- // Code Here -->
             </div>
           </div>
@@ -183,7 +236,7 @@
 
   </div>
 
-  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 
   <script>
     function copyToClipboard(element) {
