@@ -25,7 +25,6 @@
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
   </script>
-  <link rel="stylesheet" href="../plugins/jquery.steps/jquery-steps.css">
 </head>
 
 <body>
@@ -151,64 +150,12 @@
     <div class="bs-docs-section clearfix">
       <div class="row">
         <div class="col-lg-12">
-          <div class="page-header"><h2 id="steps">Steps</h2></div>
-
-          <div class="row">
-            <div class="bs-component">
-              <!-- Code Here -->
-
-              <!-- // Code Here -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Example
-      ================================================== -->
-    <div class="bs-docs-section clearfix">
-      <div class="row">
-        <div class="col-lg-12">
           <div class="page-header"><h2 id="">Example</h2></div>
 
           <div class="row">
             <div class="bs-component">
               <!-- Code Here -->
-              <div id="demo">
-                <div class="step-app">
-                  <ul class="step-steps">
-                    <li><a href="#step1">Step 1</a></li>
-                    <li><a href="#step2">Step 2</a></li>
-                    <li><a href="#step3">Step 3</a></li>
-                  </ul>
-                  <div class="step-content">
-                    <div class="step-tab-panel" id="step1">
-                      ...
-                    </div>
-                    <div class="step-tab-panel" id="step2">
-                      ...
-                    </div>
-                    <div class="step-tab-panel" id="step3">
-                      ...
-                    </div>
-                  </div>
-                  <div class="step-footer">
-                    <button data-direction="prev" class="step-btn">Previous</button>
-                    <button data-direction="next" class="step-btn">Next</button>
-                    <button data-direction="finish" class="step-btn">Finish</button>
-                  </div>
-                </div>
-              </div>
 
-              <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-              <script src="../plugins/jquery.steps/jquery-steps.js"></script>
-              <script>
-                $('#demo').steps({
-                  onFinish: function () {
-                    alert('Wizard Completed');
-                  }
-                });
-              </script>
               <!-- // Code Here -->
             </div>
           </div>
@@ -245,7 +192,7 @@
       $temp.val($(element).text()).select();
       document.execCommand("copy");
       $temp.remove();
-      alert("클립보드로 복사됐습니다.");
+      alert("SUCCESS: copy to clipboard.");
     }
   </script>
 

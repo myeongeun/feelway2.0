@@ -5,9 +5,9 @@ import _ from 'lodash';
 import './src/js/bootstrap';
 import './src/application.scss';
 import 'jquery';
-import 'jquery.steps';
+// import './plugins/jquery.steps/jquery-steps';
 // import 'jquery-validation';
-// import './src/js/custom';
+import './src/js/custom';
 
 // Entry
 import './main';

@@ -298,17 +298,17 @@
 
   </div>
 
-  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 
   <script>
     function copyToClipboard(element) {
       var $temp = $("<input>");
-        $("body").append($temp);
-        $temp.val($(element).text()).select();
-       document.execCommand("copy");
-        $temp.remove();
-       alert("클립보드로 복사됐습니다.");
-      }
+      $("body").append($temp);
+      $temp.val($(element).text()).select();
+      document.execCommand("copy");
+      $temp.remove();
+      alert("SUCCESS: copy to clipboard.");
+    }
   </script>
 
 </body>

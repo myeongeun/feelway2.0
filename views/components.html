@@ -1431,7 +1431,7 @@
           <div class="col-lg-3 col-md-3 col-sm-6">
             <div class="bs-component">
               <div class="thumbnail">
-                <img src="http://via.placeholder.com/200.png/09f/fff" class="img-thumbnail" alt="Thumbnail">
+                <img src="http://via.placeholder.com/200.png" class="img-thumbnail" alt="Thumbnail">
                 <div class="clearfix caption">
                   <h3>Card Label</h3>
                   <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam
@@ -1470,7 +1470,7 @@
                       <tbody>
                         <tr>
                           <td width="90">
-                            <div class="cart-product-imitation"><img src="//via.placeholder.com/90.png" alt="via placeholder.com"></div>
+                            <div class="cart-product-imitation"><img src="http://via.placeholder.com/90.png" alt="via placeholder.com"></div>
                           </td>
                           <td class="desc">
                             <h3><a href="#" class="text-navy">Desktop publishing software</a></h3>
@@ -1535,6 +1535,26 @@
       </div>
     </div>
 
+    <!-- Steps(jquery.steps)
+      ================================================== -->
+    <div class="bs-docs-section clearfix">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="page-header"><h2 id="steps">Steps</h2></div>
+
+          <div class="row">
+            <div class="bs-component">
+              <!-- Code Here -->
+              <div class="col-sm-12 col-md-12 col-lg-12">
+                <a href="./steps-basic.html" class="btn btn-primary" target="_blank">jQuery-Steps</a>
+              </div>
+              <!-- // Code Here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Example
       ================================================== -->
     <div class="bs-docs-section clearfix">
@@ -1573,7 +1593,7 @@
 
   </div>
 
-  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 
   <script>
     function copyToClipboard(element) {
@@ -1582,7 +1602,7 @@
       $temp.val($(element).text()).select();
       document.execCommand("copy");
       $temp.remove();
-      alert("클립보드로 복사됐습니다.");
+      alert("SUCCESS: copy to clipboard.");
     }
   </script>
 
