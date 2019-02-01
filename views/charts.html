@@ -84,7 +84,7 @@
             <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">CHARTS <span class="caret"></span></a>
             <ul class="dropdown-menu" aria-labelledby="themes">
               <li><a href="charts.html#chart">Chart</a></li>
-              <!-- <li><a href="charts.html#axis">axis</a></li> -->
+              <li><a href="charts.html#data">data</a></li>
               <li><a href="javascript:$(this.alert('See you soon~!'));">Now Working</a></li>
             </ul>
           </li>
@@ -139,8 +139,10 @@
       </div>
       <div class="row">
         <div class="col-lg-3 col-md-3 col-sm-6">
-          <h2>Charts</h2>
+          <h2>CHARTS</h2>
           <div class="list-group table-of-contents">
+            <a class="list-group-item" href="charts.html#chart">chart</a>
+            <a class="list-group-item" href="charts.html#data">data</a>
             <a class="list-group-item" href="javascript:$(this.alert('See you soon~!'));">now working :)</a>
           </div>
         </div>
@@ -149,21 +151,21 @@
 
     <!-- Charts
       ================================================== -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/c3/0.6.12/c3.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.12/c3.min.js"></script>
 
     <div class="bs-docs-section clearfix">
       <div class="row">
         <div class="col-lg-12">
           <div class="page-header"><h2 id="chart">Charts</h2></div>
 
-          <div class="col-lg-6">
+          <div class="col-md-6">
             <div class="page-header"><h3 id="line">Charts: Line</h3></div>
             <div class="row">
               <div class="bs-component">
                 <!-- Code Here -->
-                <svg class="chartline col-sm-12"></svg>
+                <svg class="col-sm-12 chartline"></svg>
                 <script>
                   var chartline = c3.generate({
                     bindto: d3.select('.chartline'),
@@ -182,12 +184,12 @@
             </div>
           </div>
 
-          <div class="col-lg-6">
+          <div class="col-md-6">
             <div class="page-header"><h3 id="spline">Charts: spline</h3></div>
             <div class="row">
               <div class="bs-component">
                 <!-- Code Here -->
-                <svg class="chartspline col-sm-12"></svg>
+                <svg class="col-sm-12 chartspline"></svg>
                 <script>
                   var chartspline = c3.generate({
                     bindto: d3.select('.chartspline'),
@@ -206,12 +208,12 @@
             </div>
           </div>
 
-          <div class="col-lg-6">
+          <div class="col-md-6">
             <div class="page-header"><h3 id="step">Charts: step</h3></div>
             <div class="row">
               <div class="bs-component">
                 <!-- Code Here -->
-                <svg class="chartstep col-sm-12"></svg>
+                <svg class="col-sm-12 chartstep"></svg>
                 <script>
                   var chartstep = c3.generate({
                     bindto: d3.select('.chartstep'),
@@ -230,12 +232,12 @@
             </div>
           </div>
 
-          <div class="col-lg-6">
+          <div class="col-md-6">
             <div class="page-header"><h3 id="bar">Charts: bar</h3></div>
             <div class="row">
               <div class="bs-component">
                 <!-- Code Here -->
-                <svg class="chartbar col-sm-12"></svg>
+                <svg class="col-sm-12 chartbar"></svg>
                 <script>
                   var chartbar = c3.generate({
                     bindto: d3.select('.chartbar'),
@@ -254,12 +256,12 @@
             </div>
           </div>
 
-          <div class="col-lg-6">
+          <div class="col-md-6">
             <div class="page-header"><h3 id="area">Charts: area</h3></div>
             <div class="row">
               <div class="bs-component">
                 <!-- Code Here -->
-                <svg class="chartarea col-sm-12"></svg>
+                <svg class="col-sm-12 chartarea"></svg>
                 <script>
                   var chartarea = c3.generate({
                     bindto: d3.select('.chartarea'),
@@ -278,12 +280,12 @@
             </div>
           </div>
 
-          <div class="col-lg-6">
+          <div class="col-md-6">
             <div class="page-header"><h3 id="area-spline">Charts: area-spline</h3></div>
             <div class="row">
               <div class="bs-component">
                 <!-- Code Here -->
-                <svg class="chartarea-spline col-sm-12"></svg>
+                <svg class="col-sm-12 chartarea-spline"></svg>
                 <script>
                   var chartareaSpline = c3.generate({
                     bindto: d3.select('.chartarea-spline'),
@@ -302,12 +304,12 @@
             </div>
           </div>
 
-          <div class="col-lg-6">
+          <div class="col-md-6">
             <div class="page-header"><h3 id="pie">Charts: pie</h3></div>
             <div class="row">
               <div class="bs-component">
                 <!-- Code Here -->
-                <svg class="chartpie col-sm-12"></svg>
+                <svg class="col-sm-12 chartpie"></svg>
                 <script>
                   var chartpie = c3.generate({
                     bindto: d3.select('.chartpie'),
@@ -326,12 +328,12 @@
             </div>
           </div>
 
-          <div class="col-lg-6">
+          <div class="col-md-6">
             <div class="page-header"><h3 id="donut">Charts: donut</h3></div>
             <div class="row">
               <div class="bs-component">
                 <!-- Code Here -->
-                <svg class="chartdonut col-sm-12"></svg>
+                <svg class="col-sm-12 chartdonut"></svg>
                 <script>
                   var chartdonut = c3.generate({
                     bindto: d3.select('.chartdonut'),
@@ -350,12 +352,12 @@
             </div>
           </div>
 
-          <div class="col-lg-6">
+          <div class="col-md-6">
             <div class="page-header"><h3 id="scatter">Charts: scatter</h3></div>
             <div class="row">
               <div class="bs-component">
                 <!-- Code Here -->
-                <svg class="chartscatter col-sm-12"></svg>
+                <svg class="col-sm-12 chartscatter"></svg>
                 <script>
                   var chartscatter = c3.generate({
                     bindto: d3.select('.chartscatter'),
@@ -374,12 +376,12 @@
             </div>
           </div>
 
-          <div class="col-lg-6">
+          <div class="col-md-6">
             <div class="page-header"><h3 id="gauge">Charts: gauge</h3></div>
             <div class="row">
               <div class="bs-component">
                 <!-- Code Here -->
-                <svg class="chartgauge col-sm-12"></svg>
+                <svg class="col-sm-12 chartgauge"></svg>
                 <script>
                   var chartgauge = c3.generate({
                     bindto: d3.select('.chartgauge'),
@@ -400,16 +402,40 @@
         </div>
 
         <div class="col-lg-12">
-          <div class="page-header"><h2 id="axis">Axis</h2></div>
+          <div class="page-header"><h2 id="data">Data</h2></div>
 
-          <div class="col-lg-6">
-            <div class="page-header"><h3 id="spline">Axis: spline</h3></div>
+          <div class="col-md-6">
+            <div class="page-header"><h3 id="spline">Data: </h3></div>
             <div class="row">
               <div class="bs-component">
                 <!-- Code Here -->
-                <svg class="axispline col-sm-12"></svg>
+                <svg class="col-sm-12 axisspline"></svg>
                 <script>
-                  var axispline = c3.generate({
+                  var axisspline = c3.generate({
+                    bindto: d3.select('.axispline'),
+                    data: {
+                      columns: [
+                        ['data1', 30, 200, 100, 400, 150, 250],
+                        ['data2', 50, 20, 10, 40, 15, 25],
+                        ['data3', 350, 150, 250, 120, 450, 850]
+                      ],
+                      type: 'spline'
+                    }
+                  });
+                </script>
+                <!-- // Code Here -->
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="page-header"><h3 id="spline">Data: </h3></div>
+            <div class="row">
+              <div class="bs-component">
+                <!-- Code Here -->
+                <svg class="col-sm-12 axisspline"></svg>
+                <script>
+                  var axisspline = c3.generate({
                     bindto: d3.select('.axispline'),
                     data: {
                       columns: [

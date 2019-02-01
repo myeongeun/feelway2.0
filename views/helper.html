@@ -84,7 +84,7 @@
             <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">CHARTS <span class="caret"></span></a>
             <ul class="dropdown-menu" aria-labelledby="themes">
               <li><a href="charts.html#chart">Chart</a></li>
-              <!-- <li><a href="charts.html#axis">axis</a></li> -->
+              <li><a href="charts.html#data">data</a></li>
               <li><a href="javascript:$(this.alert('See you soon~!'));">Now Working</a></li>
             </ul>
           </li>
@@ -143,14 +143,15 @@
           <div class="list-group table-of-contents">
             <a class="list-group-item" href="helper.html#contextualColors">Contextual colors</a>
             <a class="list-group-item" href="helper.html#contextualBackgrounds">Contextual backgrounds</a>
-            <a class="list-group-item" href="helper.html#borders">Borders</a>
+            <a class="list-group-item" href="helper.html#gridsystem">Grid System</a>
+            <!-- <a class="list-group-item" href="helper.html#borders">Borders</a>
             <a class="list-group-item" href="helper.html#borderRadius">Border radius</a>
             <a class="list-group-item" href="helper.html#hrLine">Hr Line</a>
             <a class="list-group-item" href="helper.html#images">Images</a>
             <a class="list-group-item" href="helper.html#margins">Margins</a>
             <a class="list-group-item" href="helper.html#paddings">Paddings</a>
             <a class="list-group-item" href="helper.html#widthHeight">Width, height</a>
-            <a class="list-group-item" href="helper.html#basicFontWidth">Basic font width</a>
+            <a class="list-group-item" href="helper.html#basicFontWidth">Basic font width</a> -->
             <a class="list-group-item" href="javascript:$(this.alert('See you soon~!'));">now working :)</a>
           </div>
         </div>
@@ -192,6 +193,52 @@
             <p class="bg-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
             <p class="bg-warning">Etiam porta sem malesuada magna mollis euismod.</p>
             <p class="bg-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
+            <!-- // Code Here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grid System
+      ================================================== -->
+    <div class="bs-docs-section clearfix">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="page-header"><h2 id="gridsystem">Grid System</h2></div>
+          <div class="page-header"><h3 id="line">Media Queries</h3></div>
+          <div class="bs-component">
+            <!-- Code Here -->
+            <div class="well well-sm">
+              <code>/* Small devices (tablet, 768px and up) */</code><br>
+              @media (min-width: @screen-sm-min) { ... }<br><br>
+              <code>/* Medium devices (desktops, 992px and up) */</code><br>
+              @media (min-width: @screen-md-min) { ... }<br><br>
+              <code>/* Large devieces (large desktops, 1200px and up) */</code><br>
+              @media (min-width: @screen-lg-min) { ... }
+            </div>
+
+            <div class="well well-sm">
+              @media (max-width: @screen-xs-max) { ... }<br>
+              @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { ... }<br>
+              @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { ... }<br>
+              @media (min-width: @screen-lg-min) { ... }
+            </div>
+            <!-- // Code Here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Example
+      ================================================== -->
+    <div class="bs-docs-section clearfix">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="page-header"><h2 id="">Example</h2></div>
+
+          <div class="bs-component">
+            <!-- Code Here -->
+
             <!-- // Code Here -->
           </div>
         </div>
