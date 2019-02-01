@@ -10,8 +10,6 @@ import 'jquery-validation';
 import 'chosen-js/chosen.jquery';
 import 'd3/dist/d3';
 import 'c3/c3';
-import './src/js/custom';
-
 import 'chosen-js';
 import 'ion-rangeslider';
 import 'select2';
@@ -22,10 +20,12 @@ import 'bootstrap-daterangepicker';
 import 'bootstrap-tagsinput';
 import 'imagecropper/dist/js/cropper';
 
+import './src/js/custom';
+
 // Entry
 import './main';
-import './charts';
-import './helper';
 import './components';
 import './layouts';
+import './plugins';
+import './helper';
 import './guide';

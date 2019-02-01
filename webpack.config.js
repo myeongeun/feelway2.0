@@ -67,53 +67,60 @@ module.exports = {
       chunkFilename: devMode ? 'css/applications-[hash].css' : 'applications-[hash].css',
     }),
     new HtmlWebpackPlugin({
-      title: 'applications',
+      hash: true,
       inject: true,
+      title: 'applications',
       chunks: ['applications'],
       filename: 'index.html',
-      template: './views/main.html',
+      template: './views/main.html'
     }),
     new HtmlWebpackPlugin({
-      title: 'applications',
+      hash: true,
       inject: true,
+      title: 'applications',
       chunks: ['applications'],
-      filename: 'charts.html',
-      template: './views/charts.html',
+      filename: 'plugins.html',
+      template: './views/plugins.html'
     }),
     new HtmlWebpackPlugin({
-      title: 'applications',
+      hash: true,
       inject: true,
+      title: 'applications',
       chunks: ['applications'],
       filename: 'helper.html',
-      template: './views/helper.html',
+      template: './views/helper.html'
     }),
     new HtmlWebpackPlugin({
-      title: 'applications',
+      hash: true,
       inject: true,
+      title: 'applications',
       chunks: ['applications'],
       filename: 'components.html',
-      template: './views/components.html',
+      template: './views/components.html'
     }),
     new HtmlWebpackPlugin({
-      title: 'applications',
+      hash: true,
       inject: true,
+      title: 'applications',
       chunks: ['applications'],
       filename: 'layouts.html',
-      template: './views/layouts.html',
+      template: './views/layouts.html'
     }),
     new HtmlWebpackPlugin({
-      title: 'applications',
+      hash: true,
       inject: true,
+      title: 'applications',
       chunks: ['applications'],
       filename: 'guide.html',
-      template: './views/guide.html',
+      template: './views/guide.html'
     }),
     new HtmlWebpackPlugin({
-      title: 'applications',
+      hash: true,
       inject: true,
+      title: 'applications',
       chunks: ['applications'],
       filename: 'steps-basic.html',
-      template: './views/steps-basic.html',
+      template: './views/steps-basic.html'
     }),
   ],
   output: {
