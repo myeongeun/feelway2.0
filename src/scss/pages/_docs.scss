@@ -1,0 +1,10 @@
+.show-grid [class^=col-] {
+  background: rgba(85, 50, 125, 0.15);
+  border: solid rgba(85, 50, 125, 0.15);
+  border-width: 1px;
+}
+blockquote {
+  footer {
+    margin: inherit;
+  }
+}
