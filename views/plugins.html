@@ -112,7 +112,7 @@
     <!-- Cotents-Area -->
     <div class="page-header" id="banner">
       <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
+        <div class="col-md-12 col-lg-12">
           <h1>Theme-Conects</h1>
           <p class="lead">STUnitas Conects-Super-Dev-Lab</p>
         </div>
@@ -152,7 +152,7 @@
             <div class="row">
               <div class="bs-component">
                 <!-- Code Here -->
-                <svg class="col-sm-12 chartline"></svg>
+                <div class="chartline"></div>
                 <script>
                   var chartline = c3.generate({
                     bindto: d3.select('.chartline'),
@@ -176,7 +176,7 @@
             <div class="row">
               <div class="bs-component">
                 <!-- Code Here -->
-                <svg class="col-sm-12 chartspline"></svg>
+                <div class="chartspline"></div>
                 <script>
                   var chartspline = c3.generate({
                     bindto: d3.select('.chartspline'),
@@ -200,7 +200,7 @@
             <div class="row">
               <div class="bs-component">
                 <!-- Code Here -->
-                <svg class="col-sm-12 chartstep"></svg>
+                <div class="chartstep"></div>
                 <script>
                   var chartstep = c3.generate({
                     bindto: d3.select('.chartstep'),
@@ -224,7 +224,7 @@
             <div class="row">
               <div class="bs-component">
                 <!-- Code Here -->
-                <svg class="col-sm-12 chartbar"></svg>
+                <div class="chartbar"></div>
                 <script>
                   var chartbar = c3.generate({
                     bindto: d3.select('.chartbar'),
@@ -248,7 +248,7 @@
             <div class="row">
               <div class="bs-component">
                 <!-- Code Here -->
-                <svg class="col-sm-12 chartarea"></svg>
+                <div class="chartarea"></div>
                 <script>
                   var chartarea = c3.generate({
                     bindto: d3.select('.chartarea'),
@@ -272,7 +272,7 @@
             <div class="row">
               <div class="bs-component">
                 <!-- Code Here -->
-                <svg class="col-sm-12 chartarea-spline"></svg>
+                <div class="chartarea-spline"></div>
                 <script>
                   var chartareaSpline = c3.generate({
                     bindto: d3.select('.chartarea-spline'),
@@ -296,7 +296,7 @@
             <div class="row">
               <div class="bs-component">
                 <!-- Code Here -->
-                <svg class="col-sm-12 chartpie"></svg>
+                <div class="chartpie"></div>
                 <script>
                   var chartpie = c3.generate({
                     bindto: d3.select('.chartpie'),
@@ -320,7 +320,7 @@
             <div class="row">
               <div class="bs-component">
                 <!-- Code Here -->
-                <svg class="col-sm-12 chartdonut"></svg>
+                <div class="chartdonut"></div>
                 <script>
                   var chartdonut = c3.generate({
                     bindto: d3.select('.chartdonut'),
@@ -344,7 +344,7 @@
             <div class="row">
               <div class="bs-component">
                 <!-- Code Here -->
-                <svg class="col-sm-12 chartscatter"></svg>
+                <div class="chartscatter"></div>
                 <script>
                   var chartscatter = c3.generate({
                     bindto: d3.select('.chartscatter'),
@@ -368,7 +368,7 @@
             <div class="row">
               <div class="bs-component">
                 <!-- Code Here -->
-                <svg class="col-sm-12 chartgauge"></svg>
+                <div class="chartgauge"></div>
                 <script>
                   var chartgauge = c3.generate({
                     bindto: d3.select('.chartgauge'),
@@ -386,59 +386,64 @@
               </div>
             </div>
           </div>
+
         </div>
 
+      </div>
+    </div>
+
+    <!-- Steps(jquery.steps)
+      ================================================== -->
+    <div class="bs-docs-section clearfix">
+      <div class="row">
         <div class="col-lg-12">
-          <div class="page-header"><h2 id="data">Data</h2></div>
+          <div class="page-header"><h2 id="steps">Steps</h2></div>
 
-          <div class="col-md-6">
-            <div class="page-header"><h3 id="spline">Data: </h3></div>
-            <div class="row">
-              <div class="bs-component">
-                <!-- Code Here -->
-                <svg class="col-sm-12 axisspline"></svg>
-                <script>
-                  var axisspline = c3.generate({
-                    bindto: d3.select('.axispline'),
-                    data: {
-                      columns: [
-                        ['data1', 30, 200, 100, 400, 150, 250],
-                        ['data2', 50, 20, 10, 40, 15, 25],
-                        ['data3', 350, 150, 250, 120, 450, 850]
-                      ],
-                      type: 'spline'
-                    }
-                  });
-                </script>
-                <!-- // Code Here -->
+          <div class="row">
+            <div class="bs-component">
+              <!-- Code Here -->
+              <div class="col-md-12 col-lg-12">
+                <a href="./steps-basic.html" class="btn btn-primary" target="_blank">jQuery-Steps</a>
               </div>
+              <!-- // Code Here -->
             </div>
           </div>
+        </div>
+      </div>
+    </div>
 
-          <div class="col-md-6">
-            <div class="page-header"><h3 id="spline">Data: </h3></div>
-            <div class="row">
-              <div class="bs-component">
-                <!-- Code Here -->
-                <svg class="col-sm-12 axisspline"></svg>
-                <script>
-                  var axisspline = c3.generate({
-                    bindto: d3.select('.axispline'),
-                    data: {
-                      columns: [
-                        ['data1', 30, 200, 100, 400, 150, 250],
-                        ['data2', 50, 20, 10, 40, 15, 25],
-                        ['data3', 350, 150, 250, 120, 450, 850]
-                      ],
-                      type: 'spline'
-                    }
-                  });
-                </script>
-                <!-- // Code Here -->
-              </div>
+    <!-- Example
+      ================================================== -->
+    <div class="bs-docs-section clearfix">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="page-header"><h2 id="">Example</h2></div>
+
+          <div class="row">
+            <div class="bs-component">
+              <!-- Code Here -->
+
+              <!-- // Code Here -->
             </div>
           </div>
+        </div>
+      </div>
+    </div>
 
+    <!-- Example
+      ================================================== -->
+    <div class="bs-docs-section clearfix">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="page-header"><h2 id="">Example</h2></div>
+
+          <div class="row">
+            <div class="bs-component">
+              <!-- Code Here -->
+
+              <!-- // Code Here -->
+            </div>
+          </div>
         </div>
       </div>
     </div>
