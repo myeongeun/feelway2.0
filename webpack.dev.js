@@ -50,7 +50,7 @@ module.exports = {
     ],
   },
   entry: {
-    applications: './index.js',
+    applications: ['./index.js', 'layouts.js', 'components.js', 'plugins.js', 'helper', 'guide'],
   },
   plugins: [
     new UglifyJSPlugin({

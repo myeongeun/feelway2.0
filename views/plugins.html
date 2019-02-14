@@ -74,10 +74,9 @@
             <ul class="dropdown-menu" aria-labelledby="themes">
               <li><a href="plugins.html#chart">Chart</a></li>
               <li><a href="plugins.html#steps">Steps</a></li>
-              <li><a href="plugins.html#datePicker">Date Picker</a></li>
-              <li><a href="plugins.html#dateRangePicker">Date Range Picker</a></li>
-              <li><a href="plugins.html#clockPicker">Clock Picker</a></li>
-              <li><a href="plugins.html#tagsInput">Tags Input</a></li>
+              <li><a href="plugins.html#picker">Date Picker</a></li>
+              <li><a href="plugins.html#picker">Date Range Picker</a></li>
+              <li><a href="plugins.html#picker">Clock Picker</a></li>
               <li><a href="plugins.html#rangeSlider">Range Slider</a></li>
               <li><a href="plugins.html#nouiSlider">Noui Slider</a></li>
               <li><a href="plugins.html#select2">Select2</a></li>
@@ -123,10 +122,9 @@
           <div class="list-group table-of-contents">
             <a class="list-group-item" href="plugins.html#chart">Chart</a>
             <a class="list-group-item" href="plugins.html#steps">Steps</a>
-            <a class="list-group-item" href="plugins.html#datePicker">Date Picker</a>
-            <a class="list-group-item" href="plugins.html#dateRangePicker">Date Range Picker</a>
-            <a class="list-group-item" href="plugins.html#clockPicker">Clock Picker</a>
-            <a class="list-group-item" href="plugins.html#tagsInput">Tags Input</a>
+            <a class="list-group-item" href="plugins.html#picker">Date Picker</a>
+            <a class="list-group-item" href="plugins.html#picker">Date Range Picker</a>
+            <a class="list-group-item" href="plugins.html#picker">Clock Picker</a>
             <a class="list-group-item" href="plugins.html#rangeSlider">Range Slider</a>
             <a class="list-group-item" href="plugins.html#nouiSlider">Noui Slider</a>
             <a class="list-group-item" href="plugins.html#select2">Select2</a>
@@ -419,7 +417,7 @@
     <div class="bs-docs-section clearfix">
       <div class="row">
         <div class="col-lg-12">
-          <div class="page-header"><h2 id="">Picker</h2></div>
+          <div class="page-header"><h2 id="picker">Picker</h2></div>
 
           <div class="row">
             <div class="col-sm-12 col-md-4">
@@ -473,7 +471,9 @@
                   <script>
                     $(function () {
                       $('#range-group .input-daterange').datepicker({
-                        todayHighlight: true
+                        daysOfWeekHighlighted: "0,6",
+                        todayHighlight: true,
+                        toggleActive: true
                       });
                     });
                   </script>

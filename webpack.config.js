@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const S3Uploader = require('webpack-s3-uploader');
 const devMode = process.env.NODE_ENV !== 'production';
 const webpack = require('webpack');
 
@@ -121,6 +122,18 @@ module.exports = {
       chunks: ['applications'],
       filename: 'steps-basic.html',
       template: './views/steps-basic.html'
+    }),
+    new S3Uploader({
+      s3Options: {
+        accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+        region: 'region',
+        // sessionToken: 'asdsaad' // the optional AWS session token to sign requests with
+      },
+      s3UploadOptions: {
+        Bucket: 'MyBucket'
+      },
+      progress: true
     }),
   ],
   output: {
