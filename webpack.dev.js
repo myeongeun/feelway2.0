@@ -1,11 +1,11 @@
 const path = require('path');
+const webpack = require('webpack');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const devMode = process.env.NODE_ENV !== 'production';
-const webpack = require('webpack');
 
 module.exports = {
   mode: 'development',
@@ -50,8 +50,22 @@ module.exports = {
     ],
   },
   entry: {
-    applications: ['./index.js', 'layouts.js', 'components.js', 'plugins.js', 'helper', 'guide'],
+    "applications": [
+      './main',
+      './components',
+      './layouts',
+      './plugins',
+      './helper',
+      './guide',
+    ],
+    "customs": [
+      './dist/applicatoins.js',
+      './src/js/custom.js'
+    ],
   },
+  // entry: [
+  //   '',
+  // ],
   plugins: [
     new UglifyJSPlugin({
       sourceMap: true,
@@ -61,8 +75,12 @@ module.exports = {
     new MiniCssExtractPlugin({
       // filename: devMode ? 'css/[name]-[hash].css' : 'css/[name]-[hash].css',
       // chunkFilename: devMode ? 'css/[id]-[hash].css' : 'css/[id]-[hash].css',
-      filename: devMode ? 'applications-[hash].css' : 'applications-[hash].css',
-      chunkFilename: devMode ? 'applications-[hash].css' : 'applications-[hash].css',
+      filename:
+        devMode ? 'applications-[hash].css'
+                : 'applications-[hash].css',
+      chunkFilename:
+        devMode ? 'applications-[hash].css'
+                : 'applications-[hash].css',
     }),
     new HtmlWebpackPlugin({
       title: 'applications',
@@ -110,8 +128,12 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: './',
-    filename: devMode ? '[name]-[hash].js' : '[name]-[hash].js',
-    chunkFilename: devMode ? '[id]-[hash].js' : '[id]-[hash].js',
+    filename:
+      devMode ? '[name]-[hash].js'
+              : '[name]-[hash].js',
+    chunkFilename:
+      devMode ? '[id]-[hash].js'
+              : '[id]-[hash].js',
   },
   optimization: {
     splitChunks: {
