@@ -1,6 +1,6 @@
 // Common
 import _ from 'lodash';
-import 'jquery/dist/jquery';
+import $ from 'jquery';
 import 'jquery-ui';
 import 'moment';
 import 'bootstrap/dist/js/bootstrap';

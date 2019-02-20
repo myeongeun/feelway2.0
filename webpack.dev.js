@@ -7,6 +7,10 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const devMode = process.env.NODE_ENV !== 'production';
 
+const BUILD_DIR = path.resolve(__dirname, 'dist');
+const NODE_DIR = path.resolve(__dirname, 'node_modules');
+const APP_DIR = path.resolve(__dirname, 'src');
+
 module.exports = {
   mode: 'development',
   devtool: 'source-map',
@@ -51,15 +55,15 @@ module.exports = {
   },
   entry: {
     "applications": [
-      './main',
-      './components',
-      './layouts',
-      './plugins',
-      './helper',
-      './guide',
+      './main.js',
+      './components.js',
+      './layouts.js',
+      './plugins.js',
+      './helper.js',
+      './guide.js',
+      'bootstrap-datepicker',
     ],
     "customs": [
-      './dist/applicatoins.js',
       './src/js/custom.js'
     ],
   },
@@ -73,14 +77,10 @@ module.exports = {
     new CleanWebpackPlugin(['dist']),
     new webpack.HotModuleReplacementPlugin(),
     new MiniCssExtractPlugin({
-      // filename: devMode ? 'css/[name]-[hash].css' : 'css/[name]-[hash].css',
-      // chunkFilename: devMode ? 'css/[id]-[hash].css' : 'css/[id]-[hash].css',
-      filename:
-        devMode ? 'applications-[hash].css'
-                : 'applications-[hash].css',
-      chunkFilename:
-        devMode ? 'applications-[hash].css'
-                : 'applications-[hash].css',
+      // filename: devMode ? 'css/[name]-[hash].css' : 'css/[name]-[chunkhash].css',
+      // chunkFilename: devMode ? 'css/[id]-[hash].css' : 'css/[id]-[chunkhash].css',
+      filename: devMode ? 'applications-[hash].css' : 'applications-[hash].css',
+      chunkFilename: devMode ? 'applications-[hash].css' : 'applications-[hash].css',
     }),
     new HtmlWebpackPlugin({
       title: 'applications',
@@ -126,14 +126,16 @@ module.exports = {
     }),
   ],
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: BUILD_DIR,
     publicPath: './',
     filename:
-      devMode ? '[name]-[hash].js'
-              : '[name]-[hash].js',
-    chunkFilename:
-      devMode ? '[id]-[hash].js'
-              : '[id]-[hash].js',
+      devMode ? '[name].js'
+              : '[name].js',
+    // chunkFilename:
+    //   devMode ? '[id].js'
+    //           : '[id].js',
+    libraryTarget: "var",
+    library: '[name]',
   },
   optimization: {
     splitChunks: {
