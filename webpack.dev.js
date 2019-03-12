@@ -61,10 +61,6 @@ module.exports = {
       './plugins.js',
       './helper.js',
       './guide.js',
-      'bootstrap-datepicker',
-    ],
-    "customs": [
-      './src/js/custom.js'
     ],
   },
   // entry: [
