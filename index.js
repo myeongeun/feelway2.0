@@ -51,7 +51,7 @@ uislider();
 datepicker();
 jqeurycloCkpicker();
 bootstrapClockpicker();
-cropper();
+// cropper();
 
 custom();
 

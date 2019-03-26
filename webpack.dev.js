@@ -55,12 +55,7 @@ module.exports = {
   },
   entry: {
     "applications": [
-      './main.js',
-      './components.js',
-      './layouts.js',
-      './plugins.js',
-      './helper.js',
-      './guide.js',
+      './index.js',
     ],
   },
   // entry: [
@@ -75,8 +70,8 @@ module.exports = {
     new MiniCssExtractPlugin({
       // filename: devMode ? 'css/[name]-[hash].css' : 'css/[name]-[chunkhash].css',
       // chunkFilename: devMode ? 'css/[id]-[hash].css' : 'css/[id]-[chunkhash].css',
-      filename: devMode ? 'applications-[hash].css' : 'applications-[hash].css',
-      chunkFilename: devMode ? 'applications-[hash].css' : 'applications-[hash].css',
+      filename: devMode ? 'applications.css' : 'applications.css',
+      chunkFilename: devMode ? 'applications.css' : 'applications.css',
     }),
     new HtmlWebpackPlugin({
       title: 'applications',
