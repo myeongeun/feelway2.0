@@ -33,6 +33,7 @@ import './layouts';
 import './plugins';
 import './helper';
 import './guide';
+import './conects';
 
 jqueryui();
 moment();
@@ -49,8 +50,8 @@ rangeslider();
 select2();
 uislider();
 datepicker();
-jqeurycloCkpicker();
-bootstrapClockpicker();
+// jqeuryclockpicker();
+// bootstrapClockpicker();
 // cropper();
 
 custom();

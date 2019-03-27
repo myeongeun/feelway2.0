@@ -8,7 +8,7 @@ const devMode = process.env.NODE_ENV !== 'production';
 const webpack = require('webpack');
 
 module.exports = {
-  mode: devMode ? 'development' : 'production',
+  mode: 'production',
   devtool: 'source-map',
   devServer: {
     contentBase: './dist',
@@ -20,13 +20,13 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: 'css-loader',
+            loader: 'css-loader?sourceMap',
             options: {
               sourceMap: true,
             },
           },
           {
-            loader: 'sass-loader',
+            loader: 'sass-loader?sourceMap',
             options: {
               sourceMap: true,
             },
@@ -63,9 +63,10 @@ module.exports = {
     new MiniCssExtractPlugin({
       // filename: devMode ? 'css/[name]-[hash].css' : 'css/[name]-[hash].css',
       // chunkFilename: devMode ? 'css/[id]-[hash].css' : 'css/[id]-[hash].css',
-      filename: devMode ? 'css/applications.css' : 'applications.css',
-      chunkFilename: devMode ? 'css/applications.css' : 'applications.css',
+      filename: 'css/applications.css',
+      chunkFilename: 'css/applications.css',
     }),
+    // index.html
     new HtmlWebpackPlugin({
       hash: true,
       inject: true,
@@ -74,30 +75,7 @@ module.exports = {
       filename: 'index.html',
       template: './views/main.html'
     }),
-    new HtmlWebpackPlugin({
-      hash: true,
-      inject: true,
-      title: 'applications',
-      chunks: ['applications'],
-      filename: 'plugins.html',
-      template: './views/plugins.html'
-    }),
-    new HtmlWebpackPlugin({
-      hash: true,
-      inject: true,
-      title: 'applications',
-      chunks: ['applications'],
-      filename: 'helper.html',
-      template: './views/helper.html'
-    }),
-    new HtmlWebpackPlugin({
-      hash: true,
-      inject: true,
-      title: 'applications',
-      chunks: ['applications'],
-      filename: 'components.html',
-      template: './views/components.html'
-    }),
+    // layouts.html
     new HtmlWebpackPlugin({
       hash: true,
       inject: true,
@@ -106,6 +84,34 @@ module.exports = {
       filename: 'layouts.html',
       template: './views/layouts.html'
     }),
+    // components.html
+    new HtmlWebpackPlugin({
+      hash: true,
+      inject: true,
+      title: 'applications',
+      chunks: ['applications'],
+      filename: 'components.html',
+      template: './views/components.html'
+    }),
+    // plugins.html
+    new HtmlWebpackPlugin({
+      hash: true,
+      inject: true,
+      title: 'applications',
+      chunks: ['applications'],
+      filename: 'plugins.html',
+      template: './views/plugins.html'
+    }),
+    // helper.html
+    new HtmlWebpackPlugin({
+      hash: true,
+      inject: true,
+      title: 'applications',
+      chunks: ['applications'],
+      filename: 'helper.html',
+      template: './views/helper.html'
+    }),
+    // guide.html
     new HtmlWebpackPlugin({
       hash: true,
       inject: true,
@@ -114,6 +120,16 @@ module.exports = {
       filename: 'guide.html',
       template: './views/guide.html'
     }),
+    // conects.html
+    new HtmlWebpackPlugin({
+      hash: true,
+      inject: true,
+      title: 'applications',
+      chunks: ['applications'],
+      filename: 'conects.html',
+      template: './views/conects.html'
+    }),
+    // steps-basic.html
     new HtmlWebpackPlugin({
       hash: true,
       inject: true,
@@ -125,9 +141,9 @@ module.exports = {
   ],
   output: {
     path: path.resolve(__dirname, 'dist'),
-    publicPath: devMode ? '' : 'dist',
-    filename: devMode ? 'js/[name].js' : '[name].js',
-    chunkFilename: devMode ? 'js/[id].js' : '[id].js',
+    publicPath: '',
+    filename: 'js/[name].js',
+    chunkFilename: 'js/[id].js',
   },
   optimization: {
     splitChunks: {
