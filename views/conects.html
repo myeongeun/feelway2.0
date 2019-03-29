@@ -472,16 +472,64 @@
           <div class="row">
             <h3 class="col-xs-12">배너</h3>
             <div class="col-sm-12 col-md-12 col-lg-12 ">
-              <a href="#"><img src="//placehold.it/1x1?text=Banner+Area" alt="Banner Area"></a>
+              <div class="theme-component bs-component">
+                <!-- Code Here -->
+                <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+                <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+                <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+                <div class="list-inline slick slick-banner-line">
+                  <div><a href="#"><img src="//placehold.it/950x80?text=Banner+Area-01" alt="Banner Area-01"></a></div>
+                  <div><a href="#"><img src="//placehold.it/950x80?text=Banner+Area-02" alt="Banner Area-02"></a></div>
+                  <div><a href="#"><img src="//placehold.it/950x80?text=Banner+Area-03" alt="Banner Area-03"></a></div>
+                </div>
+                <script>
+                  $(document).ready(function() {
+                    $('.slick-banner-line').slick();
+                  });
+                </script>
+                <!-- // Code Here -->
+              </div>
             </div>
           </div>
 
           <div class="row">
             <h3 class="col-xs-12">검색</h3>
-            <div class="col-sm-12 col-md-12 col-lg-12 ">
+            <div class="col-sm-12 col-md-6 col-lg-6">
               <div class="theme-component bs-component">
                 <!-- Code Here -->
-                작업예정
+                <form action="" class="search-form-01" role="search">
+                  <div class="input-group col-md-12">
+                    <input type="text" class="form-control" placeholder="search" />
+                    <span class="input-group-btn">
+                      <button class="btn btn-info" type="button">
+                        <i class="fa fa-search"></i>
+                      </button>
+                    </span>
+                  </div>
+                </form>
+                <!-- // Code Here -->
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <div class="theme-component bs-component">
+                <!-- Code Here -->
+                <form action="" class="search-form-02" role="search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+                    <div class="input-group-btn">
+                      <button class="btn btn-default" type="submit">
+                        <i class="fa fa-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+                <!-- // Code Here -->
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+              <div class="theme-component bs-component">
+                <!-- Code Here -->
+
                 <!-- // Code Here -->
               </div>
             </div>

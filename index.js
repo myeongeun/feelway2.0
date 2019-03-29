@@ -17,9 +17,10 @@ import rangeslider from 'ion-rangeslider';
 import select2 from 'select2';
 import uislider from 'nouislider';
 import datepicker from 'bootstrap-datepicker/dist/js/bootstrap-datepicker';
-import jqeurycloCkpicker from 'clockpicker/dist/jquery-clockpicker';
-import bootstrapClockpicker from 'clockpicker/dist/bootstrap-clockpicker.min';
-import cropper from 'imagecropper/dist/js/cropper';
+// import jqeurycloCkpicker from 'clockpicker/dist/jquery-clockpicker';
+// import bootstrapClockpicker from 'clockpicker/dist/bootstrap-clockpicker.min';
+// import cropper from 'imagecropper/dist/js/cropper';
+import 'slick-carousel/slick/slick';
 
 import custom from './src/js/custom';
 
