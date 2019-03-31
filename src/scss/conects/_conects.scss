@@ -61,9 +61,22 @@
   }
 
   // 배너
+  .banner-line {
+    a {
+      display: block;
+      img {
+        width: 100%;max-width: 950px;
+      }
+    }
+  }
   .slick-slider {
     &.slick-banner-line {
-
+      .slick-list {
+        padding: 0 !important;
+        .slick-slide {
+          width: 100% !important;max-width: 950px;
+        }
+      }
     }
   }
 
@@ -93,6 +106,16 @@
     }
     .fa-search {
       font-size: 1.5em;color: #D9230F;
+    }
+  }
+
+  // 지점소개
+  .profile-info {
+    .profile-thumbnail {
+      margin-bottom: 15px;
+      border: solid #e9e9e9;border-width: 1px;
+      border-radius: 10px;
+      overflow: hidden;
     }
   }
 }
