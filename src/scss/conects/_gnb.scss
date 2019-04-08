@@ -1,4 +1,10 @@
 // GNB & LNB
+.open-nav {
+  display: inline-block;
+  transform: rotate(90deg);
+  font-size:1.6em;
+  cursor:pointer;
+}
 .sidenav {
   height: 100%;
   width: 0;
