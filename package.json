@@ -8,8 +8,9 @@
     "server": "node server.js --open --watch",
     "dev": "webpack-dev-server --open --watch",
     "build": "webpack --config webpack.config.js",
-    "upload": "aws s3 cp ./dist/ s3://st-conects-theme --recursive --acl public-read",
-    "s3check": "aws s3 ls s3://st-conects-theme"
+    "s3upload": "aws s3 cp ./dist/ s3://st-conects-theme --recursive --acl public-read",
+    "s3check": "aws s3 ls s3://st-conects-theme",
+    "s3del": "aws s3 rm s3://st-comects-theme/ --recursive"
   },
   "repository": {
     "type": "git",
