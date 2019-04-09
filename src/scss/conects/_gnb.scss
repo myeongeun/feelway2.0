@@ -1,4 +1,15 @@
 // GNB & LNB
+.sidebar-fixed-left {
+  // position: fixed;
+  margin-top: 50px;
+  // z-index: 10;
+  li {
+    a {
+      padding: 10px;
+      font-size: 1.4em;
+    }
+  }
+}
 .open-nav {
   display: inline-block;
   transform: rotate(90deg);
@@ -17,22 +28,20 @@
   transition: 0.5s;
   padding-top: 60px;
   a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
     display: block;
+    padding: 4px;
+    color: #818181;text-decoration: none;
     transition: 0.3s;
     &:hover {
-      color: #f1f1f1;
+      color: rgba(0,0,0,.5);
     }
   }
   .closebtn {
     position: absolute;
     top: 50px;
     right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+    font-size: 3em;
+    z-index: 1;
   }
 }
 

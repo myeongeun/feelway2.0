@@ -186,4 +186,24 @@
 
     }
   }
+  .branch-qna {
+    ul {
+      li {
+        i.fa-bell-o {
+          float: left;
+          background: #999;
+          border-radius: 50%;
+          padding: 15px;
+          font-size: 1.5em;
+          color: #fff;
+        }
+
+        strong.bell-message {
+          display: table-cell;
+          vertical-align: middle;
+          padding-left: 15px;
+        }
+      }
+    }
+  }
 }
