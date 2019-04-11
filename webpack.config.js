@@ -47,7 +47,14 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|gif)$/,
-        use: 'file-loader',
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+            }
+          },
+        ],
       },
     ],
   },
@@ -60,83 +67,83 @@ module.exports = {
     }),
     new CleanWebpackPlugin(['dist']),
     new webpack.HotModuleReplacementPlugin(),
-    new MiniCssExtractPlugin({
-      // filename: devMode ? 'css/[name]-[hash].css' : 'css/[name]-[hash].css',
-      // chunkFilename: devMode ? 'css/[id]-[hash].css' : 'css/[id]-[hash].css',
-      filename: 'css/applications.css',
-      chunkFilename: 'css/applications.css',
-    }),
     // index.html
     new HtmlWebpackPlugin({
       hash: true,
       inject: true,
-      title: 'applications',
-      chunks: ['applications'],
+      // title: 'applications',
+      // chunks: ['applications'],
       filename: 'index.html',
-      template: './views/main.html'
+      template: path.resolve(__dirname, './views', 'main.html')
     }),
     // layouts.html
     new HtmlWebpackPlugin({
       hash: true,
       inject: true,
-      title: 'applications',
-      chunks: ['applications'],
+      // title: 'applications',
+      // chunks: ['applications'],
       filename: 'layouts.html',
-      template: './views/layouts.html'
+      template: path.resolve(__dirname, './views', 'layouts.html')
     }),
     // components.html
     new HtmlWebpackPlugin({
       hash: true,
       inject: true,
-      title: 'applications',
-      chunks: ['applications'],
+      // title: 'applications',
+      // chunks: ['applications'],
       filename: 'components.html',
-      template: './views/components.html'
+      template: path.resolve(__dirname, './views', 'components.html')
     }),
     // plugins.html
     new HtmlWebpackPlugin({
       hash: true,
       inject: true,
-      title: 'applications',
-      chunks: ['applications'],
+      // title: 'applications',
+      // chunks: ['applications'],
       filename: 'plugins.html',
-      template: './views/plugins.html'
+      template: path.resolve(__dirname, './views', 'plugins.html')
     }),
     // helper.html
     new HtmlWebpackPlugin({
       hash: true,
       inject: true,
-      title: 'applications',
-      chunks: ['applications'],
+      // title: 'applications',
+      // chunks: ['applications'],
       filename: 'helper.html',
-      template: './views/helper.html'
+      template: path.resolve(__dirname, './views', 'helper.html')
     }),
     // guide.html
     new HtmlWebpackPlugin({
       hash: true,
       inject: true,
-      title: 'applications',
-      chunks: ['applications'],
+      // title: 'applications',
+      // chunks: ['applications'],
       filename: 'guide.html',
-      template: './views/guide.html'
+      template: path.resolve(__dirname, './views', 'guide.html')
     }),
     // conects.html
     new HtmlWebpackPlugin({
       hash: true,
       inject: true,
-      title: 'applications',
-      chunks: ['applications'],
+      // title: 'applications',
+      // chunks: ['applications'],
       filename: 'conects.html',
-      template: './views/conects.html'
+      template: path.resolve(__dirname, './views', 'conects.html')
     }),
     // steps-basic.html
     new HtmlWebpackPlugin({
       hash: true,
       inject: true,
-      title: 'applications',
-      chunks: ['applications'],
+      // title: 'applications',
+      // chunks: ['applications'],
       filename: 'steps-basic.html',
-      template: './views/steps-basic.html'
+      template: path.resolve(__dirname, './views', 'steps-basic.html')
+    }),
+    new MiniCssExtractPlugin({
+      // filename: devMode ? 'css/[name]-[hash].css' : 'css/[name]-[hash].css',
+      // chunkFilename: devMode ? 'css/[id]-[hash].css' : 'css/[id]-[hash].css',
+      filename: 'css/[name].css',
+      chunkFilename: 'css/[id].css',
     }),
   ],
   output: {
