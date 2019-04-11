@@ -71,7 +71,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: true,
       inject: true,
-      // title: 'applications',
+      title: 'THEME: Main',
       // chunks: ['applications'],
       filename: 'index.html',
       template: path.resolve(__dirname, './views', 'main.html')
@@ -80,7 +80,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: true,
       inject: true,
-      // title: 'applications',
+      title: 'THEME: Layouts',
       // chunks: ['applications'],
       filename: 'layouts.html',
       template: path.resolve(__dirname, './views', 'layouts.html')
@@ -89,7 +89,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: true,
       inject: true,
-      // title: 'applications',
+      title: 'THEME: Components',
       // chunks: ['applications'],
       filename: 'components.html',
       template: path.resolve(__dirname, './views', 'components.html')
@@ -98,7 +98,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: true,
       inject: true,
-      // title: 'applications',
+      title: 'THEME: Plugins',
       // chunks: ['applications'],
       filename: 'plugins.html',
       template: path.resolve(__dirname, './views', 'plugins.html')
@@ -107,7 +107,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: true,
       inject: true,
-      // title: 'applications',
+      title: 'THEME: Helper',
       // chunks: ['applications'],
       filename: 'helper.html',
       template: path.resolve(__dirname, './views', 'helper.html')
@@ -116,7 +116,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: true,
       inject: true,
-      // title: 'applications',
+      title: 'THEME: Guide',
       // chunks: ['applications'],
       filename: 'guide.html',
       template: path.resolve(__dirname, './views', 'guide.html')
@@ -125,7 +125,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: true,
       inject: true,
-      // title: 'applications',
+      title: 'THEME: Conects',
       // chunks: ['applications'],
       filename: 'conects.html',
       template: path.resolve(__dirname, './views', 'conects.html')
@@ -134,7 +134,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: true,
       inject: true,
-      // title: 'applications',
+      title: 'THEME: Steps-basic',
       // chunks: ['applications'],
       filename: 'steps-basic.html',
       template: path.resolve(__dirname, './views', 'steps-basic.html')
