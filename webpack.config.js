@@ -180,10 +180,10 @@ module.exports = {
         parallel: true,
         sourceMap: true,
       }),
-      new OptimizeCSSAssetsPlugin({
-        minimize: true,
-        sourceMap: true,
-      }),
+      // new OptimizeCSSAssetsPlugin({
+      //   minimize: true,
+      //   sourceMap: true,
+      // }),
     ],
   },
 };

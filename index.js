@@ -5,8 +5,6 @@ import jqueryui from 'jquery-ui';
 import moment from 'moment';
 import bootstrap from 'bootstrap/dist/js/bootstrap';
 import fontawesomeloader from 'font-awesome-loader';
-import jquerysteps from './plugins/jquery.steps/jquery.steps';
-import jquerycookie from 'jquery-steps/lib/jquery.cookie-1.3.1';
 import jqueryvalidation from 'jquery-validation';
 
 // Plugins
@@ -17,9 +15,6 @@ import rangeslider from 'ion-rangeslider';
 import select2 from 'select2';
 import uislider from 'nouislider';
 import datepicker from 'bootstrap-datepicker/dist/js/bootstrap-datepicker';
-// import jqeurycloCkpicker from 'clockpicker/dist/jquery-clockpicker';
-// import bootstrapClockpicker from 'clockpicker/dist/bootstrap-clockpicker.min';
-// import cropper from 'imagecropper/dist/js/cropper';
 import 'slick-carousel/slick/slick';
 
 import custom from './src/js/custom';
@@ -40,8 +35,6 @@ jqueryui();
 moment();
 bootstrap();
 fontawesomeloader();
-jquerysteps();
-jquerycookie();
 jqueryvalidation();
 
 chosen();
@@ -51,9 +44,6 @@ rangeslider();
 select2();
 uislider();
 datepicker();
-// jqeuryclockpicker();
-// bootstrapClockpicker();
-// cropper();
 
 custom();
 

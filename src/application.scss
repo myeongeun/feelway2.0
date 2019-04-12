@@ -5,9 +5,7 @@
 
 // Custom
 @import url('//fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&subset=korean');
-// @import "./scss/ver-4.2.1.scss";
 @import "~font-awesome/css/font-awesome.min.css";
-@import "~jquery-steps/demo/css/jquery.steps.css";
 @import "~c3/c3.css";
 @import "~chosen-js/chosen.css";
 @import "~ion-rangeslider/css/ion.rangeSlider.css";
@@ -19,11 +17,8 @@
 @import "~clockpicker/dist/bootstrap-clockpicker.css";
 @import "./../node_modules/slick-carousel/slick/slick.css";
 @import "./../node_modules/slick-carousel/slick/slick-theme.css";
-// @import "~imagecropper/dist/css/cropper.css";
 
 @import "./scss/pages";
-// @import "../node_modules/jquery-steps/demo/css/jquery.steps";
-@import "./../plugins/jquery.steps/jquery-steps.css";
 
 @import "./scss/common";
 @import "./scss/conects/gnb";
