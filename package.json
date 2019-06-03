@@ -26,7 +26,7 @@
   "devDependencies": {
     "@webpack-cli/init": "^0.1.5",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^4.3.1",
     "bootstrap-datepicker": "^1.8.0",
     "bootstrap-daterangepicker": "^3.0.3",
     "c3": "^0.6.12",
