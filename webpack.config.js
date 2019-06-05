@@ -152,6 +152,9 @@ module.exports = {
     filename: 'js/[name].js',
     chunkFilename: 'js/[id].js',
   },
+  performance: {
+    hints: 'warning',
+  },
   optimization: {
     splitChunks: {
       cacheGroups: {
