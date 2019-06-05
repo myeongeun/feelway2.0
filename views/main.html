@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title><%= htmlWebpackPlugin.options.title %></title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <!-- <link rel="stylesheet" href="../src/custom.min.css"> -->
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -29,95 +29,51 @@
 </head>
 
 <body>
-  <div class="navbar navbar-default navbar-fixed-top">
+  <div class="navbar navbar-expand-lg navbar-dark bg-dark">
     <!-- Header-Area -->
     <div class="container">
-      <div class="navbar-header">
-        <a href="/" class="navbar-brand">Johnny's Theme</a>
-        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <div class="navbar-collapse collapse" id="navbar-main">
-        <ul class="nav navbar-nav">
-          <!-- Layouts -->
-          <li class="dropdown">
-            <a href="layouts.html">LAYOUTS</a>
-            <!-- <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">LAYOUTS <span class="caret"></span></a>
-            <ul class="dropdown-menu" aria-labelledby="themes">
-              <li><a href="layouts.html#">Left fix</a></li>
-              <li><a href="layouts.html#Right">Right fix</a></li>
-              <li><a href="layouts.html#Center">Center fix</a></li>
-            </ul> -->
+
+
+
+      <a href="/" class="navbar-brand">Johnny's Theme</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="layouts.html">LAYOUTS</a>
           </li>
-          <!-- Plugins -->
-          <li class="dropdown">
-            <a href="plugins.html">PLUGINS</a>
-            <!-- <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">PLUGINS <span class="caret"></span></a>
-            <ul class="dropdown-menu" aria-labelledby="themes">
-              <li><a href="plugins.html#chart">Chart</a></li>
-              <li><a href="plugins.html#steps">Steps</a></li>
-              <li><a href="plugins.html#picker">Date Picker</a></li>
-              <li><a href="plugins.html#picker">Date Range Picker</a></li>
-              <li><a href="plugins.html#picker">Clock Picker</a></li>
-              <li><a href="plugins.html#rangeSlider">Range Slider</a></li>
-              <li><a href="plugins.html#nouiSlider">Noui Slider</a></li>
-              <li><a href="plugins.html#select2">Select2</a></li>
-              <li><a href="plugins.html#imageCropper">Image Cropper</a></li>
-            </ul> -->
+          <li class="nav-item">
+            <a class="nav-link" href="plugins.html">PLUGINS</a>
           </li>
-          <!-- Helper -->
-          <li class="dropdown">
-            <a href="helper.html">HELPER</a>
-            <!-- <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">HELPER <span class="caret"></span></a>
-            <ul class="dropdown-menu" aria-labelledby="themes">
-              <li><a href="helper.html#contextualColors">Contextual colors</a></li>
-              <li><a href="helper.html#contextualBackgrounds">Contextual backgrounds</a></li>
-              <li><a href="helper.html#gridsystem">Grid System</a></li>
-            </ul> -->
+          <li class="nav-item">
+            <a class="nav-link" href="helper.html">HELPER</a>
           </li>
-          <!-- Components -->
-          <li class="dropdown">
-            <a href="components.html">COMPONENTS</a>
-            <!-- <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">COMPONENTS <span class="caret"></span></a>
-            <ul class="dropdown-menu" aria-labelledby="themes">
-              <li><a href="components.html#typography">Typography</a></li>
-              <li><a href="components.html#navs">Navs</a></li>
-              <li><a href="components.html#navbar">Navbar</a></li>
-              <li><a href="components.html#buttons">Buttons</a></li>
-              <li><a href="components.html#tables">Tables</a></li>
-              <li><a href="components.html#forms">Forms</a></li>
-              <li><a href="components.html#inputs">Inputs</a></li>
-              <li><a href="components.html#indicators">Indicators</a></li>
-              <li><a href="components.html#progress-bars">Progress bars</a></li>
-              <li><a href="components.html#containers">Containers</a></li>
-              <li><a href="components.html#dialogs">Dialogs</a></li>
-              <li><a href="components.html#thumbnail">Thumbnail</a></li>
-            </ul> -->
+          <li class="nav-item">
+            <a class="nav-link" href="components.html">COMPONENTS</a>
           </li>
-          <!-- Conects -->
-          <li class="dropdown">
-            <a href="conects.html">CONECTS <small class="small">... Work Inprogress</small></a>
-            <!-- <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">CONECTS <span class="caret"></span></a>
-            <ul class="dropdown-menu" aria-labelledby="themes">
-              <li><a href="conects.html#listAcademy">학원 카드리스트</a></li>
-              <li><a href="conects.html#listReadingRoom">독서실 카드리스트</a></li>
-            </ul> -->
-          </li>
+          <!-- <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expandd="false">Dropdown</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a href="#" class="dropdown-item">Action</a>
+              <a href="#" class="dropdown-item">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">Something else here</a>
+            </div>
+          </li> -->
+          <!-- <li class="nav-item">
+            <a href="#" class="nav-link disabled" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li> -->
         </ul>
-        <!-- <ul class="nav navbar-nav navbar-right">
-          <li>
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="theme">HOW TO USE <span class="caret"></span></a>
-            <ul class="dropdown-menu" aria-labelledby="themes">
-              <li><a href="guide.html#css">Css</a></li>
-              <li><a href="guide.html#components">Components</a></li>
-              <li><a href="guide.html#layouts">Layouts</a></li>
-            </ul>
-          </li>
-        </ul> -->
+        <form action="" class="form-inline my-2 my-lg-0">
+          <input type="search" class="form-control mr-sm-2" placeholder="Search" aria-label="Search">
+          <button class="btn btn-sm btn-dark btn-outline-seccess my-2 my-sm-0" type="submit">Search</button>
+        </form>
       </div>
+
+
+
     </div><!-- // Header-Area -->
   </div>
 
@@ -130,73 +86,6 @@
           <p class="lead">Johnny's theme</p>
         </div>
       </div>
-      <!-- Page navigation -->
-      <!-- <div class="row">
-        <div class="col-lg-3 col-md-3 col-sm-6">
-          <h2>LAYOUTS</h2>
-          <div class="list-group table-of-contents">
-            <a class="list-group-item" href="layouts.html#Left">Left fix</a>
-            <a class="list-group-item" href="layouts.html#Right">Right fix</a>
-            <a class="list-group-item" href="layouts.html#Center">Center fix</a>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-6">
-          <h2>COMPONENTS</h2>
-          <div class="list-group table-of-contents">
-            <a class="list-group-item" href="components.html#typography">Typography</a>
-            <a class="list-group-item" href="components.html#navs">Navs</a>
-            <a class="list-group-item" href="components.html#navbar">Navbar</a>
-            <a class="list-group-item" href="components.html#buttons">Buttons</a>
-            <a class="list-group-item" href="components.html#tables">Tables</a>
-            <a class="list-group-item" href="components.html#forms">Forms</a>
-            <a class="list-group-item" href="components.html#inputs">Inputs</a>
-            <a class="list-group-item" href="components.html#indicators">Indicators</a>
-            <a class="list-group-item" href="components.html#progress-bars">Progress bars</a>
-            <a class="list-group-item" href="components.html#containers">Containers</a>
-            <a class="list-group-item" href="components.html#dialogs">Dialogs</a>
-            <a class="list-group-item" href="components.html#thumbnail">Thumbnail</a>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-6">
-          <h2>PLUGINS</h2>
-          <div class="list-group table-of-contents">
-            <a class="list-group-item" href="plugins.html#chart">Chart</a>
-            <a class="list-group-item" href="plugins.html#steps">Steps</a>
-            <a class="list-group-item" href="plugins.html#datePicker">Date Picker</a>
-            <a class="list-group-item" href="plugins.html#dateRangePicker">Date Range Picker</a>
-            <a class="list-group-item" href="plugins.html#clockPicker">Clock Picker</a>
-            <a class="list-group-item" href="plugins.html#tagsInput">Tags Input</a>
-            <a class="list-group-item" href="plugins.html#rangeSlider">Range Slider</a>
-            <a class="list-group-item" href="plugins.html#nouiSlider">Noui Slider</a>
-            <a class="list-group-item" href="plugins.html#select2">Select2</a>
-            <a class="list-group-item" href="plugins.html#imageCropper">Image Cropper</a>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-6">
-          <h2>HELPER</h2>
-          <div class="list-group table-of-contents">
-            <a class="list-group-item" href="helper.html#contextualColors">Contextual colors</a>
-            <a class="list-group-item" href="helper.html#contextualBackgrounds">Contextual backgrounds</a>
-            <a class="list-group-item" href="helper.html#borders">Borders</a>
-            <a class="list-group-item" href="helper.html#borderRadius">Border radius</a>
-            <a class="list-group-item" href="helper.html#hrLine">Hr Line</a>
-            <a class="list-group-item" href="helper.html#images">Images</a>
-            <a class="list-group-item" href="helper.html#margins">Margins</a>
-            <a class="list-group-item" href="helper.html#paddings">Paddings</a>
-            <a class="list-group-item" href="helper.html#widthHeight">Width, height</a>
-            <a class="list-group-item" href="helper.html#basicFontWidth">Basic font width</a>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-6">
-          <h2>HOW TO USE</h2>
-          <div class="list-group table-of-contents">
-            <a class="list-group-item" href="guide.html#css">CSS</a>
-            <a class="list-group-item" href="guide.html#components">COMPONENTS</a>
-            <a class="list-group-item" href="guide.html#layouts">LAYOUTS</a>
-          </div>
-        </div>
-      </div> -->
-      <!-- // Page navigation -->
     </div><!-- // Contents-Area -->
 
     <!-- 소개
@@ -210,6 +99,33 @@
             <ul class="clearfix">
               <li class="col-sm-12 col-md-12 col-lg-12">Front-End에 공용으로 사용 될 목적을 가진 컴포넌트의 저장소입니다. <span class="small">(지속 업데이트.)</span></li>
               <li class="col-sm-12 col-md-12 col-lg-12">저장소는 Github을 이용했습니다.</li>
+            </ul>
+          </div>
+          <!-- // Code Here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- 기대효과
+      ================================================== -->
+    <div class="bs-docs-section clearfix">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="page-header"><h2 id="">기대효과</h2></div>
+          <!-- Code Here -->
+          <div class="row">
+            <ul class="clearfix">
+              <li>기획/디자인/프론트/백엔드 가이드를 제공</li>
+              <li>사용자 경험 향상</li>
+              <li>사이트 퍼포먼스의 향상</li>
+              <li>통일된 개발베이스를 제공함으로써 개발비용을 절감</li>
+              <li>고도화된 업무에 집중</li>
+              <li>사이트에 아이덴티티 부여</li>
+              <li>디자인 패턴을 통일하고 사용자에게 안정감을 제공</li>
+              <li>지속적인 관리로 정제된 소스를 제공</li>
+              <li>협업부서와 커뮤니케이션 도구로 활용</li>
+              <li>컴포넌트단위 작업물로 어떠한 환경에도 적용이 가능 <p class="small">(각 프레임워크 또는 언어에 맞게 커스터마이징 필요)</p></li>
+              <li>다양한 디바이스 환경을 지원 <p class="small">(디바이스 환경에 따른 사용자의 니즈를 충족)</p></li>
             </ul>
           </div>
           <!-- // Code Here -->
@@ -238,7 +154,7 @@
               <li class="col-sm-12 col-md-12 col-lg-12">
                 <dl>
                   <dt>Style</dt>
-                  <dd>Bootstrap <span class="small">@3.3.7</span></dd>
+                  <dd>Bootstrap <span class="small">@4.3.1</span></dd>
                   <dd>Node-Sass <span class="small">@4.11.0</span></dd>
                   <dd>chosen-js <span class="small">1.8.7</span></dd>
                 </dl>

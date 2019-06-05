@@ -3,7 +3,7 @@ import _ from 'lodash';
 import $ from 'jquery';
 import jqueryui from 'jquery-ui';
 import moment from 'moment';
-import bootstrap from 'bootstrap/dist/js/bootstrap';
+import 'bootstrap';
 import fontawesomeloader from 'font-awesome-loader';
 import jqueryvalidation from 'jquery-validation';
 
@@ -29,7 +29,6 @@ import './layouts';
 import './plugins';
 import './helper';
 import './guide';
-import './conects';
 
 jqueryui();
 moment();
