@@ -7,6 +7,9 @@ import 'bootstrap';
 import fontawesomeloader from 'font-awesome-loader';
 import jqueryvalidation from 'jquery-validation';
 
+// Plugins (local)
+import parsley from './plugins/Parsley.js-2.9.1/dist/parsley';
+
 // Plugins
 import chosen from 'chosen-js/chosen.jquery';
 import d3 from 'd3/dist/d3';
@@ -29,20 +32,6 @@ import './layouts';
 import './plugins';
 import './helper';
 import './guide';
-
-jqueryui();
-moment();
-bootstrap();
-fontawesomeloader();
-jqueryvalidation();
-
-chosen();
-d3();
-c3();
-rangeslider();
-select2();
-uislider();
-datepicker();
 
 custom();
 

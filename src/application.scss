@@ -6,20 +6,10 @@
 // Custom
 @import url('//fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&subset=korean');
 @import "~font-awesome/css/font-awesome.min.css";
-@import "~c3/c3.css";
-@import "~chosen-js/chosen.css";
-@import "~ion-rangeslider/css/ion.rangeSlider.css";
-@import "~select2/dist/css/select2.css";
-@import "~nouislider/distribute/nouislider.css";
-@import "~bootstrap-datepicker/dist/css/bootstrap-datepicker.css";
-@import "~bootstrap-datepicker/dist/css/bootstrap-datepicker3.css";
-@import "~bootstrap-datepicker/dist/css/bootstrap-datepicker.standalone.css";
-@import "~clockpicker/dist/bootstrap-clockpicker.css";
 @import "./../node_modules/slick-carousel/slick/slick.css";
 @import "./../node_modules/slick-carousel/slick/slick-theme.css";
 
 @import "./scss/pages";
 
 @import "./scss/common";
-@import "./scss/conects/gnb";
-@import "./scss/conects/conects";
+@import "./scss/custom/parsley";
