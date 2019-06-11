@@ -21,63 +21,66 @@
     _gaq.push(['_trackPageview']);
 
     (function () {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      var ga = document.createElement('script');
+      ga.type = 'text/javascript';
+      ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') +
+      '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
     })();
   </script>
 </head>
 
 <body>
-  <div class="navbar">
+  <div class="navbar navbar-expand-lg navbar-dark bg-dark">
     <!-- Header-Area -->
     <div class="container">
-      <div class="navbar-header">
-        <a href="/index.html" class="navbar-brand">Johnny's Theme</a>
-        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <div class="navbar-collapse collapse" id="navbar-main">
-        <ul class="nav navbar-nav">
-          <!-- Layouts -->
-          <li class="dropdown">
-            <a href="layouts.html">LAYOUTS</a>
+      <a href="/" class="navbar-brand h1">Johnny's Theme</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="layouts.html">LAYOUTS</a>
           </li>
-          <!-- Plugins -->
-          <li class="dropdown">
-            <a href="plugins.html">PLUGINS</a>
+          <li class="nav-item">
+            <a class="nav-link" href="plugins.html">PLUGINS</a>
           </li>
-          <!-- Helper -->
-          <li class="dropdown">
-            <a href="helper.html">HELPER</a>
+          <li class="nav-item">
+            <a class="nav-link" href="helper.html">HELPER</a>
           </li>
-          <!-- Components -->
-          <li class="dropdown">
-            <a href="components.html">COMPONENTS</a>
+          <li class="nav-item">
+            <a class="nav-link" href="components.html">COMPONENTS</a>
           </li>
+          <!-- <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expandd="false">Dropdown</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a href="#" class="dropdown-item">Action</a>
+              <a href="#" class="dropdown-item">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">Something else here</a>
+            </div>
+          </li> -->
+          <!-- <li class="nav-item">
+            <a href="#" class="nav-link disabled" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li> -->
         </ul>
-        <!-- <ul class="nav navbar-nav navbar-right">
-          <li>
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="theme">HOW TO USE <span class="caret"></span></a>
-            <ul class="dropdown-menu" aria-labelledby="themes">
-              <li><a href="guide.html#css">Css</a></li>
-              <li><a href="guide.html#components">Components</a></li>
-              <li><a href="guide.html#layouts">Layouts</a></li>
-            </ul>
-          </li>
-        </ul> -->
+        <form action="" class="form-inline my-2 my-lg-0">
+          <input type="search" class="form-control mr-sm-2" placeholder="Search" aria-label="Search">
+          <button class="btn btn-sm btn-dark btn-outline-seccess my-2 my-sm-0" type="submit">Search</button>
+        </form>
       </div>
     </div><!-- // Header-Area -->
   </div>
 
   <div class="container">
-    <!-- Cotents-Area -->
+    <!-- Contents-Area -->
     <div class="page-header" id="banner">
       <div class="row">
-        <div class="col-md-12 col-lg-12">
+        <div class="col-sm-12 col-md-12 col-lg-12">
           <h1>Theme</h1>
           <p class="lead">Johnny's theme</p>
         </div>
@@ -85,382 +88,25 @@
       <!-- Page navigation -->
       <!-- <div class="row">
         <div class="col-lg-3 col-md-3 col-sm-6">
-          <h2>PLUGINS</h2>
+          <h2>LAYOUTS</h2>
           <div class="list-group table-of-contents">
-            <a class="list-group-item" href="plugins.html#chart">Chart</a>
-            <a class="list-group-item" href="plugins.html#steps">Steps</a>
-            <a class="list-group-item" href="plugins.html#picker">Date Picker</a>
-            <a class="list-group-item" href="plugins.html#picker">Date Range Picker</a>
-            <a class="list-group-item" href="plugins.html#picker">Clock Picker</a>
-            <a class="list-group-item" href="plugins.html#rangeSlider">Range Slider</a>
-            <a class="list-group-item" href="plugins.html#nouiSlider">Noui Slider</a>
-            <a class="list-group-item" href="plugins.html#select2">Select2</a>
-            <a class="list-group-item" href="plugins.html#imageCropper">Image Cropper</a>
+            <a class="list-group-item" href="layouts.html#Left">Left fix</a>
+            <a class="list-group-item" href="layouts.html#Right">Right fix</a>
+            <a class="list-group-item" href="layouts.html#Center">Center fix</a>
           </div>
         </div>
       </div> -->
       <!-- // Page navigation -->
     </div><!-- // Contents-Area -->
 
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/5.8.0/d3.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/c3/0.6.12/c3.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
-
-    <!-- Charts
-      ================================================== -->
-
-    <div class="bs-docs-section clearfix">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="page-header"><h2 id="chart">Charts</h2></div>
-
-          <div class="col-md-6">
-            <div class="page-header"><h3 id="line">Charts: Line</h3></div>
-            <div class="row">
-              <div class="bs-component">
-                <!-- Code Here -->
-                <div class="chartline"></div>
-                <script>
-                  var chartline = c3.generate({
-                    bindto: d3.select('.chartline'),
-                    data: {
-                      columns: [
-                        ['data1', 30, 200, 100, 400, 150, 250],
-                        ['data2', 50, 20, 10, 40, 15, 25],
-                        ['data3', 350, 150, 250, 120, 450, 850]
-                      ],
-                      type: 'line'
-                    }
-                  });
-                </script>
-                <!-- // Code Here -->
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="page-header"><h3 id="spline">Charts: spline</h3></div>
-            <div class="row">
-              <div class="bs-component">
-                <!-- Code Here -->
-                <div class="chartspline"></div>
-                <script>
-                  var chartspline = c3.generate({
-                    bindto: d3.select('.chartspline'),
-                    data: {
-                      columns: [
-                        ['data1', 30, 200, 100, 400, 150, 250],
-                        ['data2', 50, 20, 10, 40, 15, 25],
-                        ['data3', 350, 150, 250, 120, 450, 850]
-                      ],
-                      type: 'spline'
-                    }
-                  });
-                </script>
-                <!-- // Code Here -->
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="page-header"><h3 id="step">Charts: step</h3></div>
-            <div class="row">
-              <div class="bs-component">
-                <!-- Code Here -->
-                <div class="chartstep"></div>
-                <script>
-                  var chartstep = c3.generate({
-                    bindto: d3.select('.chartstep'),
-                    data: {
-                      columns: [
-                        ['data1', 30, 200, 100, 400, 150, 250],
-                        ['data2', 50, 20, 10, 40, 15, 25],
-                        ['data3', 350, 150, 250, 120, 450, 850]
-                      ],
-                      type: 'step'
-                    }
-                  });
-                </script>
-                <!-- // Code Here -->
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="page-header"><h3 id="bar">Charts: bar</h3></div>
-            <div class="row">
-              <div class="bs-component">
-                <!-- Code Here -->
-                <div class="chartbar"></div>
-                <script>
-                  var chartbar = c3.generate({
-                    bindto: d3.select('.chartbar'),
-                    data: {
-                      columns: [
-                        ['data1', 30, 200, 100, 400, 150, 250],
-                        ['data2', 50, 20, 10, 40, 15, 25],
-                        ['data3', 350, 150, 250, 120, 450, 850]
-                      ],
-                      type: 'bar'
-                    }
-                  });
-                </script>
-                <!-- // Code Here -->
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="page-header"><h3 id="area">Charts: area</h3></div>
-            <div class="row">
-              <div class="bs-component">
-                <!-- Code Here -->
-                <div class="chartarea"></div>
-                <script>
-                  var chartarea = c3.generate({
-                    bindto: d3.select('.chartarea'),
-                    data: {
-                      columns: [
-                        ['data1', 30, 200, 100, 400, 150, 250],
-                        ['data2', 50, 20, 10, 40, 15, 25],
-                        ['data3', 350, 150, 250, 120, 450, 850]
-                      ],
-                      type: 'area'
-                    }
-                  });
-                </script>
-                <!-- // Code Here -->
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="page-header"><h3 id="area-spline">Charts: area-spline</h3></div>
-            <div class="row">
-              <div class="bs-component">
-                <!-- Code Here -->
-                <div class="chartarea-spline"></div>
-                <script>
-                  var chartareaSpline = c3.generate({
-                    bindto: d3.select('.chartarea-spline'),
-                    data: {
-                      columns: [
-                        ['data1', 30, 200, 100, 400, 150, 250],
-                        ['data2', 50, 20, 10, 40, 15, 25],
-                        ['data3', 350, 150, 250, 120, 450, 850]
-                      ],
-                      type: 'area-spline'
-                    }
-                  });
-                </script>
-                <!-- // Code Here -->
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="page-header"><h3 id="pie">Charts: pie</h3></div>
-            <div class="row">
-              <div class="bs-component">
-                <!-- Code Here -->
-                <div class="chartpie"></div>
-                <script>
-                  var chartpie = c3.generate({
-                    bindto: d3.select('.chartpie'),
-                    data: {
-                      columns: [
-                        ['data1', 30, 200, 100, 400, 150, 250],
-                        ['data2', 50, 20, 10, 40, 15, 25],
-                        ['data3', 350, 150, 250, 120, 450, 850]
-                      ],
-                      type: 'pie'
-                    }
-                  });
-                </script>
-                <!-- // Code Here -->
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="page-header"><h3 id="donut">Charts: donut</h3></div>
-            <div class="row">
-              <div class="bs-component">
-                <!-- Code Here -->
-                <div class="chartdonut"></div>
-                <script>
-                  var chartdonut = c3.generate({
-                    bindto: d3.select('.chartdonut'),
-                    data: {
-                      columns: [
-                        ['data1', 30, 200, 100, 400, 150, 250],
-                        ['data2', 50, 20, 10, 40, 15, 25],
-                        ['data3', 350, 150, 250, 120, 450, 850]
-                      ],
-                      type: 'donut'
-                    }
-                  });
-                </script>
-                <!-- // Code Here -->
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="page-header"><h3 id="scatter">Charts: scatter</h3></div>
-            <div class="row">
-              <div class="bs-component">
-                <!-- Code Here -->
-                <div class="chartscatter"></div>
-                <script>
-                  var chartscatter = c3.generate({
-                    bindto: d3.select('.chartscatter'),
-                    data: {
-                      columns: [
-                        ['data1', 30, 200, 100, 400, 150, 250],
-                        ['data2', 50, 20, 10, 40, 15, 25],
-                        ['data3', 350, 150, 250, 120, 450, 850]
-                      ],
-                      type: 'scatter'
-                    }
-                  });
-                </script>
-                <!-- // Code Here -->
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="page-header"><h3 id="gauge">Charts: gauge</h3></div>
-            <div class="row">
-              <div class="bs-component">
-                <!-- Code Here -->
-                <div class="chartgauge"></div>
-                <script>
-                  var chartgauge = c3.generate({
-                    bindto: d3.select('.chartgauge'),
-                    data: {
-                      columns: [
-                        ['data1', 30, 200, 100, 400, 150, 250],
-                        ['data2', 50, 20, 10, 40, 15, 25],
-                        ['data3', 350, 150, 250, 120, 450, 850]
-                      ],
-                      type: 'gauge'
-                    }
-                  });
-                </script>
-                <!-- // Code Here -->
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Steps(jquery.steps)
-      ================================================== -->
-    <div class="bs-docs-section clearfix">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="page-header"><h2 id="steps">Steps</h2></div>
-
-          <div class="row">
-            <div class="bs-component">
-              <!-- Code Here -->
-              <div class="col-md-12 col-lg-12">
-                <a href="./steps-basic.html" class="btn btn-primary" target="_blank">jQuery-Steps</a>
-              </div>
-              <!-- // Code Here -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Picker
-      ================================================== -->
-    <div class="bs-docs-section clearfix">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="page-header"><h2 id="picker">Picker</h2></div>
-
-          <div class="row">
-            <div class="col-sm-12 col-md-6">
-              <h3 class="picker-date">date picker</h3>
-              <div class="bs-component">
-                <!-- Code Here -->
-                <div class="form-group">
-                  <div id="myPicker">
-                    <input type="text" class="form-control">
-                  </div>
-                  <script>
-                    $(function () {
-                      $('#myPicker input').datepicker();
-                    });
-                  </script>
-                </div>
-
-                <div class="form-group">
-                  <div id="component-group">
-                    <div class="input-group date">
-                      <input type="text" class="form-control">
-                      <span class="input-group-addon">
-                        <i class="fa fa-calendar"></i>
-                      </span>
-                    </div>
-                  </div>
-                  <script>
-                    $(function () {
-                      $('#component-group .input-group.date').datepicker({
-                        todayHighlight: true
-                      });
-                    });
-                  </script>
-                </div>
-                <!-- // Code Here -->
-              </div>
-            </div>
-
-            <div class="col-sm-12 col-md-6">
-              <h3 class="picker-range">range picker</h3>
-              <div class="bs-component">
-                <!-- Code Here -->
-                <div class="form-group">
-                  <div id="range-group">
-                    <div class="input-group input-daterange" id="datepicker">
-                      <input type="text" class="input-sm form-control" name="start">
-                      <span class="input-group-addon">to</span>
-                      <input type="text" class="input-sm form-control" name="end">
-                    </div>
-                  </div>
-                  <script>
-                    $(function () {
-                      $('#range-group .input-daterange').datepicker({
-                        daysOfWeekHighlighted: "0,6",
-                        todayHighlight: true,
-                        toggleActive: true
-                      });
-                    });
-                  </script>
-                </div>
-                <!-- // Code Here -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
     <!-- Example
       ================================================== -->
     <div class="bs-docs-section clearfix">
       <div class="row">
         <div class="col-lg-12">
-          <div class="page-header"><h2 id="">Example</h2></div>
+          <div class="page-header">
+            <h2 id="">Example</h2>
+          </div>
 
           <div class="row">
             <div class="bs-component">
@@ -473,45 +119,40 @@
       </div>
     </div>
 
-    <!-- Example
+    <!-- Emmet
       ================================================== -->
-    <div class="bs-docs-section clearfix">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="page-header"><h2 id="">Example</h2></div>
-
-          <div class="row">
-            <div class="bs-component">
-              <!-- Code Here -->
-
-              <!-- // Code Here -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal
-      ================================================== -->
-    <div id="source-modal" class="modal fade">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title">참고 소스</h4>
-          </div>
-          <div class="modal-body">
-            <pre id="toClipboard"></pre>
-          </div>
-          <div class="modal-footer"><button class="btn btn-sm btn-block btn-primary" onclick="copyToClipboard('#toClipboard')">Copy
-              Source</button></div>
-        </div>
-      </div>
-    </div>
+    <!--
+      .bs-docs-section.clearfix>.row>.col-lg-12>.page-header>h2#{Example}^.row>.bs-component
+    -->
 
   </div>
+  <!-- Modal
+    ================================================== -->
+  <div id="source-modal" class="modal fade">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">참고 소스</h4>
+        </div>
+        <div class="modal-body">
+          <pre id="toClipboard"></pre>
+        </div>
+        <div class="modal-footer"><button class="btn btn-sm btn-block btn-primary"
+            onclick="copyToClipboard('#toClipboard')">Copy Source</button></div>
+      </div>
+    </div>
+  </div>
+
   <script>
     function copyToClipboard(element) {
+      $(".bs-component").hover(function () {
+        $(this).append($button);
+        $button.show();
+      }, function () {
+        $button.hide();
+      });
+
       var $temp = $("<input>");
       $("body").append($temp);
       $temp.val($(element).text()).select();
