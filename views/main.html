@@ -21,9 +21,13 @@
     _gaq.push(['_trackPageview']);
 
     (function () {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      var ga = document.createElement('script');
+      ga.type = 'text/javascript';
+      ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') +
+      '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
     })();
   </script>
 </head>
@@ -33,22 +37,26 @@
     <!-- Header-Area -->
     <div class="container">
       <a href="/" class="navbar-brand h1">Johnny's Theme</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="layouts.html">LAYOUTS</a>
+            <a class="nav-link" href="layout.html">LAYOUT</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="plugins.html">PLUGINS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="helper.html">HELPER</a>
+            <a class="nav-link" href="content.html">CONTENT</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="components.html">COMPONENTS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="utilities.html">UTILITIES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="plugins.html">PLUGINS</a>
           </li>
           <!-- <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expandd="false">Dropdown</a>
@@ -63,10 +71,10 @@
             <a href="#" class="nav-link disabled" tabindex="-1" aria-disabled="true">Disabled</a>
           </li> -->
         </ul>
-        <form action="" class="form-inline my-2 my-lg-0">
+        <!-- <form action="" class="form-inline my-2 my-lg-0">
           <input type="search" class="form-control mr-sm-2" placeholder="Search" aria-label="Search">
           <button class="btn btn-sm btn-dark btn-outline-seccess my-2 my-sm-0" type="submit">Search</button>
-        </form>
+        </form> -->
       </div>
     </div><!-- // Header-Area -->
   </div>
@@ -78,6 +86,7 @@
         <div class="col-12">
           <h1>Theme</h1>
           <p class="lead">Johnny's theme</p>
+          <h2></h2>
         </div>
       </div>
     </div><!-- // Contents-Area -->
@@ -87,7 +96,7 @@
     <div class="bs-docs-section clearfix">
       <div class="row">
         <div class="col-lg-12">
-          <div class="page-header"><h2 id="">소개</h2></div>
+          <div class="page-header"><h3 id="">소개</h3></div>
           <!-- Code Here -->
           <div class="row">
             <ul class="clearfix">
@@ -106,7 +115,7 @@
     <div class="bs-docs-section clearfix">
       <div class="row">
         <div class="col-lg-12">
-          <div class="page-header"><h2 id="">기대효과</h2></div>
+          <div class="page-header"><h3 id="">기대효과</h3></div>
           <!-- Code Here -->
           <div class="row">
             <ul class="clearfix">
@@ -133,7 +142,7 @@
     <div class="bs-docs-section clearfix">
       <div class="row">
         <div class="col-lg-12">
-          <div class="page-header"><h2 id="">구성</h2></div>
+          <div class="page-header"><h3 id="">구성</h3></div>
           <!-- Code Here -->
           <div class="row">
             <p class="col-12">이 테마와 컴포넌트를 구성하는데에 사용 된 <code>Dependencies</code>는 아래와 같습니다.</p>
@@ -172,25 +181,25 @@
               <li>
                 <dl>
                   <dt>Plugins <code class="small">NPM</code></dt>
-                  <dd>c3 <span class="small">@0.6.12</span></dd>
-                  <dd>d3 <span class="small">@5.8.0</span></dd>
+                  <dd> <span class="small"></span></dd>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt>Plugins <code class="small">Bundle</code></dt>
+                  <dd><a href="http://parsleyjs.org/" target="_blank">Parsley</a> <span class="small">@2.9.1</span></dd>
+                  <dd>c3<!-- <a href="https://c3js.org/" target="_blank"></a>--> <span class="small">@0.6.12</span></dd>
+                  <dd>d3<!-- <a href="https://www.d3-graph-gallery.com/" target="_blank"></a>--> <span class="small">@5.8.0</span></dd>
                   <dd>jquery-steps <span class="small">@1.1.0</span></dd>
-                  <dd>jquery-validation <span class="small">@1.19.0</span></dd>
                   <dd>bootstrap-datepicker <span class="small">^1.8.0</span></dd>
                   <dd>bootstrap-daterangepicker <span class="small">^3.0.3</span></dd>
                   <dd>bootstrap-tagsinput <span class="small">^0.7.1</span></dd>
                   <dd>clockpicker <span class="small">0.0.7</span></dd>
                   <dd>imagecropper <span class="small">^0.1.3</span></dd>
                   <dd>ion-rangeslider <span class="small">^2.3.0</span></dd>
-                  <dd>jquery-steps <span class="small">^1.1.0</span></dd>
                   <dd>nouislider <span class="small">^12.1.0</span></dd>
                   <dd>select2 <span class="small">^4.0.6-rc.1</span></dd>
-                </dl>
-              </li>
-              <li>
-                <dl>
-                  <dt>Plugins <code class="small">Bundle</code></dt>
-                  <dd>Parsley <span class="small">@2.9.1</span></dd>
+
                   <dd> <span class="small"></span></dd>
                 </dl>
               </li>
@@ -212,72 +221,6 @@
 
           <div class="row">
             <div class="bs-component">
-
-              <div class="col">
-                <!-- Parsley -->
-                <form id="demo-form" data-parsley-validate="">
-                  <label for="fullname">Full Name * :</label>
-                  <input type="text" class="form-control" name="fullname" required="">
-
-                  <label for="email">Email * :</label>
-                  <input type="email" class="form-control" name="email" data-parsley-trigger="change" required="">
-
-                  <label for="contactMethod">Preferred Contact Method *:</label>
-                  <p>
-                    Email: <input type="radio" name="contactMethod" id="contactMethodEmail" value="Email" required="">
-                    Phone: <input type="radio" name="contactMethod" id="contactMethodPhone" value="Phone">
-                  </p>
-
-                  <label for="hobbies">Hobbies (Optional, but 2 minimum):</label>
-                  <p>
-                    Skiing <input type="checkbox" name="hobbies[]" id="hobby1" value="ski" data-parsley-mincheck="2"><br>
-                    Running <input type="checkbox" name="hobbies[]" id="hobby2" value="run"><br>
-                    Eating <input type="checkbox" name="hobbies[]" id="hobby3" value="eat"><br>
-                    Sleeping <input type="checkbox" name="hobbies[]" id="hobby4" value="sleep"><br>
-                    Reading <input type="checkbox" name="hobbies[]" id="hobby5" value="read"><br>
-                    Coding <input type="checkbox" name="hobbies[]" id="hobby6" value="code"><br>
-                  </p>
-
-                  <p>
-                    <label for="heard">Heard about us via *:</label>
-                    <select id="heard" required="">
-                      <option value="">Choose..</option>
-                      <option value="press">Press</option>
-                      <option value="net">Internet</option>
-                      <option value="mouth">Word of mouth</option>
-                      <option value="other">Other..</option>
-                    </select>
-                  </p>
-
-                  <p>
-                    <label for="message">Message (20 chars min, 100 max) :</label>
-                    <textarea id="message" class="form-control" name="message" data-parsley-trigger="keyup" data-parsley-minlength="20"
-                      data-parsley-maxlength="100"
-                      data-parsley-minlength-message="Come on! You need to enter at least a 20 character comment.."
-                      data-parsley-validation-threshold="10"></textarea>
-                  </p>
-
-                  <br>
-                  <input type="submit" class="btn btn-default" value="validate">
-
-                  <p><small>* Please, note that this demo form is not a perfect example of UX-awareness. The aim here is to show a quick
-                      overview of parsley-API and Parsley customizable behavior.</small></p>
-                </form>
-
-                <script type="text/javascript">
-                  $(function () {
-                    $('#demo-form').parsley().on('field:validated', function () {
-                      var ok = $('.parsley-error').length === 0;
-                      $('.bs-callout-info').toggleClass('hidden', !ok);
-                      $('.bs-callout-warning').toggleClass('hidden', ok);
-                    })
-                      .on('form:submit', function () {
-                        return false; // Don't submit form for this demo
-                      });
-                  });
-                </script>
-                <!-- // Parsley -->
-              </div>
 
             </div>
           </div>

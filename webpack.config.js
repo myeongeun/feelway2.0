@@ -59,6 +59,7 @@ module.exports = {
     ],
   },
   entry: {
+    common: './common.js',
     applications: './index.js',
   },
   plugins: [
@@ -67,7 +68,7 @@ module.exports = {
     }),
     new CleanWebpackPlugin(['dist']),
     new webpack.HotModuleReplacementPlugin(),
-    // index.html
+    // Main.html
     new HtmlWebpackPlugin({
       hash: true,
       inject: true,
@@ -76,16 +77,25 @@ module.exports = {
       filename: 'index.html',
       template: path.resolve(__dirname, './views', 'main.html')
     }),
-    // layouts.html
+    // Layout.html
     new HtmlWebpackPlugin({
       hash: true,
       inject: true,
-      title: 'THEME: Layouts',
+      title: 'THEME: Layout',
       // chunks: ['applications'],
-      filename: 'layouts.html',
-      template: path.resolve(__dirname, './views', 'layouts.html')
+      filename: 'layout.html',
+      template: path.resolve(__dirname, './views', 'layout.html')
     }),
-    // components.html
+    // Content.html
+    new HtmlWebpackPlugin({
+      hash: true,
+      inject: true,
+      title: 'THEME: Content',
+      // chunks: ['applications'],
+      filename: 'content.html',
+      template: path.resolve(__dirname, './views', 'content.html')
+    }),
+    // Components.html
     new HtmlWebpackPlugin({
       hash: true,
       inject: true,
@@ -93,6 +103,15 @@ module.exports = {
       // chunks: ['applications'],
       filename: 'components.html',
       template: path.resolve(__dirname, './views', 'components.html')
+    }),
+    // Utilities.html
+    new HtmlWebpackPlugin({
+      hash: true,
+      inject: true,
+      title: 'THEME: Utilities',
+      // chunks: ['applications'],
+      filename: 'utilities.html',
+      template: path.resolve(__dirname, './views', 'utilities.html')
     }),
     // plugins.html
     new HtmlWebpackPlugin({
@@ -102,42 +121,6 @@ module.exports = {
       // chunks: ['applications'],
       filename: 'plugins.html',
       template: path.resolve(__dirname, './views', 'plugins.html')
-    }),
-    // helper.html
-    new HtmlWebpackPlugin({
-      hash: true,
-      inject: true,
-      title: 'THEME: Helper',
-      // chunks: ['applications'],
-      filename: 'helper.html',
-      template: path.resolve(__dirname, './views', 'helper.html')
-    }),
-    // guide.html
-    new HtmlWebpackPlugin({
-      hash: true,
-      inject: true,
-      title: 'THEME: Guide',
-      // chunks: ['applications'],
-      filename: 'guide.html',
-      template: path.resolve(__dirname, './views', 'guide.html')
-    }),
-    // conects.html
-    new HtmlWebpackPlugin({
-      hash: true,
-      inject: true,
-      title: 'THEME: Conects',
-      // chunks: ['applications'],
-      filename: 'conects.html',
-      template: path.resolve(__dirname, './views', 'conects.html')
-    }),
-    // steps-basic.html
-    new HtmlWebpackPlugin({
-      hash: true,
-      inject: true,
-      title: 'THEME: Steps-basic',
-      // chunks: ['applications'],
-      filename: 'steps-basic.html',
-      template: path.resolve(__dirname, './views', 'steps-basic.html')
     }),
     new MiniCssExtractPlugin({
       // filename: devMode ? 'css/[name]-[hash].css' : 'css/[name]-[hash].css',
