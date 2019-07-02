@@ -59,8 +59,8 @@ module.exports = {
     ],
   },
   entry: {
-    common: './common.js',
     applications: './index.js',
+    another: './another.js',
   },
   plugins: [
     new UglifyJSPlugin({
@@ -130,10 +130,10 @@ module.exports = {
     }),
   ],
   output: {
+    filename: 'js/[name].js',
+    chunkFilename: 'js/[name].js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: '',
-    filename: 'js/[name].js',
-    chunkFilename: 'js/[id].js',
   },
   performance: {
     hints: 'warning',
@@ -151,7 +151,7 @@ module.exports = {
           reuseExistingChunk: true,
         },
       },
-      chunks: 'async',
+      chunks: 'all',
       minSize: 30000,
       maxSize: 0,
       minChunks: 1,

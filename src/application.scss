@@ -6,10 +6,10 @@
 // Custom
 @import url('//fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&subset=korean');
 @import "~font-awesome/css/font-awesome.min.css";
-@import "./../node_modules/slick-carousel/slick/slick.css";
-@import "./../node_modules/slick-carousel/slick/slick-theme.css";
 
 @import "./scss/pages";
 
+// @import "./custom.min.css";
 @import "./scss/common";
 @import "./scss/custom/parsley";
+@import "./../plugins/select2-4.0.7/dist/css/select2.css";

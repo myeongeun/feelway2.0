@@ -1,18 +1,15 @@
-// Plugins (local)
-import parsley from './plugins/Parsley.js-2.9.1/dist/parsley';
+// Common
+import _ from 'lodash';
+import $ from 'jquery';
+import jqueryui from 'jquery-ui';
+import moment from 'moment';
+import 'bootstrap';
+import fontawesomeloader from 'font-awesome-loader';
+// import './src/js/custom';
 
-// Plugins
-import chosen from 'chosen-js/chosen.jquery';
-import 'slick-carousel/slick/slick';
+// Sass
+import './src/application.scss';
 
 // Entry
 import './main';
 import './components';
-import './layouts';
-import './plugins';
-import './helper';
-import './guide';
-
-import custom from './src/js/custom';
-
-custom();
