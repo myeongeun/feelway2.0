@@ -4,12 +4,16 @@
 @import "./scss/themes/yeti/bootswatch";
 
 // Custom
-@import url('//fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&subset=korean');
+// @import url('//fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&subset=korean');
 @import "~font-awesome/css/font-awesome.min.css";
 
 @import "./scss/pages";
 
 // @import "./custom.min.css";
 @import "./scss/common";
+
+// Plugins
 @import "./scss/custom/parsley";
 @import "./../plugins/select2-4.0.7/dist/css/select2.css";
+@import "./../plugins/sweetalert2/src/sweetalert2";
+@import "./../plugins/dropzone/src/basic.scss";
