@@ -3,13 +3,13 @@ import _ from 'lodash';
 import $ from 'jquery';
 import jqueryui from 'jquery-ui';
 import moment from 'moment';
-import 'bootstrap';
+// import 'bootstrap';
 import fontawesomeloader from 'font-awesome-loader';
 // import './src/js/custom';
 
 // Sass
 import './src/application.scss';
 
-// Entry
-import './main';
-import './components';
+// Views
+// import './main';
+// import './components';

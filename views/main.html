@@ -30,6 +30,13 @@
       s.parentNode.insertBefore(ga, s);
     })();
   </script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style>
+    body {padding-top: 100px;}
+    .bs-component {position: relative;}
+    .bs-component .source-button {display: none;position: absolute;top: 0;right: 0;}
+    .bs-component:hover .source-button {display: block;}
+  </style>
 </head>
 
 <body>
@@ -43,28 +50,14 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <!-- <li class="nav-item"><a class="nav-link" href="layout.html">LAYOUT</a></li> -->
-          <!-- <li class="nav-item"><a class="nav-link" href="content.html">CONTENT</a></li> -->
-          <li class="nav-item"><a class="nav-link" href="components.html">COMPONENTS</a></li>
-          <!-- <li class="nav-item"><a class="nav-link" href="utilities.html">UTILITIES</a></li> -->
-          <!-- <li class="nav-item"><a class="nav-link" href="plugins.html">PLUGINS</a></li> -->
-          <!-- <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expandd="false">Dropdown</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a href="#" class="dropdown-item">Action</a>
-              <a href="#" class="dropdown-item">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a href="#" class="dropdown-item">Something else here</a>
-            </div>
-          </li> -->
-          <!-- <li class="nav-item">
-            <a href="#" class="nav-link disabled" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li> -->
+          <li class="nav-item"><a class="nav-link" href="feelway-menus.html">F.T-Menus</a></li>
+          <li class="nav-item"><a class="nav-link" href="feelway-images.html">F.T-Images</a></li>
+          <li class="nav-item"><a class="nav-link" href="feelway-buttons.html">F.T-Buttons</a></li>
+          <li class="nav-item"><a class="nav-link" href="feelway-forms.html">F.T-Forms</a></li>
+          <li class="nav-item"><a class="nav-link" href="feelway-filters.html">F.T-Filters</a></li>
+          <li class="nav-item"><a class="nav-link" href="feelway-tables.html">F.T-Tables</a></li>
+          <li class="nav-item"><a class="nav-link" href="feelway-other.html">F.T-Other</a></li>
         </ul>
-        <!-- <form action="" class="form-inline my-2 my-lg-0">
-          <input type="search" class="form-control mr-sm-2" placeholder="Search" aria-label="Search">
-          <button class="btn btn-sm btn-dark btn-outline-seccess my-2 my-sm-0" type="submit">Search</button>
-        </form> -->
       </div>
     </div><!-- // Header-Area -->
   </div>
@@ -74,15 +67,17 @@
     <div class="page-header" id="banner">
       <div class="row">
         <div class="col-12">
-          <h1>Theme</h1>
-          <p class="lead">Johnny's theme</p>
+          <h1>FeeLWAY</h1>
+          <p class="lead">Project name: <strong>FeeLWAY2.0</strong></p>
           <h2></h2>
         </div>
       </div>
     </div><!-- // Contents-Area -->
 
+    <div class="hr-line-dashed"></div>
+
     <!-- 소개
-      ================================================== -->
+    ================================================== -->
     <div class="bs-docs-section clearfix">
       <div class="row">
         <div class="col-lg-12">
@@ -100,8 +95,10 @@
       </div>
     </div>
 
+    <div class="hr-line-dashed"></div>
+
     <!-- 기대효과
-      ================================================== -->
+    ================================================== -->
     <div class="bs-docs-section clearfix">
       <div class="row">
         <div class="col-lg-12">
@@ -127,8 +124,10 @@
       </div>
     </div>
 
+    <div class="hr-line-dashed"></div>
+
     <!-- 구성
-      ================================================== -->
+    ================================================== -->
     <div class="bs-docs-section clearfix">
       <div class="row">
         <div class="col-lg-12">
@@ -177,12 +176,13 @@
               <li>
                 <dl>
                   <dt>Plugins <code class="small">Vendor</code></dt>
-                  <dd><a href="http://parsleyjs.org/" target="_blank">Parsley</a> <span class="small">@2.9.1</span></dd>
-                  <dd><a href="https://www.jsdelivr.com/package/npm/select2" target="_blank">Select2</a> <span class="small">@4.0.7</span></dd>
+                  <dd>Parsley <span class="small">@2.9.1</span></dd>
+                  <dd>Select2 <span class="small">@4.0.7</span></dd>
                   <!-- <dd>c3 <a href="https://c3js.org/" target="_blank"></a> <span class="small">@0.6.12</span></dd> -->
                   <!-- <dd>d3 <a href="https://www.d3-graph-gallery.com/" target="_blank"></a> <span class="small">@5.8.0</span></dd> -->
-                  <dd>jquery-steps <span class="small">@1.1.0</span></dd>
-                  <dd>bootstrap-tagsinput <span class="small">^0.7.1</span></dd>
+                  <dd>SweetAlert2 <span class="small">@8.13.0</span></dd>
+                  <dd>Dropzonejs <span class="small">@5.5.0</span></dd>
+                  <dd>Swiperjs <span class="small">@4.5.0</span></dd>
                   <dd> <span class="small"></span></dd>
                 </dl>
               </li>
@@ -193,50 +193,14 @@
       </div>
     </div>
 
-    <!-- Example
-      ================================================== -->
-    <div class="bs-docs-section clearfix">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="page-header">
-            <h2 id="">Example</h2>
-          </div>
-
-          <div class="row">
-            <div class="bs-component">
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Example
-      ================================================== -->
-    <!-- <div class="bs-docs-section clearfix">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="page-header">
-            <h2 id="">Example</h2>
-          </div>
-
-          <div class="row">
-            <div class="bs-component">
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
     <!-- Modal
     ================================================== -->
     <div id="source-modal" class="modal fade">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             <h4 class="modal-title">참고 소스</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
           </div>
           <div class="modal-body">
             <pre id="toClipboard"></pre>
@@ -266,7 +230,12 @@
     </script>
 
   </div>
-
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
 </body>
 
 </html>

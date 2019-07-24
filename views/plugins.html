@@ -30,6 +30,13 @@
       s.parentNode.insertBefore(ga, s);
     })();
   </script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style>
+    body {padding-top: 100px;}
+    .bs-component {position: relative;}
+    .bs-component .source-button {display: none;position: absolute;top: 0;right: 0;}
+    .bs-component:hover .source-button {display: block;}
+  </style>
 </head>
 
 <body>
@@ -47,7 +54,8 @@
           <!-- <li class="nav-item"><a class="nav-link" href="content.html">CONTENT</a></li> -->
           <li class="nav-item"><a class="nav-link" href="components.html">COMPONENTS</a></li>
           <!-- <li class="nav-item"><a class="nav-link" href="utilities.html">UTILITIES</a></li> -->
-          <!-- <li class="nav-item"><a class="nav-link" href="plugins.html">PLUGINS</a></li> -->
+          <li class="nav-item"><a class="nav-link" href="plugins.html">PLUGINS</a></li>
+          <li class="nav-item"><a class="nav-link" href="feelway.html">FEELWAY</a></li>
           <!-- <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expandd="false">Dropdown</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -74,170 +82,264 @@
     <div class="page-header" id="banner">
       <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12">
-          <h1>Theme</h1>
-          <p class="lead">Johnny's theme</p>
+          <h1>FeeLWAY</h1>
+          <p class="lead">Project name: <strong>FeeLWAY2.0</strong></p>
           <h2>Plugins</h2>
         </div>
       </div>
-      <!-- Page navigation -->
-      <!-- <div class="row">
-        <div class="col-lg-3 col-md-3 col-sm-6">
-          <h2>LAYOUTS</h2>
-          <div class="list-group table-of-contents">
-            <a class="list-group-item" href="layouts.html#Left">Left fix</a>
-            <a class="list-group-item" href="layouts.html#Right">Right fix</a>
-            <a class="list-group-item" href="layouts.html#Center">Center fix</a>
-          </div>
-        </div>
-      </div> -->
-      <!-- // Page navigation -->
     </div><!-- // Contents-Area -->
 
+    <div class="hr-line-dashed"></div>
+
     <!-- Parsley
-      ================================================== -->
-    <div class="bs-docs-section clearfix">
+    ================================================== -->
+    <div class="bs-docs-section">
+
       <div class="row">
         <div class="col-lg-12">
           <div class="page-header">
-            <h3 id="">Parsley</h3>
-          </div>
-
-          <div class="row">
-            <div class="bs-component">
-              <!-- Code Here -->
-
-              <!-- // Code Here -->
-            </div>
+            <h3 id="typography">Parsley</h3>
           </div>
         </div>
       </div>
-    </div>
-
-    <!-- C3 / D3
-      ================================================== -->
-    <div class="bs-docs-section clearfix">
       <div class="row">
-        <div class="col-lg-12">
-          <div class="page-header">
-            <h3 id="">C3 / D3</h3>
+        <div class="col-lg-6">
+          <h4>Simple form</h4>
+          <div class="bs-component">
+            <form id="demo-form1" data-parsley-validate="">
+              <div class="form-group">
+                <label for="fullname">Full Name * :</label>
+                <input type="text" class="form-control" name="fullname" required="">
+              </div>
+
+              <div class="hr-line-dashed"></div>
+
+              <div class="form-group">
+                <label for="email">Email * :</label>
+                <input type="email" class="form-control" name="email" data-parsley-trigger="change" required="">
+              </div>
+
+              <div class="hr-line-dashed"></div>
+
+              <div class="form-group">
+                <label for="contactMethod">Preferred Contact Method *:</label>
+                <p>
+                  Email: <input type="radio" name="contactMethod" id="contactMethodEmail" value="Email" required="">
+                  Phone: <input type="radio" name="contactMethod" id="contactMethodPhone" value="Phone">
+                </p>
+              </div>
+
+              <div class="hr-line-dashed"></div>
+
+              <div class="form-group">
+                <label for="hobbies">Hobbies (Optional, but 2 minimum):</label>
+                <div>
+                  <input type="checkbox" name="hobbies[]" id="hobby1" value="ski" data-parsley-mincheck="2"> <label for="hobby1">Skiing</label>
+                  <input type="checkbox" name="hobbies[]" id="hobby2" value="run"> <label for="hobby2">Running</label>
+                  <input type="checkbox" name="hobbies[]" id="hobby3" value="eat"> <label for="hobby3">Eating</label>
+                  <input type="checkbox" name="hobbies[]" id="hobby4" value="sleep"> <label for="hobby4">Sleeping</label>
+                  <input type="checkbox" name="hobbies[]" id="hobby5" value="read"> <label for="hobby5">Reading</label>
+                  <input type="checkbox" name="hobbies[]" id="hobby6" value="code"> <label for="hobby6">Coding</label>
+                </div>
+              </div>
+
+              <div class="hr-line-dashed"></div>
+
+              <div class="form-group">
+                <p>
+                  <label for="heard">Heard about us via *:</label>
+                  <select id="heard" required="">
+                    <option value="">Choose..</option>
+                    <option value="press">Press</option>
+                    <option value="net">Internet</option>
+                    <option value="mouth">Word of mouth</option>
+                    <option value="other">Other..</option>
+                  </select>
+                </p>
+              </div>
+
+              <div class="hr-line-dashed"></div>
+
+              <div class="form-group">
+                <p>
+                  <label for="message">Message (20 chars min, 100 max) :</label>
+                  <textarea id="message" class="form-control" name="message" data-parsley-trigger="keyup" data-parsley-minlength="20"
+                    data-parsley-maxlength="100"
+                    data-parsley-minlength-message="Come on! You need to enter at least a 20 character comment.."
+                    data-parsley-validation-threshold="10"></textarea>
+                </p>
+              </div>
+
+              <div class="hr-line-dashed"></div>
+
+              <input type="submit" class="btn btn-primary btn-block" value="validate">
+
+            </form>
+
+            <script type="text/javascript">
+              $(function () {
+                $('#demo-form1').parsley().on('field:validated', function () {
+                    var ok = $('.parsley-error').length === 0;
+                    $('.bs-callout-info').toggleClass('hidden', !ok);
+                    $('.bs-callout-warning').toggleClass('hidden', ok);
+                  })
+                  .on('form:submit', function () {
+                    return false; // Don't submit form for this demo
+                  });
+              });
+            </script>
           </div>
+        </div>
+        <div class="col-lg-6">
+          <h4>Pasley Events</h4>
+          <div class="bs-component">
+            <form class="demo-form2" data-parsley-validate="">
+              <div class="form-group">
+                <div class="first">
+                  <label for="firstname">Firstname:</label>
+                  <input type="text" class="form-control" name="firstname" data-parsley-length="[4, 20]" data-parsley-group="block1">
 
-          <div class="row">
-            <div class="bs-component">
-              <!-- Code Here -->
+                  <label for="lastname">Lastname:</label>
+                  <input type="text" class="form-control" name="lastname" data-parsley-length="[4, 20]" data-parsley-group="block1">
+                </div>
+              </div>
 
-              <!-- // Code Here -->
-            </div>
+              <div class="hr-line-dashed"></div>
+
+              <div class="form-group">
+                <div class="second">
+                  <label for="fullname">Fullname:</label>
+                  <input type="text" class="form-control" name="fullname" data-parsley-length="[8, 40]" data-parsley-group="block2">
+                </div>
+              </div>
+
+              <div class="hr-line-dashed"></div>
+
+              <div class="invalid-form-error-message"></div>
+              <input type="submit" class="btn btn-primary btn-block validate">
+            </form>
+
+            <script type="text/javascript">
+              $(function () {
+                $('.demo-form2').parsley().on('form:validate', function (formInstance) {
+                  var ok = formInstance.isValid({
+                    group: 'block1',
+                    force: true
+                  }) || formInstance.isValid({
+                    group: 'block2',
+                    force: true
+                  });
+                  $('.invalid-form-error-message')
+                    .html(ok ? '' : 'You must correctly fill *at least one of these two blocks!')
+                    .toggleClass('filled', !ok);
+                  if (!ok)
+                    formInstance.validationResult = false;
+                });
+              });
+            </script>
           </div>
         </div>
       </div>
+
     </div>
 
-    <!-- Tags input
-      ================================================== -->
-    <div class="bs-docs-section clearfix">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="page-header">
-            <h3 id="">Tags input</h3>
-          </div>
-
-          <div class="row">
-            <div class="bs-component">
-              <!-- Code Here -->
-
-              <!-- // Code Here -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Jquery steps
-      ================================================== -->
-    <div class="bs-docs-section clearfix">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="page-header">
-            <h3 id="">Jquery steps</h3>
-          </div>
-
-          <div class="row">
-            <div class="bs-component">
-              <!-- Code Here -->
-
-              <!-- // Code Here -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Bootstrap datepicker
-      ================================================== -->
-    <div class="bs-docs-section clearfix">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="page-header">
-            <h3 id="">Bootstrap datepicker</h3>
-          </div>
-
-          <div class="row">
-            <div class="bs-component">
-              <!-- Code Here -->
-
-              <!-- // Code Here -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Select2
-      ================================================== -->
-    <div class="bs-docs-section clearfix">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="page-header">
-            <h3 id="">Select2</h3>
-          </div>
-
-          <div class="row">
-            <div class="bs-component">
-              <!-- Code Here -->
-
-              <!-- // Code Here -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class="hr-line-dashed"></div>
 
     <!-- Example
-      ================================================== -->
-    <div class="bs-docs-section clearfix">
+    ================================================== -->
+    <div class="bs-docs-section">
+
       <div class="row">
         <div class="col-lg-12">
           <div class="page-header">
-            <h3 id="">Example</h3>
-          </div>
-
-          <div class="row">
-            <div class="bs-component">
-              <!-- Code Here -->
-
-              <!-- // Code Here -->
-            </div>
+            <h3 id="typography">Example</h3>
           </div>
         </div>
       </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <h4>Example 1</h4>
+          <div class="bs-component">
+
+          </div>
+        </div>
+      </div>
+
     </div>
 
-    <!-- Emmet
-      ================================================== -->
-    <!--
-      .bs-docs-section.clearfix>.row>.col-lg-12>.page-header>h2#{Example}^.row>.bs-component
-    -->
+    <div class="hr-line-dashed"></div>
+
+    <!-- Example
+    ================================================== -->
+    <div class="bs-docs-section">
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="page-header">
+            <h3 id="typography">Example</h3>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <h4>Example 1</h4>
+          <div class="bs-component">
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hr-line-dashed"></div>
+
+    <!-- Example
+    ================================================== -->
+    <div class="bs-docs-section">
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="page-header">
+            <h3 id="typography">Example</h3>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <h4>Example 1</h4>
+          <div class="bs-component">
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hr-line-dashed"></div>
+
+    <!-- Example
+    ================================================== -->
+    <div class="bs-docs-section">
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="page-header">
+            <h3 id="typography">Example</h3>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <h4>Example 1</h4>
+          <div class="bs-component">
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hr-line-dashed"></div>
 
     <!-- Modal
     ================================================== -->
@@ -245,8 +347,8 @@
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             <h4 class="modal-title">참고 소스</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
           </div>
           <div class="modal-body">
             <pre id="toClipboard"></pre>
@@ -274,8 +376,14 @@
         alert("SUCCESS: copy to clipboard.");
       }
     </script>
-  </div>
 
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
 </body>
 
 </html>
