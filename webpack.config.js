@@ -72,55 +72,73 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: true,
       inject: true,
-      title: 'THEME: Main',
+      title: 'FeeLWAY 2.0: Main',
       // chunks: ['applications'],
       filename: 'index.html',
       template: path.resolve(__dirname, './views', 'main.html')
     }),
-    // Layout.html
+    // FeeLWAY-Menus.html
     new HtmlWebpackPlugin({
       hash: true,
       inject: true,
-      title: 'THEME: Layout',
+      title: 'FeeLWAY 2.0: Components-Menus',
       // chunks: ['applications'],
-      filename: 'layout.html',
-      template: path.resolve(__dirname, './views', 'layout.html')
+      filename: 'feelway-menus.html',
+      template: path.resolve(__dirname, './views', 'feelway-menus.html')
     }),
-    // Content.html
+    // FeeLWAY-Images.html
     new HtmlWebpackPlugin({
       hash: true,
       inject: true,
-      title: 'THEME: Content',
+      title: 'FeeLWAY 2.0: Components-images',
       // chunks: ['applications'],
-      filename: 'content.html',
-      template: path.resolve(__dirname, './views', 'content.html')
+      filename: 'feelway-images.html',
+      template: path.resolve(__dirname, './views', 'feelway-images.html')
     }),
-    // Components.html
+    // FeeLWAY-Buttons.html
     new HtmlWebpackPlugin({
       hash: true,
       inject: true,
-      title: 'THEME: Components',
+      title: 'FeeLWAY 2.0: Components-buttons',
       // chunks: ['applications'],
-      filename: 'components.html',
-      template: path.resolve(__dirname, './views', 'components.html')
+      filename: 'feelway-buttons.html',
+      template: path.resolve(__dirname, './views', 'feelway-buttons.html')
     }),
-    // Utilities.html
+    // FeeLWAY-Forms.html
     new HtmlWebpackPlugin({
       hash: true,
       inject: true,
-      title: 'THEME: Utilities',
+      title: 'FeeLWAY 2.0: Components-forms',
       // chunks: ['applications'],
-      filename: 'utilities.html',
-      template: path.resolve(__dirname, './views', 'utilities.html')
+      filename: 'feelway-forms.html',
+      template: path.resolve(__dirname, './views', 'feelway-forms.html')
     }),
-    // plugins.html
+    // FeeLWAY-Filters.html
     new HtmlWebpackPlugin({
       hash: true,
       inject: true,
-      title: 'THEME: Plugins',
+      title: 'FeeLWAY 2.0: Components-filters',
       // chunks: ['applications'],
-      filename: 'plugins.html',
-      template: path.resolve(__dirname, './views', 'plugins.html')
+      filename: 'feelway-filters.html',
+      template: path.resolve(__dirname, './views', 'feelway-filters.html')
+    }),
+    // FeeLWAY-Tables.html
+    new HtmlWebpackPlugin({
+      hash: true,
+      inject: true,
+      title: 'FeeLWAY 2.0: Components-tables',
+      // chunks: ['applications'],
+      filename: 'feelway-tables.html',
+      template: path.resolve(__dirname, './views', 'feelway-tables.html')
+    }),
+    // FeeLWAY-Other.html
+    new HtmlWebpackPlugin({
+      hash: true,
+      inject: true,
+      title: 'FeeLWAY 2.0: Components-other',
+      // chunks: ['applications'],
+      filename: 'feelway-other.html',
+      template: path.resolve(__dirname, './views', 'feelway-other.html')
     }),
     new MiniCssExtractPlugin({
       // filename: devMode ? 'css/[name]-[hash].css' : 'css/[name]-[hash].css',
@@ -166,10 +184,6 @@ module.exports = {
         parallel: true,
         sourceMap: true,
       }),
-      // new OptimizeCSSAssetsPlugin({
-      //   minimize: true,
-      //   sourceMap: true,
-      // }),
     ],
   },
 };
