@@ -30,35 +30,19 @@
       s.parentNode.insertBefore(ga, s);
     })();
   </script>
-  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <style>
-    body {
-      padding-top: 100px;
-    }
-
-    .bs-component {
-      position: relative;
-    }
-
-    .bs-component .source-button {
-      display: none;
-      position: absolute;
-      top: 0;
-      right: 0;
-    }
-
-    .bs-component:hover .source-button {
-      display: block;
-    }
-  </style>
 </head>
 
 <body>
-  <!-- Header-Area -->
-  <div class="header">
+  <div class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <!-- Header-Area -->
     <div class="container">
       <a href="/index.html" class="navbar-brand h1">Johnny's Theme</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item"><a class="nav-link" href="feelway-menus.html">F.T-Menus</a></li>
@@ -70,8 +54,8 @@
           <li class="nav-item"><a class="nav-link" href="feelway-other.html">F.T-Other</a></li>
         </ul>
       </div>
-    </div>
-  </div><!-- // Header-Area -->
+    </div><!-- // Header-Area -->
+  </div>
 
   <div class="container">
 
@@ -91,108 +75,637 @@
 
   <div class="container">
 
-    <!-- Menus
+    <!-- Images
     ================================================== -->
     <div class="bs-docs-section">
       <div class="clearfix container align-center">
-        <h3>01.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>01. Responsive Image Grid</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayimages">
 
-          <!-- // Source Here -->
+          <div class="container-01">
+            <div class="row-01">
+              <div class="column-01">
+                <img src="wedding.jpg">
+                <img src="rocks.jpg">
+                <img src="falls2.jpg">
+                <img src="paris.jpg">
+                <img src="nature.jpg">
+                <img src="mist.jpg">
+                <img src="paris.jpg">
+              </div>
+              <div class="column-01">
+                <img src="underwater.jpg">
+                <img src="ocean.jpg">
+                <img src="wedding.jpg">
+                <img src="mountainskies.jpg">
+                <img src="rocks.jpg">
+                <img src="underwater.jpg">
+              </div>
+              <div class="column-01">
+                <img src="wedding.jpg">
+                <img src="rocks.jpg">
+                <img src="falls2.jpg">
+                <img src="paris.jpg">
+                <img src="nature.jpg">
+                <img src="mist.jpg">
+                <img src="paris.jpg">
+              </div>
+              <div class="column-01">
+                <img src="underwater.jpg">
+                <img src="ocean.jpg">
+                <img src="wedding.jpg">
+                <img src="mountainskies.jpg">
+                <img src="rocks.jpg">
+                <img src="underwater.jpg">
+              </div>
+            </div>
+          </div>
+          <script>
+
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>02.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <!-- Source Here -->
+        <h3>02. Image Grid</h3>
+        <div class="bs-component feelwayimages">
 
-          <!-- // Source Here -->
+          <div class="container-02">
+            <div class="row-02">
+              <div class="column-02">
+                <img src="wedding.jpg">
+                <img src="rocks.jpg">
+                <img src="falls2.jpg">
+                <img src="paris.jpg">
+                <img src="nature.jpg">
+                <img src="mist.jpg">
+                <img src="paris.jpg">
+              </div>
+              <div class="column-02">
+                <img src="underwater.jpg">
+                <img src="ocean.jpg">
+                <img src="wedding.jpg">
+                <img src="mountainskies.jpg">
+                <img src="rocks.jpg">
+                <img src="underwater.jpg">
+              </div>
+              <div class="column-02">
+                <img src="wedding.jpg">
+                <img src="rocks.jpg">
+                <img src="falls2.jpg">
+                <img src="paris.jpg">
+                <img src="nature.jpg">
+                <img src="mist.jpg">
+                <img src="paris.jpg">
+              </div>
+              <div class="column-02">
+                <img src="underwater.jpg">
+                <img src="ocean.jpg">
+                <img src="wedding.jpg">
+                <img src="mountainskies.jpg">
+                <img src="rocks.jpg">
+                <img src="underwater.jpg">
+              </div>
+            </div>
+
+            <button onclick="oneContainer02()">1</button>
+            <button onclick="twoContainer02()">2</button>
+            <button onclick="fourContainer02()">4</button>
+          </div>
+          <script>
+            var elements = document.getElementsByClassName("column-02");
+            var i;
+            function oneContainer02() {
+              for (i = 0; i < elements.length; i++) {
+                elements[i].style.flex = "100%";
+              }
+            }
+            function twoContainer02() {
+              for (i = 0; i < elements.length; i++) {
+                elements[i].style.flex = "50%";
+              }
+            }
+            function fourContainer02() {
+              for (i = 0; i < elements.length; i++) {
+                elements[i].style.flex = "25%";
+              }
+            }
+          </script>
         </div>
+
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>03.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>03. Tab Gallery</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayimages">
 
-          <!-- // Source Here -->
+          <div class="container-03">
+            <!-- The grid: four columns -->
+            <div class="row">
+              <div class="column">
+                <img src="img_nature.jpg" alt="Nature" onclick="container03(this);">
+              </div>
+              <div class="column">
+                <img src="img_snow.jpg" alt="Snow" onclick="container03(this);">
+              </div>
+              <div class="column">
+                <img src="img_mountains.jpg" alt="Mountains" onclick="container03(this);">
+              </div>
+              <div class="column">
+                <img src="img_lights.jpg" alt="Lights" onclick="container03(this);">
+              </div>
+            </div>
+
+            <!-- The expanding image container -->
+            <div class="contain-03">
+              <!-- Close the image -->
+              <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+              <!-- Expanded image -->
+              <img id="expandedImg-03" style="width:100%">
+
+              <!-- Image text -->
+              <div id="imgtext-03"></div>
+            </div>
+          </div>
+          <script>
+            function container03(imgs) {
+              var expandImg = document.getElementById("expandedImg-03");
+              var imgText03 = document.getElementById("imgtext-03");
+              expandImg.src = imgs.src;
+              imgText03.innerHTML = imgs.alt;
+              expandImg.parentElement.style.display = "block";
+            }
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>04.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>04. Form on Image</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayimages">
 
-          <!-- // Source Here -->
+          <div class="container-04">
+            <div class="bg-img-04">
+              <form action="/action_page.php" class="contain-04">
+                <h1>Login</h1>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit" class="btn-04">Login</button>
+              </form>
+            </div>
+          </div>
+          <script>
+
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>05.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>05. Hero Image</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayimages">
 
-          <!-- // Source Here -->
+          <div class="container-05">
+            <div class="hero-image-05">
+              <div class="hero-text-05">
+                <h1>I am John Doe</h1>
+                <p>And I'm a Photographer</p>
+                <button>Hire me</button>
+              </div>
+            </div>
+          </div>
+          <script>
+
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>06.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>06. Blurred Background Image</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayimages">
 
-          <!-- // Source Here -->
+          <div class="container-06">
+            <div class="bg-image-06"></div>
+
+            <div class="bg-text-06">
+              <h1>I am John Doe</h1>
+              <p>And I'm a Photographer</p>
+            </div>
+          </div>
+          <script>
+
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>07.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>07. Change Background on Scroll</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayimages">
 
-          <!-- // Source Here -->
+          <div class="container-07">
+            <div class="bg-image-07 img1-07"></div>
+            <div class="bg-image-07 img2-07"></div>
+            <div class="bg-image-07 img3-07"></div>
+            <div class="bg-image-07 img4-07"></div>
+            <div class="bg-image-07 img5-07"></div>
+            <div class="bg-image-07 img6-07"></div>
+
+            <div class="bg-text-07">TEXT</div>
+          </div>
+          <script>
+
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>08.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>08. Meet The Team Page</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayimages">
 
-          <!-- // Source Here -->
+          <div class="container-08">
+            <div class="row-08">
+              <div class="column-08">
+                <div class="card-08">
+                  <img src="img1.jpg" alt="Jane" style="width:100%">
+                  <div class="contain-08">
+                    <h2>Jane Doe</h2>
+                    <p class="title-08">CEO &amp; Founder</p>
+                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                    <p>example@example.com</p>
+                    <p><button class="button-08">Contact</button></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="column-08">
+                <div class="card-08">
+                  <img src="img2.jpg" alt="Mike" style="width:100%">
+                  <div class="contain-08">
+                    <h2>Mike Ross</h2>
+                    <p class="title-08">Art Director</p>
+                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                    <p>example@example.com</p>
+                    <p><button class="button-08">Contact</button></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="column-08">
+                <div class="card-08">
+                  <img src="img3.jpg" alt="John" style="width:100%">
+                  <div class="contain-08">
+                    <h2>John Doe</h2>
+                    <p class="title-08">Designer</p>
+                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                    <p>example@example.com</p>
+                    <p><button class="button-08">Contact</button></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <script>
+
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>09.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>09. Portfolio Gallery with Filtering</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayimages">
 
-          <!-- // Source Here -->
+          <div class="container-09">
+            <h2>PORTFOLIO</h2>
+            <div id="myBtnContainer">
+              <button class="btn-09 active" onclick="filterSelectionContainer09('all')"> Show all</button>
+              <button class="btn-09" onclick="filterSelectionContainer09('nature')"> Nature</button>
+              <button class="btn-09" onclick="filterSelectionContainer09('cars')"> Cars</button>
+              <button class="btn-09" onclick="filterSelectionContainer09('people')"> People</button>
+            </div>
+
+            <!-- Portfolio Gallery Grid -->
+            <div class="row-09">
+              <div class="column-09 nature">
+                <div class="content-09">
+                  <img src="/w3images/mountains.jpg" alt="Mountains" style="width:100%">
+                  <h4>Mountains</h4>
+                  <p>Lorem ipsum dolor..</p>
+                </div>
+              </div>
+              <div class="column-09 nature">
+                <div class="content-09">
+                  <img src="/w3images/lights.jpg" alt="Lights" style="width:100%">
+                  <h4>Lights</h4>
+                  <p>Lorem ipsum dolor..</p>
+                </div>
+              </div>
+              <div class="column-09 nature">
+                <div class="content-09">
+                  <img src="/w3images/nature.jpg" alt="Nature" style="width:100%">
+                  <h4>Forest</h4>
+                  <p>Lorem ipsum dolor..</p>
+                </div>
+              </div>
+
+              <div class="column-09 cars">
+                <div class="content-09">
+                  <img src="/w3images/cars1.jpg" alt="Car" style="width:100%">
+                  <h4>Retro</h4>
+                  <p>Lorem ipsum dolor..</p>
+                </div>
+              </div>
+              <div class="column-09 cars">
+                <div class="content-09">
+                  <img src="/w3images/cars2.jpg" alt="Car" style="width:100%">
+                  <h4>Fast</h4>
+                  <p>Lorem ipsum dolor..</p>
+                </div>
+              </div>
+              <div class="column-09 cars">
+                <div class="content-09">
+                  <img src="/w3images/cars3.jpg" alt="Car" style="width:100%">
+                  <h4>Classic</h4>
+                  <p>Lorem ipsum dolor..</p>
+                </div>
+              </div>
+
+              <div class="column-09 people">
+                <div class="content-09">
+                  <img src="/w3images/people1.jpg" alt="People" style="width:100%">
+                  <h4>Girl</h4>
+                  <p>Lorem ipsum dolor..</p>
+                </div>
+              </div>
+              <div class="column-09 people">
+                <div class="content-09">
+                  <img src="/w3images/people2.jpg" alt="People" style="width:100%">
+                  <h4>Man</h4>
+                  <p>Lorem ipsum dolor..</p>
+                </div>
+              </div>
+              <div class="column-09 people">
+                <div class="content-09">
+                  <img src="/w3images/people3.jpg" alt="People" style="width:100%">
+                  <h4>Woman</h4>
+                  <p>Lorem ipsum dolor..</p>
+                </div>
+              </div>
+            <!-- END GRID -->
+            </div>
+          </div>
+          <script>
+            filterSelectionContainer09("all") // Execute the function and show all columns
+            function filterSelectionContainer09(c) {
+              var x, i;
+              x = document.getElementsByClassName("column-09");
+              if (c == "all") c = "";
+              for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show-09");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show-09");
+              }
+            }
+            function w3AddClass(element, name) {
+              var i, arr1, arr2;
+              arr1 = element.className.split(" ");
+              arr2 = name.split(" ");
+              for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                  element.className += " " + arr2[i];
+                }
+              }
+            }
+            function w3RemoveClass(element, name) {
+              var i, arr1, arr2;
+              arr1 = element.className.split(" ");
+              arr2 = name.split(" ");
+              for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                  arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+              }
+              element.className = arr1.join(" ");
+            }
+            var btnContainer = document.getElementById("myBtnContainer");
+            var btns = btnContainer.getElementsByClassName("btn-09");
+            for (var i = 0; i < btns.length; i++) {
+              btns[i].addEventListener("click", function(){
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+              });
+            }
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>10.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>10. Image Zoom</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayimages">
 
-          <!-- // Source Here -->
+          <div class="container-10">
+            <div class="img-zoom-container-10">
+              <img id="myimage" src="//placehold.it/300x240" width="300" height="240" alt="Girl">
+              <div id="myresult" class="img-zoom-result-10"></div>
+            </div>
+          </div>
+          <script>
+            function imageZoom(imgID, resultID) {
+              var img, lens, result, cx, cy;
+              img = document.getElementById(imgID);
+              result = document.getElementById(resultID);
+              lens = document.createElement("DIV");
+              lens.setAttribute("class", "img-zoom-lens-10");
+              img.parentElement.insertBefore(lens, img);
+              cx = result.offsetWidth / lens.offsetWidth;
+              cy = result.offsetHeight / lens.offsetHeight;
+              result.style.backgroundImage = "url('" + img.src + "')";
+              result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
+              lens.addEventListener("mousemove", moveLens);
+              img.addEventListener("mousemove", moveLens);
+              lens.addEventListener("touchmove", moveLens);
+              img.addEventListener("touchmove", moveLens);
+              function moveLens(e) {
+                var pos, x, y;
+                e.preventDefault();
+                pos = getCursorPos(e);
+                x = pos.x - (lens.offsetWidth / 2);
+                y = pos.y - (lens.offsetHeight / 2);
+                if (x > img.width - lens.offsetWidth) {x = img.width - lens.offsetWidth;}
+                if (x < 0) {x = 0;}
+                if (y > img.height - lens.offsetHeight) {y = img.height - lens.offsetHeight;}
+                if (y < 0) {y = 0;}
+                lens.style.left = x + "px";
+                lens.style.top = y + "px";
+                result.style.backgroundPosition = "-" + (x * cx) + "px -" + (y * cy) + "px";
+              }
+              function getCursorPos(e) {
+                var a, x = 0, y = 0;
+                e = e || window.event;
+                a = img.getBoundingClientRect();
+                x = e.pageX - a.left;
+                y = e.pageY - a.top;
+                x = x - window.pageXOffset;
+                y = y - window.pageYOffset;
+                return {x : x, y : y};
+              }
+            }
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>11.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>11. Image Magnifier Glass</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayimages">
 
-          <!-- // Source Here -->
+          <div class="container-11">
+            <div class="img-magnifier-container-11">
+              <img id="myimage" src="//placehold.it/600x400" width="600" height="400" alt="Girl">
+            </div>
+          </div>
+          <script>
+            function magnify(imgID, zoom) {
+              var img, glass, w, h, bw;
+              img = document.getElementById(imgID);
+              glass = document.createElement("DIV");
+              glass.setAttribute("class", "img-magnifier-glass-11");
+              img.parentElement.insertBefore(glass, img);
+              glass.style.backgroundImage = "url('" + img.src + "')";
+              glass.style.backgroundRepeat = "no-repeat";
+              glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
+              bw = 3;
+              w = glass.offsetWidth / 2;
+              h = glass.offsetHeight / 2;
+              glass.addEventListener("mousemove", moveMagnifier);
+              img.addEventListener("mousemove", moveMagnifier);
+              glass.addEventListener("touchmove", moveMagnifier);
+              img.addEventListener("touchmove", moveMagnifier);
+              function moveMagnifier(e) {
+                var pos, x, y;
+                e.preventDefault();
+                pos = getCursorPos(e);
+                x = pos.x;
+                y = pos.y;
+                if (x > img.width - (w / zoom)) {x = img.width - (w / zoom);}
+                if (x < w / zoom) {x = w / zoom;}
+                if (y > img.height - (h / zoom)) {y = img.height - (h / zoom);}
+                if (y < h / zoom) {y = h / zoom;}
+                glass.style.left = (x - w) + "px";
+                glass.style.top = (y - h) + "px";
+                glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
+              }
+
+              function getCursorPos(e) {
+                var a, x = 0, y = 0;
+                e = e || window.event;
+                a = img.getBoundingClientRect();
+                x = e.pageX - a.left;
+                y = e.pageY - a.top;
+                x = x - window.pageXOffset;
+                y = y - window.pageYOffset;
+                return {x : x, y : y};
+              }
+            }
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>12.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>12. Image Comparison Slider</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayimages">
 
-          <!-- // Source Here -->
+          <div class="container-12">
+            <div class="img-comp-container-12">
+              <div class="img-comp-img-12">
+                <img src="//placehold.it/300x200" width="300" height="200">
+              </div>
+              <div class="img-comp-img-12 img-comp-overlay-12">
+                <img src="//placehold.it/300x200" width="300" height="200">
+              </div>
+            </div>
+          </div>
+          <script>
+            function initComparisons() {
+              var x, i;
+              x = document.getElementsByClassName("img-comp-overlay-12");
+              for (i = 0; i < x.length; i++) {
+                compareImages(x[i]);
+              }
+              function compareImages(img) {
+                var slider, img, clicked = 0, w, h;
+                w = img.offsetWidth;
+                h = img.offsetHeight;
+                img.style.width = (w / 2) + "px";
+                slider = document.createElement("DIV");
+                slider.setAttribute("class", "img-comp-slider-12");
+                img.parentElement.insertBefore(slider, img);
+                slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
+                slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+                slider.addEventListener("mousedown", slideReady);
+                window.addEventListener("mouseup", slideFinish);
+                slider.addEventListener("touchstart", slideReady);
+                window.addEventListener("touchstop", slideFinish);
+                function slideReady(e) {
+                  e.preventDefault();
+                  clicked = 1;
+                  window.addEventListener("mousemove", slideMove);
+                  window.addEventListener("touchmove", slideMove);
+                }
+                function slideFinish() {
+                  clicked = 0;
+                }
+                function slideMove(e) {
+                  var pos;
+                  if (clicked == 0) return false;
+                  pos = getCursorPos(e)
+                  if (pos < 0) pos = 0;
+                  if (pos > w) pos = w;
+                  slide(pos);
+                }
+                function getCursorPos(e) {
+                  var a, x = 0;
+                  e = e || window.event;
+                  a = img.getBoundingClientRect();
+                  x = e.pageX - a.left;
+                  x = x - window.pageXOffset;
+                  return x;
+                }
+                function slide(x) {
+                  img.style.width = x + "px";
+                  slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
+                }
+              }
+            }
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
-
-      <div class="hr-line-dashed"></div>
-
     </div>
 
     <div class="hr-line-dashed"></div>

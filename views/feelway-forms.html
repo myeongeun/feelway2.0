@@ -30,35 +30,19 @@
       s.parentNode.insertBefore(ga, s);
     })();
   </script>
-  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <style>
-    body {
-      padding-top: 100px;
-    }
-
-    .bs-component {
-      position: relative;
-    }
-
-    .bs-component .source-button {
-      display: none;
-      position: absolute;
-      top: 0;
-      right: 0;
-    }
-
-    .bs-component:hover .source-button {
-      display: block;
-    }
-  </style>
 </head>
 
 <body>
-  <!-- Header-Area -->
-  <div class="header">
+  <div class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <!-- Header-Area -->
     <div class="container">
       <a href="/index.html" class="navbar-brand h1">Johnny's Theme</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item"><a class="nav-link" href="feelway-menus.html">F.T-Menus</a></li>
@@ -70,8 +54,8 @@
           <li class="nav-item"><a class="nav-link" href="feelway-other.html">F.T-Other</a></li>
         </ul>
       </div>
-    </div>
-  </div><!-- // Header-Area -->
+    </div><!-- // Header-Area -->
+  </div>
 
   <div class="container">
 
@@ -91,236 +75,1321 @@
 
   <div class="container">
 
-    <!-- Menus
+    <!-- Forms
     ================================================== -->
     <div class="bs-docs-section">
       <div class="clearfix container align-center">
-        <h3>01.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>01. Login Form &amp; Login Modal Form</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayforms">
 
-          <!-- // Source Here -->
+          <div class="container-01">
+            <form action="action_page.php">
+              <div class="imgcontainer-01">
+                <img src="img_avatar2.png" alt="Avatar" class="avatar-01">
+              </div>
+
+              <div class="contain-01">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit">Login</button>
+                <label>
+                  <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+              </div>
+
+              <div class="contain-01" style="background-color:#f1f1f1">
+                <button type="button" class="cancelbtn-01">Cancel</button>
+                <span class="psw-01">Forgot <a href="#">password?</a></span>
+              </div>
+            </form>
+          </div>
+
+          <div class="hr-line-dashed"></div>
+
+          <div class="container-01 modal-form">
+            <!-- Button to open the modal login form -->
+            <button onclick="document.getElementById('modalLogin01').style.display='block'">Login</button>
+
+            <!-- The Modal -->
+            <div id="modalLogin01" class="modal">
+              <span onclick="document.getElementById('modalLogin01').style.display='none'" class="close-01" title="Close Modal">&times;</span>
+
+              <!-- Modal Content -->
+              <form class="modal-content-01 animate-01" action="/action_page.php">
+                <div class="imgcontainer">
+                  <img src="img_avatar2.png" alt="Avatar" class="avatar">
+                </div>
+
+                <div class="container">
+                  <label for="uname"><b>Username</b></label>
+                  <input type="text" placeholder="Enter Username" name="uname" required>
+
+                  <label for="psw"><b>Password</b></label>
+                  <input type="password" placeholder="Enter Password" name="psw" required>
+
+                  <button type="submit">Login</button>
+                  <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                  </label>
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1">
+                  <button type="button" onclick="document.getElementById('modalLogin01').style.display='none'"
+                    class="cancelbtn-01">Cancel</button>
+                  <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+              </form>
+            </div>
+          </div>
+          <script>
+            var modal = document.getElementById('modalLogin01');
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>02.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>02. Sign Up Form &amp; Sign Up Modal Form</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayforms">
 
-          <!-- // Source Here -->
+          <div class="container-02">
+            <form action="action_page.php" style="border:1px solid #ccc">
+              <div class="contain-02">
+                <h1>Sign Up</h1>
+                <p>Please fill in this form to create an account.</p>
+                <hr>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+                <label>
+                  <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                </label>
+
+                <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+                <div class="clearfix-02">
+                  <button type="button" class="cancelbtn-02">Cancel</button>
+                  <button type="submit" class="signupbtn-02">Sign Up</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="hr-line-dashed"></div>
+
+          <div class="container-02 modal-form">
+            <!-- Button to open the modal -->
+            <button onclick="document.getElementById('modalSignUp02').style.display='block'">Sign Up</button>
+
+            <!-- The Modal (contains the Sign Up form) -->
+            <div id="modalSignUp02" class="modal-02">
+              <span onclick="document.getElementById('modalSignUp02').style.display='none'" class="close-02" title="Close Modal">times;</span>
+              <form class="modal-content-02" action="/action_page.php">
+                <div class="contain-02">
+                  <h1>Sign Up</h1>
+                  <p>Please fill in this form to create an account.</p>
+                  <hr>
+                  <label for="email"><b>Email</b></label>
+                  <input type="text" placeholder="Enter Email" name="email" required>
+
+                  <label for="psw"><b>Password</b></label>
+                  <input type="password" placeholder="Enter Password" name="psw" required>
+
+                  <label for="psw-repeat"><b>Repeat Password</b></label>
+                  <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+                  <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                  </label>
+
+                  <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+                  <div class="clearfix-02">
+                    <button type="button" onclick="document.getElementById('modalSignUp02').style.display='none'" class="cancelbtn-02">Cancel</button>
+                    <button type="submit" class="signupbtn-02">Sign Up</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <script>
+            var modal = document.getElementById('modalSignUp02');
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>03.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>03. Checkout Form</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayforms">
 
-          <!-- // Source Here -->
+          <div class="container-03">
+            <div class="row-03">
+              <div class="col-75-03">
+                <div class="contain-03">
+                  <form action="/action_page.php">
+
+                    <div class="row-03">
+                      <div class="col-50-03">
+                        <h3>Billing Address</h3>
+                        <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                        <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                        <input type="text" id="email" name="email" placeholder="john@example.com">
+                        <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                        <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                        <label for="city"><i class="fa fa-institution"></i> City</label>
+                        <input type="text" id="city" name="city" placeholder="New York">
+
+                        <div class="row-03">
+                          <div class="col-50-03">
+                            <label for="state">State</label>
+                            <input type="text" id="state" name="state" placeholder="NY">
+                          </div>
+                          <div class="col-50-03">
+                            <label for="zip">Zip</label>
+                            <input type="text" id="zip" name="zip" placeholder="10001">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-50-03">
+                        <h3>Payment</h3>
+                        <label for="fname">Accepted Cards</label>
+                        <div class="icon-contain-03">
+                          <i class="fa fa-cc-visa" style="color:navy;"></i>
+                          <i class="fa fa-cc-amex" style="color:blue;"></i>
+                          <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                          <i class="fa fa-cc-discover" style="color:orange;"></i>
+                        </div>
+                        <label for="cname">Name on Card</label>
+                        <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                        <label for="ccnum">Credit card number</label>
+                        <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                        <label for="expmonth">Exp Month</label>
+                        <input type="text" id="expmonth" name="expmonth" placeholder="September">
+
+                        <div class="row-03">
+                          <div class="col-50-03">
+                            <label for="expyear">Exp Year</label>
+                            <input type="text" id="expyear" name="expyear" placeholder="2018">
+                          </div>
+                          <div class="col-50-03">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" name="cvv" placeholder="352">
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <label>
+                      <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+                    </label>
+                    <input type="submit" value="Continue to checkout" class="btn-03">
+                  </form>
+                </div>
+              </div>
+
+              <div class="col-25-03">
+                <div class="contain-03">
+                  <h4>Cart
+                    <span class="price-03" style="color:black">
+                      <i class="fa fa-shopping-cart"></i>
+                      <b>4</b>
+                    </span>
+                  </h4>
+                  <p><a href="#">Product 1</a> <span class="price-03">$15</span></p>
+                  <p><a href="#">Product 2</a> <span class="price-03">$5</span></p>
+                  <p><a href="#">Product 3</a> <span class="price-03">$8</span></p>
+                  <p><a href="#">Product 4</a> <span class="price-03">$2</span></p>
+                  <hr>
+                  <p>Total <span class="price-03" style="color:black"><b>$30</b></span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>04.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>04. Contact Form</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayforms">
 
-          <!-- // Source Here -->
+          <div class="container-04">
+            <div class="contain-04">
+              <form action="action_page.php">
+
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                  <option value="australia">Australia</option>
+                  <option value="canada">Canada</option>
+                  <option value="usa">USA</option>
+                </select>
+
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                <input type="submit" value="Submit">
+
+              </form>
+            </div>
+          </div>
+          <script>
+
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>05.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>05. Social Login Form</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayforms">
 
-          <!-- // Source Here -->
+          <div class="container-05">
+            <div class="contain-05">
+              <form action="/action_page.php">
+                <div class="row-05">
+                  <h2 style="text-align:center">Login with Social Media or Manually</h2>
+                  <div class="vl-05">
+                    <span class="vl-innertext">or</span>
+                  </div>
+
+                  <div class="col-05">
+                    <a href="#" class="fb-05 btn-05">
+                      <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+                    </a>
+                    <a href="#" class="twitter-05 btn-05">
+                      <i class="fa fa-twitter fa-fw"></i> Login with Twitter
+                    </a>
+                    <a href="#" class="google-05 btn-05">
+                      <i class="fa fa-google fa-fw"></i> Login with Google+
+                    </a>
+                  </div>
+
+                  <div class="col-05">
+                    <div class="hide-md-lg-05">
+                      <p>Or sign in manually:</p>
+                    </div>
+
+                    <input type="text" name="username" placeholder="Username" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <input type="submit" value="Login">
+                  </div>
+
+                </div>
+              </form>
+            </div>
+
+            <div class="bottom-contain-05">
+              <div class="row-05">
+                <div class="col-05">
+                  <a href="#" style="color:white" class="btn-05">Sign up</a>
+                </div>
+                <div class="col-05">
+                  <a href="#" style="color:white" class="btn-05">Forgot password?</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <script>
+
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>06.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>06. Register Form</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayforms">
 
-          <!-- // Source Here -->
+          <div class="container-06">
+            <form action="action_page.php">
+              <div class="contain-06">
+                <h1>Register</h1>
+                <p>Please fill in this form to create an account.</p>
+                <hr>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                <hr>
+
+                <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+                <button type="submit" class="registerbtn-06">Register</button>
+              </div>
+
+              <div class="contain-06 signin-06">
+                <p>Already have an account? <a href="#">Sign in</a>.</p>
+              </div>
+            </form>
+          </div>
+          <script>
+
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>07.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>07. Form with Icons</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayforms">
 
-          <!-- // Source Here -->
+          <div class="container-07">
+            <form action="/action_page.php">
+              <h2>Register Form</h2>
+              <div class="input-contain-07">
+                <i class="fa fa-user icon-07"></i>
+                <input class="input-field-07" type="text" placeholder="Username" name="usrnm">
+              </div>
+
+              <div class="input-contain-07">
+                <i class="fa fa-envelope icon-07"></i>
+                <input class="input-field-07" type="text" placeholder="Email" name="email">
+              </div>
+
+              <div class="input-contain-07">
+                <i class="fa fa-key icon-07"></i>
+                <input class="input-field-07" type="password" placeholder="Password" name="psw">
+              </div>
+
+              <button type="submit" class="btn-07">Register</button>
+            </form>
+          </div>
+          <script>
+
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>08.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>08. Email Newsletter</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayforms">
 
-          <!-- // Source Here -->
+          <div class="container-08">
+            <form action="action_page.php">
+              <div class="contain-08">
+                <h2>Subscribe to our Newsletter</h2>
+                <p>Lorem ipsum..</p>
+              </div>
+
+              <div class="contain-08" style="background-color:white">
+                <input type="text" placeholder="Name" name="name" required>
+                <input type="text" placeholder="Email address" name="mail" required>
+                <label>
+                  <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+                </label>
+              </div>
+
+              <div class="contain-08">
+                <input type="submit" value="Subscribe">
+              </div>
+            </form>
+          </div>
+          <script>
+
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>09.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>09. Stacked Form</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayforms">
 
-          <!-- // Source Here -->
+          <div class="container-09">
+            <form action="/action_page.php">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+              <label for="country">Country</label>
+              <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+              </select>
+
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+          <script>
+
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>10.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>10. Responsive Form</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayforms">
 
-          <!-- // Source Here -->
+          <div class="container-10">
+            <div class="contain-10">
+              <form action="action_page.php">
+                <div class="row-10">
+                  <div class="col-25-10">
+                    <label for="fname">First Name</label>
+                  </div>
+                  <div class="col-75-10">
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                  </div>
+                </div>
+                <div class="row-10">
+                  <div class="col-25-10">
+                    <label for="lname">Last Name</label>
+                  </div>
+                  <div class="col-75-10">
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                  </div>
+                </div>
+                <div class="row-10">
+                  <div class="col-25-10">
+                    <label for="country">Country</label>
+                  </div>
+                  <div class="col-75-10">
+                    <select id="country" name="country">
+                      <option value="australia">Australia</option>
+                      <option value="canada">Canada</option>
+                      <option value="usa">USA</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row-10">
+                  <div class="col-25-10">
+                    <label for="subject">Subject</label>
+                  </div>
+                  <div class="col-75-10">
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                  </div>
+                </div>
+                <div class="row-10">
+                  <input type="submit" value="Submit">
+                </div>
+              </form>
+            </div>
+          </div>
+          <script>
+
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>11.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>11. Popup Form</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayforms">
 
-          <!-- // Source Here -->
+          <div class="container-11">
+            <div class="form-popup-11" id="myForm-11">
+              <form action="/action_page.php" class="form-contain-11">
+                <h1>Login</h1>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit" class="btn-11">Login</button>
+                <button type="submit" class="btn-11 cancel-11" onclick="closeForm11()">Close</button>
+              </form>
+            </div>
+          </div>
+          <script>
+            function openForm11() {
+              document.getElementById("myForm-11").style.display = "block";
+            }
+            function closeForm11() {
+              document.getElementById("myForm-11").style.display = "none";
+            }
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>12.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>12. Inline Form</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayforms">
 
-          <!-- // Source Here -->
+          <div class="container-12">
+            <form class="form-inline-12" action="/action_page.php">
+              <label for="email">Email:</label>
+              <input type="email" id="email" placeholder="Enter email" name="email">
+              <label for="pwd">Password:</label>
+              <input type="password" id="pwd" placeholder="Enter password" name="pswd">
+              <label>
+                <input type="checkbox" name="remember"> Remember me
+              </label>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+          <script>
+
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>13.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>13. Clear Input Field</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayforms">
 
-          <!-- // Source Here -->
+          <style>
+
+          </style>
+          <div class="container-13">
+            <!-- When the input field gets focus, replace its current value with an empty string -->
+            <input type="text" onfocus="this.value=''" value="Blabla">
+          </div>
+          <script>
+
+          </script>
+
+          <div class="hr-line-dashed"></div>
+
+          <div class="container-13">
+            <button onclick="document.getElementById('myInput13').value = ''">Clear input field</button>
+            <input type="text" value="Blabla" id="myInput13">
+          </div>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>14.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>14. Copy Text to Clipboard</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayforms">
 
-          <!-- // Source Here -->
+          <style>
+
+          </style>
+          <div class="container-14">
+            <!-- The text field -->
+            <input type="text" value="Hello World" id="myInput14">
+
+            <!-- The button used to copy the text -->
+            <button onclick="container14()">Copy text</button>
+          </div>
+          <script>
+            function container14() {
+              /* Get the text field */
+              var copyText = document.getElementById("myInput14");
+
+              /* Select the text field */
+              copyText.select();
+
+              /* Copy the text inside the text field */
+              document.execCommand("copy");
+
+              /* Alert the copied text */
+              alert("Copied the text: " + copyText.value);
+            }
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>15.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>15. Animated Search Form</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayforms">
 
-          <!-- // Source Here -->
+          <div class="container-15">
+            <input type="text" name="search" placeholder="Search..">
+          </div>
+          <script>
+
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>16.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>16. Search Button</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayforms">
 
-          <!-- // Source Here -->
+          <div class="container-16">
+            <form class="example-16" action="action_page.php">
+              <input type="text" placeholder="Search.." name="search">
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+          <script>
+
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>17.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>17. Fullscreen Search</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayforms">
 
-          <!-- // Source Here -->
+          <div class="container-17">
+            <div id="myOverlay17" class="overlay-17">
+              <span class="closebtn-17" onclick="closeSearch17()" title="Close Overlay">x</span>
+              <div class="overlay-content-17">
+                <form action="action_page.php">
+                  <input type="text" placeholder="Search.." name="search">
+                  <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <script>
+            function openSearch17() {
+              document.getElementById("myOverlay17").style.display = "block";
+            }
+            function closeSearch17() {
+              document.getElementById("myOverlay17").style.display = "none";
+            }
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>18.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>18. Input Field in a Menu</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayforms">
 
-          <!-- // Source Here -->
+          <div class="container-18">
+            <div class="topnav-18">
+              <a class="active-18" href="#home">Home</a>
+              <a href="#about">About</a>
+              <a href="#contact">Contact</a>
+              <div class="search-container-18">
+                <form action="/action_page.php">
+                  <input type="text" placeholder="Search.." name="search">
+                  <button type="submit">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <script>
+
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>19.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>19. Login Form in a Menu</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayforms">
 
-          <!-- // Source Here -->
+          <div class="container-19">
+            <div class="topnav-19">
+              <a class="active" href="#home">Home</a>
+              <a href="#about">About</a>
+              <a href="#contact">Contact</a>
+              <div class="login-container-19">
+                <form action="/action_page.php">
+                  <input type="text" placeholder="Username" name="username">
+                  <input type="text" placeholder="Password" name="psw">
+                  <button type="submit">Login</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <script>
+
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>20.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>20. Custom Checkbox</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayforms">
 
-          <!-- // Source Here -->
+          <div class="container-20">
+            <label class="contain-20">One
+              <input type="checkbox" checked="checked">
+              <span class="checkmark-20"></span>
+            </label>
+
+            <label class="contain-20">Two
+              <input type="checkbox">
+              <span class="checkmark-20"></span>
+            </label>
+
+            <label class="contain-20">Three
+              <input type="checkbox">
+              <span class="checkmark-20"></span>
+            </label>
+
+            <label class="contain-20">Four
+              <input type="checkbox">
+              <span class="checkmark-20"></span>
+            </label>
+          </div>
+          <script>
+
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>21.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>21. Custom Select Box</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayforms">
 
-          <!-- // Source Here -->
+          <div class="container-21">
+            <div class="custom-select-21" style="width:200px;">
+              <select>
+                <option value="0">Select car:</option>
+                <option value="1">Audi</option>
+                <option value="2">BMW</option>
+                <option value="3">Citroen</option>
+                <option value="4">Ford</option>
+                <option value="5">Honda</option>
+                <option value="6">Jaguar</option>
+                <option value="7">Land Rover</option>
+                <option value="8">Mercedes</option>
+                <option value="9">Mini</option>
+                <option value="10">Nissan</option>
+                <option value="11">Toyota</option>
+                <option value="12">Volvo</option>
+              </select>
+            </div>
+          </div>
+          <script>
+            var x, i, j, selElmnt, a, b, c;
+            /* Look for any elements with the class "custom-select-21": */
+            x = document.getElementsByClassName("custom-select-21");
+            for (i = 0; i < x.length; i++) {
+              selElmnt = x[i].getElementsByTagName("select")[0];
+              /* For each element, create a new DIV that will act as the selected item: */
+              a = document.createElement("DIV");
+              a.setAttribute("class", "select-selected-21");
+              a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+              x[i].appendChild(a);
+              /* For each element, create a new DIV that will contain the option list: */
+              b = document.createElement("DIV");
+              b.setAttribute("class", "select-items-21 select-hide-21");
+              for (j = 1; j < selElmnt.length; j++) {
+                /* For each option in the original select element,
+                create a new DIV that will act as an option item: */
+                c = document.createElement("DIV");
+                c.innerHTML = selElmnt.options[j].innerHTML;
+                c.addEventListener("click", function(e) {
+                    /* When an item is clicked, update the original select box,
+                    and the selected item: */
+                    var y, i, k, s, h;
+                    s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+                    h = this.parentNode.previousSibling;
+                    for (i = 0; i < s.length; i++) {
+                      if (s.options[i].innerHTML == this.innerHTML) {
+                        s.selectedIndex = i;
+                        h.innerHTML = this.innerHTML;
+                        y = this.parentNode.getElementsByClassName("same-as-selected-21");
+                        for (k = 0; k < y.length; k++) {
+                          y[k].removeAttribute("class");
+                        }
+                        this.setAttribute("class", "same-as-selected-21");
+                        break;
+                      }
+                    }
+                    h.click();
+                });
+                b.appendChild(c);
+              }
+              x[i].appendChild(b);
+              a.addEventListener("click", function(e) {
+                /* When the select box is clicked, close any other select boxes,
+                and open/close the current select box: */
+                e.stopPropagation();
+                closeAllSelect(this);
+                this.nextSibling.classList.toggle("select-hide-21");
+                this.classList.toggle("select-arrow-active-21");
+              });
+            }
+
+            function closeAllSelect(elmnt) {
+              /* A function that will close all select boxes in the document,
+              except the current select box: */
+              var x, y, i, arrNo = [];
+              x = document.getElementsByClassName("select-items-21");
+              y = document.getElementsByClassName("select-selected-21");
+              for (i = 0; i < y.length; i++) {
+                if (elmnt == y[i]) {
+                  arrNo.push(i)
+                } else {
+                  y[i].classList.remove("select-arrow-active-21");
+                }
+              }
+              for (i = 0; i < x.length; i++) {
+                if (arrNo.indexOf(i)) {
+                  x[i].classList.add("select-hide-21");
+                }
+              }
+            }
+
+            /* If the user clicks anywhere outside the select box,
+            then close all select boxes: */
+            document.addEventListener("click", closeAllSelect);
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>22.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>22. Toggle Switch</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayforms">
 
-          <!-- // Source Here -->
+          <div class="container-22">
+            <label class="switch-22">
+              <input type="checkbox">
+              <span class="slider-22"></span>
+            </label>
+            <label class="switch-22">
+              <input type="checkbox">
+              <span class="slider-22 round-22"></span>
+            </label>
+          </div>
+          <script>
+
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>23.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>23. Display Text when Checkbox is Checked</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayforms">
 
-          <!-- // Source Here -->
+          <style>
+
+          </style>
+          <div class="container-23">
+            Checkbox: <input type="checkbox" id="myCheck23" onclick="container23()">
+            <p id="text23" style="display:none">Checkbox is CHECKED!</p>
+          </div>
+          <script>
+            function container23() {
+              var checkBox = document.getElementById("myCheck23");
+              var text = document.getElementById("text23");
+              if (checkBox.checked == true){
+                text.style.display = "block";
+              } else {
+                text.style.display = "none";
+              }
+            }
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>24.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>24. Detect Caps Lock</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayforms">
 
-          <!-- // Source Here -->
+          <style>
+
+          </style>
+          <div class="container-24">
+            <input id="myInput24" value="Some text..">
+            <p id="text24">WARNING! Caps lock is ON.</p>
+          </div>
+          <script>
+            var input = document.getElementById("myInput24");
+            var text = document.getElementById("text24");
+            input.addEventListener("keyup", function(event) {
+
+            if (event.getModifierState("CapsLock")) {
+                text.style.display = "block";
+              } else {
+                text.style.display = "none"
+              }
+            });
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>25.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>25. Password Validation</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayforms">
 
-          <!-- // Source Here -->
+          <div class="container-25">
+            <div class="contain-25">
+              <form action="/action_page.php">
+                <label for="usrname25">Username</label>
+                <input type="text" id="usrname25" name="usrname25" required>
+
+                <label for="psw25">Password</label>
+                <input type="password" id="psw25" name="psw25" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+
+                <input type="submit" value="Submit">
+              </form>
+            </div>
+
+            <div id="message25">
+              <h3>Password must contain the following:</h3>
+              <p id="letter25" class="invalid-25">A <b>lowercase</b> letter</p>
+              <p id="capital25" class="invalid-25">A <b>capital (uppercase)</b> letter</p>
+              <p id="number25" class="invalid-25">A <b>number</b></p>
+              <p id="length25" class="invalid-25">Minimum <b>8 characters</b></p>
+            </div>
+          </div>
+          <script>
+            var myInput = document.getElementById("psw25");
+            var letter = document.getElementById("letter25");
+            var capital = document.getElementById("capital25");
+            var number = document.getElementById("number25");
+            var length = document.getElementById("length25");
+
+            // When the user clicks on the password field, show the message box
+            myInput.onfocus = function() {
+              document.getElementById("message25").style.display = "block";
+            }
+
+            // When the user clicks outside of the password field, hide the message box
+            myInput.onblur = function() {
+              document.getElementById("message25").style.display = "none";
+            }
+
+            // When the user starts to type something inside the password field
+            myInput.onkeyup = function() {
+              // Validate lowercase letters
+              var lowerCaseLetters = /[a-z]/g;
+              if(myInput.value.match(lowerCaseLetters)) {
+                letter.classList.remove("invalid-25");
+                letter.classList.add("valid-25");
+              } else {
+                letter.classList.remove("valid-25");
+                letter.classList.add("invalid-25");
+            }
+
+              // Validate capital letters
+              var upperCaseLetters = /[A-Z]/g;
+              if(myInput.value.match(upperCaseLetters)) {
+                capital.classList.remove("invalid-25");
+                capital.classList.add("valid-25");
+              } else {
+                capital.classList.remove("valid-25");
+                capital.classList.add("invalid-25");
+              }
+
+              // Validate numbers
+              var numbers = /[0-9]/g;
+              if(myInput.value.match(numbers)) {
+                number.classList.remove("invalid-25");
+                number.classList.add("valid-25");
+              } else {
+                number.classList.remove("valid-25");
+                number.classList.add("invalid-25");
+              }
+
+              // Validate length
+              if(myInput.value.length >= 8) {
+                length.classList.remove("invalid-25");
+                length.classList.add("valid-25");
+              } else {
+                length.classList.remove("valid-25");
+                length.classList.add("invalid-25");
+              }
+            }
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>26.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>26. Toggle Password Visibility</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayforms">
 
-          <!-- // Source Here -->
+          <style>
+
+          </style>
+          <div class="container-26">
+            Password: <input type="password" value="FakePSW" id="myInput26">
+            <input type="checkbox" onclick="container26()">Show Password
+          </div>
+          <script>
+            function container26() {
+              var x = document.getElementById("myInput26");
+              if (x.type === "password") {
+                x.type = "text";
+              } else {
+                x.type = "password";
+              }
+            }
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>27.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>27. Form with Multiple Steps</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayforms">
 
-          <!-- // Source Here -->
+          <div class="container-27">
+            <form id="regForm27" action="">
+
+            <h1>Register:</h1>
+
+            <!-- One "tab" for each step in the form: -->
+            <div class="tab-27">Name:
+              <p><input placeholder="First name..." oninput="this.className = ''"></p>
+              <p><input placeholder="Last name..." oninput="this.className = ''"></p>
+            </div>
+
+            <div class="tab-27">Contact Info:
+              <p><input placeholder="E-mail..." oninput="this.className = ''"></p>
+              <p><input placeholder="Phone..." oninput="this.className = ''"></p>
+            </div>
+
+            <div class="tab-27">Birthday:
+              <p><input placeholder="dd" oninput="this.className = ''"></p>
+              <p><input placeholder="mm" oninput="this.className = ''"></p>
+              <p><input placeholder="yyyy" oninput="this.className = ''"></p>
+            </div>
+
+            <div class="tab-27">Login Info:
+              <p><input placeholder="Username..." oninput="this.className = ''"></p>
+              <p><input placeholder="Password..." oninput="this.className = ''"></p>
+            </div>
+
+            <div style="overflow:auto;">
+              <div style="float:right;">
+                <button type="button" id="prevBtn27" onclick="nextPrev27(-1)">Previous</button>
+                <button type="button" id="nextBtn27" onclick="nextPrev27(1)">Next</button>
+              </div>
+            </div>
+
+            <!-- Circles which indicates the steps of the form: -->
+            <div style="text-align:center;margin-top:40px;">
+              <span class="step-27"></span>
+              <span class="step-27"></span>
+              <span class="step-27"></span>
+              <span class="step-27"></span>
+            </div>
+
+            </form>
+          </div>
+          <script>
+            var currentTab = 0; // Current tab is set to be the first tab (0)
+            showTab(currentTab); // Display the current tab
+
+            function showTab(n) {
+              // This function will display the specified tab of the form ...
+              var x = document.getElementsByClassName("tab-27");
+              x[n].style.display = "block";
+              // ... and fix the Previous/Next buttons:
+              if (n == 0) {
+                document.getElementById("prevBtn27").style.display = "none";
+              } else {
+                document.getElementById("prevBtn27").style.display = "inline";
+              }
+              if (n == (x.length - 1)) {
+                document.getElementById("nextBtn27").innerHTML = "Submit";
+              } else {
+                document.getElementById("nextBtn27").innerHTML = "Next";
+              }
+              // ... and run a function that displays the correct step indicator:
+              fixStepIndicator(n)
+            }
+
+            function nextPrev27(n) {
+              // This function will figure out which tab to display
+              var x = document.getElementsByClassName("tab-27");
+              // Exit the function if any field in the current tab is invalid:
+              if (n == 1 && !validateForm()) return false;
+              // Hide the current tab:
+              x[currentTab].style.display = "none";
+              // Increase or decrease the current tab by 1:
+              currentTab = currentTab + n;
+              // if you have reached the end of the form... :
+              if (currentTab >= x.length) {
+                //...the form gets submitted:
+                document.getElementById("regForm27").submit();
+                return false;
+              }
+              // Otherwise, display the correct tab:
+              showTab(currentTab);
+            }
+
+            function validateForm() {
+              // This function deals with validation of the form fields
+              var x, y, i, valid = true;
+              x = document.getElementsByClassName("tab-27");
+              y = x[currentTab].getElementsByTagName("input");
+              // A loop that checks every input field in the current tab:
+              for (i = 0; i < y.length; i++) {
+                // If a field is empty...
+                if (y[i].value == "") {
+                  // add an "invalid" class to the field:
+                  y[i].className += " invalid-27";
+                  // and set the current valid status to false:
+                  valid = false;
+                }
+              }
+              // If the valid status is true, mark the step as finished and valid:
+              if (valid) {
+                document.getElementsByClassName("step-27")[currentTab].className += " finish";
+              }
+              return valid; // return the valid status
+            }
+
+            function fixStepIndicator(n) {
+              // This function removes the "active" class of all steps...
+              var i, x = document.getElementsByClassName("step-27");
+              for (i = 0; i < x.length; i++) {
+                x[i].className = x[i].className.replace(" active", "");
+              }
+              //... and adds the "active" class to the current step:
+              x[n].className += " active";
+            }
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>28.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>28. Autocomplete</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayforms">
 
-          <!-- // Source Here -->
+          <div class="container-28">
+            <form autocomplete="on" action="/action_page.php">
+              <div class="autocomplete-28" style="width:300px;">
+                <input id="myInput28" type="text" name="myCountry" placeholder="Country">
+              </div>
+              <input type="submit">
+            </form>
+          </div>
+          <script>
+            function autocomplete(inp, arr) {
+              var currentFocus;
+              inp.addEventListener("input", function(e) {
+                  var a, b, i, val = this.value;
+                  closeAllLists();
+                  if (!val) { return false;}
+                  currentFocus = -1;
+                  a = document.createElement("DIV");
+                  a.setAttribute("id", this.id + "autocomplete-list28");
+                  a.setAttribute("class", "autocomplete-items-28");
+                  this.parentNode.appendChild(a);
+                  for (i = 0; i < arr.length; i++) {
+                    if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+                      b = document.createElement("DIV");
+                      b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+                      b.innerHTML += arr[i].substr(val.length);
+                      b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                          b.addEventListener("click", function(e) {
+                          inp.value = this.getElementsByTagName("input")[0].value;
+                          closeAllLists();
+                      });
+                      a.appendChild(b);
+                    }
+                  }
+              });
+              inp.addEventListener("keydown", function(e) {
+                  var x = document.getElementById(this.id + "autocomplete-list28");
+                  if (x) x = x.getElementsByTagName("div");
+                  if (e.keyCode == 40) {
+                    currentFocus++;
+                    addActive(x);
+                  } else if (e.keyCode == 38) { //up
+                    currentFocus--;
+                    addActive(x);
+                  } else if (e.keyCode == 13) {
+                    e.preventDefault();
+                    if (currentFocus > -1) {
+                      if (x) x[currentFocus].click();
+                    }
+                  }
+              });
+              function addActive(x) {
+                if (!x) return false;
+                removeActive(x);
+                if (currentFocus >= x.length) currentFocus = 0;
+                if (currentFocus < 0) currentFocus = (x.length - 1);
+                x[currentFocus].classList.add("autocomplete-active-28");
+              }
+              function removeActive(x) {
+                for (var i = 0; i < x.length; i++) {
+                  x[i].classList.remove("autocomplete-active-28");
+                }
+              }
+              function closeAllLists(elmnt) {
+                var x = document.getElementsByClassName("autocomplete-items-28");
+                for (var i = 0; i < x.length; i++) {
+                  if (elmnt != x[i] && elmnt != inp) {
+                  x[i].parentNode.removeChild(x[i]);
+                }
+              }
+            }
+            document.addEventListener("click", function (e) {
+                closeAllLists(e.target);
+            });
+            }
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
-
-      <div class="hr-line-dashed"></div>
-
     </div>
 
     <div class="hr-line-dashed"></div>

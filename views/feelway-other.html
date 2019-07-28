@@ -30,35 +30,19 @@
       s.parentNode.insertBefore(ga, s);
     })();
   </script>
-  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <style>
-    body {
-      padding-top: 100px;
-    }
-
-    .bs-component {
-      position: relative;
-    }
-
-    .bs-component .source-button {
-      display: none;
-      position: absolute;
-      top: 0;
-      right: 0;
-    }
-
-    .bs-component:hover .source-button {
-      display: block;
-    }
-  </style>
 </head>
 
 <body>
-  <!-- Header-Area -->
-  <div class="header">
+  <div class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <!-- Header-Area -->
     <div class="container">
       <a href="/index.html" class="navbar-brand h1">Johnny's Theme</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item"><a class="nav-link" href="feelway-menus.html">F.T-Menus</a></li>
@@ -70,8 +54,8 @@
           <li class="nav-item"><a class="nav-link" href="feelway-other.html">F.T-Other</a></li>
         </ul>
       </div>
-    </div>
-  </div><!-- // Header-Area -->
+    </div><!-- // Header-Area -->
+  </div>
 
   <div class="container">
 
@@ -91,396 +75,1661 @@
 
   <div class="container">
 
-    <!-- Menus
+    <!-- Other
     ================================================== -->
     <div class="bs-docs-section">
       <div class="clearfix container align-center">
-        <h3>01.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>01. CSS/JS Modal</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
 
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>02.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+          <div class="container-01">
+            <!-- Trigger/Open The Modal -->
+            <button id="myBtn01">Open Modal</button>
 
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>03.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+            <!-- The Modal -->
+            <div id="myModal01" class="modal">
 
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>04.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+              <!-- Modal content -->
+              <div class="modal-content-01">
+                <span class="close-01">&times;</span>
+                <p>Some text in the Modal..</p>
+              </div>
 
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>05.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+            </div>
+          </div>
+          <script>
+            var modal01 = document.getElementById("myModal01");
+            var btn01 = document.getElementById("myBtn01");
+            var span01 = document.getElementsByClassName("close-01")[0];
+            btn01.onclick = function() {
+              modal01.style.display = "block";
+            }
+            span01.onclick = function() {
+              modal01.style.display = "none";
+            }
+            window.onclick = function(event) {
+              if (event.target == modal01) {
+                modal01.style.display = "none";
+              }
+            }
+          </script>
 
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>06.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+          <div class="hr-line-dashed"></div>
 
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>07.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+          <div class="container-01-bottom">
+            <!-- Trigger/Open The Modal -->
+            <button id="myBtn01-bottom">Open Modal</button>
 
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>08.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+            <!-- The Modal -->
+            <div id="myModal01-bottom" class="modal">
 
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>09.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+              <!-- Modal content -->
+              <div class="modal-content-01-bottom">
+                <div class="modal-header-01-bottom">
+                  <span class="close-01-bottom">&times;</span>
+                  <h2>Modal Header</h2>
+                </div>
+                <div class="modal-body-01-bottom">
+                  <p>Some text in the Modal Body</p>
+                  <p>Some other text...</p>
+                </div>
+                <div class="modal-footer-01-bottom">
+                  <h3>Modal Footer</h3>
+                </div>
+              </div>
 
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>10.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+            </div>
+          </div>
+          <script>
+            var modal01bottom = document.getElementById("myModal01-bottom");
+            var btn01bottom = document.getElementById("myBtn01-bottom");
+            var span01bottom = document.getElementsByClassName("close-01-bottom")[0];
+            btn01bottom.onclick = function() {
+              modal01bottom.style.display = "block";
+            }
+            span01bottom.onclick = function() {
+              modal01bottom.style.display = "none";
+            }
+            window.onclick = function(event) {
+              if (event.target == modal01bottom) {
+                modal01bottom.style.display = "none";
+              }
+            }
+          </script>
 
-          <!-- // Source Here -->
         </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>11.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
-
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>12.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
-
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>13.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
-
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>14.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
-
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>15.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
-
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>16.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
-
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>17.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
-
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>18.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
-
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>19.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
-
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>20.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
-
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>21.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
-
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>22.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
-
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>23.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
-
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>24.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
-
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>25.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
-
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>26.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
-
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>27.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
-
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>28.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
-
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>29.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
-
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>30.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
-
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>31.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
-
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>32.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
-
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>33.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
-
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>34.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
-
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>35.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
-
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>36.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
-
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>37.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
-
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>38.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
-
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>39.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
-
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>40.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
-
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>41.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
-
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>42.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
-
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>43.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
-
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>44.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
-
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>45.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
-
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>46.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
-
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>47.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
-
-          <!-- // Source Here -->
-        </div>
-      </div>
-      <div class="clearfix container align-center">
-        <h3>48.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
-
-          <!-- // Source Here -->
-        </div>
+        <!-- // Source Here -->
       </div>
 
       <div class="hr-line-dashed"></div>
 
+      <div class="clearfix container align-center">
+        <h3>02. Fullscreen Video</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-02" style="display: none;">
+            <!-- The video -->
+            <video autoplay muted loop id="myVideo02">
+              <source src="rain.mp4" type="video/mp4">
+            </video>
+
+            <!-- Optional: some overlay text to describe the video -->
+            <div class="content-02">
+              <h1>Heading</h1>
+              <p>Lorem ipsum...</p>
+              <!-- Use a button to pause/play the video with JavaScript -->
+              <button id="myBtn02" onclick="myFunction()">Pause</button>
+            </div>
+          </div>
+          <script>
+            var video02 = document.getElementById("myVideo02");
+            var btn02 = document.getElementById("myBtn02");
+            function myFunction() {
+              if (video02.paused) {
+                video02.play();
+                btn.innerHTML = "Pause";
+              } else {
+                video02.pause();
+                btn.innerHTML = "Play";
+              }
+            }
+          </script>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>03. Timeline</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-03">
+            <div class="timeline-03">
+              <div class="contain-03 left-03">
+                <div class="content">
+                  <h2>2017</h2>
+                  <p>Lorem ipsum..</p>
+                </div>
+              </div>
+              <div class="contain-03 right-03">
+                <div class="content">
+                  <h2>2016</h2>
+                  <p>Lorem ipsum..</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>04. Scroll Indicator</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-04">
+            <div class="header-04">
+              <h2>Scroll Indicator</h2>
+              <div class="progress-container-04">
+                <div class="progress-bar-04" id="myBar04"></div>
+              </div>
+            </div>
+
+            <div>content...</div>
+          </div>
+          <script>
+            window.onscroll = function() {container04()};
+            function container04() {
+              var winScroll04 = document.body.scrollTop || document.documentElement.scrollTop;
+              var height04 = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+              var scrolled04 = (winScroll04 / height04) * 100;
+              document.getElementById("myBar04").style.width = scrolled04 + "%";
+            }
+          </script>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>05. Progress Bar</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-05">
+            <div id="myProgress05">
+              <div id="myBar05"></div>
+            </div>
+          </div>
+          <script>
+            function move() {
+              var elem = document.getElementById("myBar05");
+              var width = 1;
+              var id = setInterval(frame, 10);
+              function frame() {
+                if (width >= 100) {
+                  clearInterval(id);
+                } else {
+                  width++;
+                  elem.style.width = width + '%';
+                }
+              }
+            }
+          </script>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>06. Skill Bar</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-06">
+            <p>HTML</p>
+            <div class="contain-06">
+              <div class="skills-06 html-06">90%</div>
+            </div>
+
+            <p>CSS</p>
+            <div class="contain-06">
+              <div class="skills-06 css-06">80%</div>
+            </div>
+
+            <p>JavaScript</p>
+            <div class="contain-06">
+              <div class="skills-06 js-06">65%</div>
+            </div>
+
+            <p>PHP</p>
+            <div class="contain-06">
+              <div class="skills-06 php-06">60%</div>
+            </div>
+          </div>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>07. Range Sliders</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-07">
+            <div class="slidecontain-07">
+              <input type="range" min="1" max="100" value="50" class="slider-07" id="myRange07">
+            </div>
+          </div>
+          <script>
+            var slider07 = document.getElementById("myRange07");
+            var output07 = document.getElementById("demo07");
+            output.innerHTML = slider07.value;
+            slider07.oninput = function() {
+              output07.innerHTML = this.value;
+            }
+          </script>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>08. Tooltip</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-08">
+            <div class="tooltip-08">Hover over me
+              <span class="tooltiptext-08">Tooltip text</span>
+            </div>
+          </div>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>09. Popup</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-09">
+            <div class="popup-09" onclick="container09()">Click me!
+              <span class="popuptext-09" id="myPopup09">Popup text...</span>
+            </div>
+          </div>
+          <script>
+            function container09() {
+              var popup09 = document.getElementById("myPopup09");
+              popup09.classList.toggle("show-09");
+            }
+          </script>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>10. Collapse</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-10">
+            <button class="collapsible-10">Open Collapsible</button>
+            <div class="content-10">
+              <p>Lorem ipsum...</p>
+            </div>
+          </div>
+          <script>
+            var coll = document.getElementsByClassName("collapsible-10");
+            var i;
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active-10");
+                var content10 = this.nextElementSibling;
+                if (content10.style.display === "block") {
+                  content10.style.display = "none";
+                } else {
+                  content10.style.display = "block";
+                }
+              });
+            }
+          </script>
+
+          <div class="hr-line-dashed"></div>
+
+          <script>
+            var coll = document.getElementsByClassName("collapsible-10-collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active-10-collapsible");
+                var content10collapsible = this.nextElementSibling;
+                if (content10collapsible.style.maxHeight){
+                  content10collapsible.style.maxHeight = null;
+                } else {
+                  content10collapsible.style.maxHeight = content10collapsible.scrollHeight + "px";
+                }
+              });
+            }
+          </script>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>11. Calendar</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-11">
+            <div class="month-11">
+              <ul>
+                <li class="prev-11">&#10094;</li>
+                <li class="next-11">&#10095;</li>
+                <li>August<br><span style="font-size:18px">2017</span></li>
+              </ul>
+            </div>
+
+            <ul class="weekdays-11">
+              <li>Mo</li>
+              <li>Tu</li>
+              <li>We</li>
+              <li>Th</li>
+              <li>Fr</li>
+              <li>Sa</li>
+              <li>Su</li>
+            </ul>
+
+            <ul class="days-11">
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+              <li>6</li>
+              <li>7</li>
+              <li>8</li>
+              <li>9</li>
+              <li><span class="active-11">10</span></li>
+              <li>11</li>
+              ...etc
+            </ul>
+          </div>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>12. Create To Do List</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-12">
+            <div id="myDIV12" class="header-12">
+              <h2>My To Do List</h2>
+              <input type="text" id="myInput12" placeholder="Title...">
+              <span onclick="newElementContainer12()" class="addBtn-12">Add</span>
+            </div>
+
+            <ul id="myUL12">
+              <li>Hit the gym</li>
+              <li class="checked-12">Pay bills</li>
+              <li>Meet George</li>
+              <li>Buy eggs</li>
+              <li>Read a book</li>
+              <li>Organize office</li>
+            </ul>
+          </div>
+          <script>
+            // Create a "close-12" button and append it to each list item
+            var myNodelist = document.getElementsByTagName("li");
+            var i;
+            for (i = 0; i < myNodelist.length; i++) {
+              var span = document.createElement("span");
+              var txt = document.createTextNode("\u00D7");
+              span.className = "close-12";
+              span.appendChild(txt);
+              myNodelist[i].appendChild(span);
+            }
+
+            // Click on a close-12 button to hide the current list item
+            var close = document.getElementsByClassName("close-12");
+            var i;
+            for (i = 0; i < close.length; i++) {
+              close[i].onclick = function() {
+                var div = this.parentElement;
+                div.style.display = "none";
+              }
+            }
+
+            // Add a "checked-12" symbol when clicking on a list item
+            var list = document.querySelector('ul');
+            list.addEventListener('click', function(ev) {
+              if (ev.target.tagName === 'li') {
+                ev.target.classList.toggle('checked-12');
+              }
+            }, false);
+
+            // Create a new list item when clicking on the "Add" button
+            function newElementContainer12() {
+              var li = document.createElement("li");
+              var inputValue = document.getElementById("myInput12").value;
+              var t = document.createTextNode(inputValue);
+              li.appendChild(t);
+              if (inputValue === '') {
+                alert("You must write something!");
+              } else {
+                document.getElementById("myUL12").appendChild(li);
+              }
+              document.getElementById("myInput12").value = "";
+
+              var span = document.createElement("span");
+              var txt = document.createTextNode("\u00D7");
+              span.className = "close-12";
+              span.appendChild(txt);
+              li.appendChild(span);
+
+              for (i = 0; i < close.length; i++) {
+                close[i].onclick = function() {
+                  var div = this.parentElement;
+                  div.style.display = "none";
+                }
+              }
+            }
+          </script>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>13. CSS Loader</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-13">
+            <body onload="container14()">
+              <div id="loader13"></div>
+
+              <div style="display:none;" id="myDiv13" class="animate-bottom-13">
+                <h2>Tada!</h2>
+                <p>Some text in my newly loaded page..</p>
+              </div>
+            </body>
+          </div>
+          <script>
+            var myVar;
+
+            function container14() {
+              myVar = setTimeout(showPageContainer14, 3000);
+            }
+
+            function showPageContainer14() {
+              document.getElementById("loader13").style.display = "none";
+              document.getElementById("myDiv13").style.display = "block";
+            }
+          </script>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>14. Rating</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-14">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </div>
+
+          <div class="hr-line-dashed"></div>
+
+          <div class="container-14-rating">
+            <span class="heading-14-rating">User Rating</span>
+            <span class="fa fa-star checked-14-rating"></span>
+            <span class="fa fa-star checked-14-rating"></span>
+            <span class="fa fa-star checked-14-rating"></span>
+            <span class="fa fa-star checked-14-rating"></span>
+            <span class="fa fa-star"></span>
+            <p>4.1 average based on 254 reviews.</p>
+            <hr style="border:3px solid #f1f1f1">
+
+            <div class="row">
+              <div class="side-14-rating">
+                <div>5 star</div>
+              </div>
+              <div class="middle-14-rating">
+                <div class="bar-container">
+                  <div class="bar-5"></div>
+                </div>
+              </div>
+              <div class="side-14-rating right-14-rating">
+                <div>150</div>
+              </div>
+              <div class="side-14-rating">
+                <div>4 star</div>
+              </div>
+              <div class="middle-14-rating">
+                <div class="bar-container">
+                  <div class="bar-4"></div>
+                </div>
+              </div>
+              <div class="side-14-rating right-14-rating">
+                <div>63</div>
+              </div>
+              <div class="side-14-rating">
+                <div>3 star</div>
+              </div>
+              <div class="middle-14-rating">
+                <div class="bar-container">
+                  <div class="bar-3"></div>
+                </div>
+              </div>
+              <div class="side-14-rating right-14-rating">
+                <div>15</div>
+              </div>
+              <div class="side-14-rating">
+                <div>2 star</div>
+              </div>
+              <div class="middle-14-rating">
+                <div class="bar-container">
+                  <div class="bar-2"></div>
+                </div>
+              </div>
+              <div class="side-14-rating right-14-rating">
+                <div>6</div>
+              </div>
+              <div class="side-14-rating">
+                <div>1 star</div>
+              </div>
+              <div class="middle-14-rating">
+                <div class="bar-container">
+                  <div class="bar-1"></div>
+                </div>
+              </div>
+              <div class="side-14-rating right-14-rating">
+                <div>20</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>15. Contact Chips</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-15">
+            <div class="chip">
+              <img src="img_avatar.jpg" alt="Person" width="96" height="96">
+              John Doe
+            </div>
+          </div>
+
+          <div class="hr-line-dashed"></div>
+
+          <div class="contain-15-closable">
+            <div class="chip">
+              <img src="img_avatar.jpg" alt="Person" width="96" height="96">
+              John Doe
+              <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+            </div>
+          </div>
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>16. Profile Card</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-16">
+            <div class="card-16">
+              <img src="img.jpg" alt="John" style="width:100%">
+              <h1>John Doe</h1>
+              <p class="title-16">CEO & Founder, Example</p>
+              <p>Harvard University</p>
+              <a href="#"><i class="fa fa-dribbble"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <p><button>Contact</button></p>
+            </div>
+          </div>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>17. Product Card</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-17">
+            <div class="card-17">
+              <img src="jeans3.jpg" alt="Denim Jeans" style="width:100%">
+              <h1>Tailored Jeans</h1>
+              <p class="price-17">$19.99</p>
+              <p>Some text about the jeans..</p>
+              <p><button>Add to Cart</button></p>
+            </div>
+          </div>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>18. Alerts</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-18">
+            <div class="alert-18">
+              <span class="closebtn-18" onclick="this.parentElement.style.display='none';">&times;</span>
+              This is an alert box.
+            </div>
+          </div>
+
+          <div class="hr-line-dashed"></div>
+
+          <div class="container-18-many">
+            <div class="alert-18-many">
+              <span class="closebtn-18-many">&times;</span>
+              <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+            </div>
+
+            <div class="alert-18-many success">
+              <span class="closebtn-18-many">&times;</span>
+              <strong>Success!</strong> Indicates a successful or positive action.
+            </div>
+
+            <div class="alert-18-many info">
+              <span class="closebtn-18-many">&times;</span>
+              <strong>Info!</strong> Indicates a neutral informative change or action.
+            </div>
+
+            <div class="alert-18-many warning">
+              <span class="closebtn-18-many">&times;</span>
+              <strong>Warning!</strong> Indicates a warning that might need attention.
+            </div>
+          </div>
+          <script>
+            var close = document.getElementsByClassName("closebtn-18-many");
+            var i;
+            for (i = 0; i < close.length; i++) {
+              close[i].onclick = function(){
+                var div = this.parentElement;
+                div.style.opacity = "0";
+                setTimeout(function(){ div.style.display = "none"; }, 600);
+              }
+            }
+          </script>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>19. Cutout Text</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-19">
+            <div class="image-contain-19">
+              <div class="text-19">NATURE</div>
+            </div>
+          </div>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>20. Equal Height</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-20">
+            <div class="col-contain-20">
+              <div class="col-20">
+                <h2>Column 1</h2>
+                <p>Hello World</p>
+              </div>
+
+              <div class="col-20">
+                <h2>Column 2</h2>
+                <p>Hello World!</p>
+                <p>Hello World!</p>
+                <p>Hello World!</p>
+                <p>Hello World!</p>
+              </div>
+
+              <div class="col-20">
+                <h2>Column 3</h2>
+                <p>Some other text..</p>
+                <p>Some other text..</p>
+              </div>
+            </div>
+          </div>
+          <script>
+
+          </script>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>21. Clear Floats</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-21">
+            <div class="clearfix">CLEARFIX</div>
+          </div>
+          <script>
+
+          </script>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>22. Snackbar / Toast</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-22">
+            <button onclick="container22()">Show Snackbar</button>
+            <div id="snackbar22">Some text some message..</div>
+          </div>
+          <script>
+            function container22() {
+              // Get the snackbar DIV
+              var x = document.getElementById("snackbar22");
+
+              // Add the "show" class to DIV
+              x.className = "show22";
+
+              // After 3 seconds, remove the show class from DIV
+              setTimeout(function(){ x.className = x.className.replace("show22", ""); }, 3000);
+            }
+          </script>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>23. On Scroll Header</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-23">
+            <div class="header-23" id="myHeader23">
+              <h2>My Header</h2>
+            </div>
+          </div>
+          <script>
+            window.onscroll = function() {container23()};
+            var header23 = document.getElementById("myHeader23");
+            var sticky23 = header23.offsetTop;
+            function container23() {
+              if (window.pageYOffset > sticky23) {
+                header23.classList.add("sticky-23");
+              } else {
+                header23.classList.remove("sticky-23");
+              }
+            }
+          </script>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>24. Resize Header on Scroll</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-24">
+            <div id="header24">Header</div>
+          </div>
+          <script>
+            window.onscroll = function() {scrollContainer24()};
+
+            function scrollContainer24() {
+              if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                document.getElementById("header24").style.fontSize = "30px";
+              } else {
+                document.getElementById("header24").style.fontSize = "90px";
+              }
+            }
+          </script>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>25. Responsive Pricing Table</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-25">
+            <div class="columns-25">
+              <ul class="price-25">
+                <li class="header-25">Basic</li>
+                <li class="grey-25">$ 9.99 / year</li>
+                <li>10GB Storage</li>
+                <li>10 Emails</li>
+                <li>10 Domains</li>
+                <li>1GB Bandwidth</li>
+                <li class="grey-25"><a href="#" class="button">Sign Up</a></li>
+              </ul>
+            </div>
+          </div>
+          <script>
+
+          </script>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>26. Toggle Like and Dislike</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-26">
+            <i onclick="container26(this)" class="fa fa-thumbs-up"></i>
+          </div>
+          <script>
+            function container26(x) {
+              x.classList.toggle("fa-thumbs-down");
+            }
+          </script>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>27. Toggle Hide and Show</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-27">
+            <button onclick="container27()">Click Me</button>
+
+            <div id="myDIV27">
+              This is my DIV element.
+            </div>
+          </div>
+          <script>
+            function container27() {
+              var x = document.getElementById("myDIV27");
+              if (x.style.display === "none") {
+                x.style.display = "block";
+              } else {
+                x.style.display = "none";
+              }
+            }
+          </script>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>28. Toggle Class</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-28">
+            <button onclick="container28()">Try it</button>
+
+            <div id="myDIV28">
+              This is a DIV element.
+            </div>
+          </div>
+          <script>
+            function container28() {
+              var element = document.getElementById("myDIV28");
+              element.classList.toggle("mystyle-28");
+            }
+          </script>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>29. Add Active Class to Current Element</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-29">
+            <div id="myDIV29">
+              <button class="btn-29">1</button>
+              <button class="btn-29 active-29">2</button>
+              <button class="btn-29">3</button>
+              <button class="btn-29">4</button>
+              <button class="btn-29">5</button>
+            </div>
+          </div>
+          <script>
+            var btnContainer = document.getElementById("myDIV29");
+            var btns = btnContainer.getElementsByClassName("btn-29");
+            for (var i = 0; i < btns.length; i++) {
+              btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active-29");
+                current[0].className = current[0].className.replace(" active-29", "");
+                this.className += " active-29";
+              });
+            }
+          </script>
+
+          <div class="hr-line-dashed"></div>
+
+          <script>
+            var btnContainer = document.getElementById("myDIV29");
+            var btns = btnContainer.getElementsByClassName("btn-29");
+            for (var i = 0; i < btns.length; i++) {
+              btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active-29");
+                if (current.length > 0) {
+                  current[0].className = current[0].className.replace(" active-29", "");
+                }
+                this.className += " active-29";
+              });
+            }
+          </script>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>30. Tree View</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-30">
+            <ul id="myUL30">
+              <li><span class="caret-30">Beverages</span>
+                <ul class="nested-30">
+                  <li>Water</li>
+                  <li>Coffee</li>
+                  <li><span class="caret-30">Tea</span>
+                    <ul class="nested-30">
+                      <li>Black Tea</li>
+                      <li>White Tea</li>
+                      <li><span class="caret-30">Green Tea</span>
+                        <ul class="nested-30">
+                          <li>Sencha</li>
+                          <li>Gyokuro</li>
+                          <li>Matcha</li>
+                          <li>Pi Lo Chun</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <script>
+            var toggler = document.getElementsByClassName("caret-30");
+            var i;
+
+            for (i = 0; i < toggler.length; i++) {
+              toggler[i].addEventListener("click", function() {
+                this.parentElement.querySelector(".nested-30").classList.toggle("active-30");
+                this.classList.toggle("caret-down-30");
+              });
+            }
+          </script>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>31. Online Offline Detection</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-31">
+            <button onclick="container31()">Try it</button>
+            <p id="demo31"></p>
+          </div>
+          <script>
+            function container31() {
+              var x = "Is the browser online? " + navigator.onLine;
+              document.getElementById("demo31").innerHTML = x;
+            }
+          </script>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>32. Check if an Element is Hidden</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-32">
+
+          </div>
+          <script>
+            function container32() {
+              var x = document.getElementById("myDIV32");
+              if (window.getComputedStyle(x).display === "none") {
+                // Do something..
+              }
+            }
+          </script>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>33. Zoom on Hover</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-33">
+            <div class="zoom"></div>
+          </div>
+          <script>
+
+          </script>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>34. 3D Flip Box</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-34">
+            <div class="flip-box-34">
+              <div class="flip-box-inner-34">
+                <div class="flip-box-front-34">
+                  <h2>Front Side</h2>
+                </div>
+                <div class="flip-box-back-34">
+                  <h2>Back Side</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <script>
+
+          </script>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>35. Center Elements Vertically</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-35">
+            <div class="contain-35">
+              <div class="vertical-center">
+                <p>I am vertically centered.</p>
+              </div>
+            </div>
+          </div>
+          <script>
+
+          </script>
+
+          <div class="hr-line-dashed"></div>
+
+          <div class="container-35-horizontally">
+            <div class="contain-35-horizontally">
+              <div class="center-35-horizontally">
+                <p>I am vertically and horizontally centered.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>36. CSS Arrows</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-36">
+            <p>Right arrow: <i class="arrow right-36"></i></p>
+            <p>Left arrow: <i class="arrow left-36"></i></p>
+            <p>Up arrow: <i class="arrow up-36"></i></p>
+            <p>Down arrow: <i class="arrow down-36"></i></p>
+          </div>
+          <script>
+
+          </script>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>37. CSS Shapes (Arrows)</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-37">
+            <div class="triangle-up-37"></div>
+            <div class="triangle-down-37"></div>
+            <div class="triangle-left-37"></div>
+            <div class="triangle-right-37"></div>
+          </div>
+          <script>
+
+          </script>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>38. JavaScript Countdown Timer</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-38">
+            <p id="demo38"></p>
+          </div>
+          <script>
+            var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+            var x = setInterval(function() {
+              var now = new Date().getTime();
+              var distance = countDownDate - now;
+              var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+              var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+              var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+              document.getElementById("demo38").innerHTML = days + "d " + hours + "h "
+              + minutes + "m " + seconds + "s ";
+              if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo38").innerHTML = "EXPIRED";
+              }
+            }, 1000);
+          </script>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>39. Typing Effect</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-39">
+            <p id="demo39"></p>
+          </div>
+          <script>
+            var i39 = 0;
+            var txt39 = 'Lorem ipsum typing effect!'; /* The text */
+            var speed39 = 50; /* The speed/duration of the effect in milliseconds */
+
+            function typeWriter() {
+              if (i39 < txt39.length) {
+                document.getElementById("demo39").innerHTML += txt39.charAt(i39);
+                i39++;
+                setTimeout(typeWriter, speed39);
+              }
+            }
+          </script>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>40. Coming Soon Page</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-40">
+            <div class="bgimg-40">
+              <div class="topleft-40">
+                <p>Logo</p>
+              </div>
+              <div class="middle-40">
+                <h1>COMING SOON</h1>
+                <hr>
+                <p>35 days</p>
+              </div>
+              <div class="bottomleft-40">
+                <p>Some text</p>
+              </div>
+            </div>
+          </div>
+          <script>
+            var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+            var x = setInterval(function() {
+              var now = new Date().getTime();
+              var distance = countDownDate - now;
+              var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+              var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+              var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+              document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+              + minutes + "m " + seconds + "s ";
+              if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+              }
+            }, 1000);
+          </script>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>41. Chat</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-41">
+            <div class="contain-41">
+              <img src="/w3images/bandmember.jpg" alt="Avatar">
+              <p>Hello. How are you today?</p>
+              <span class="time-right-41">11:00</span>
+            </div>
+
+            <div class="contain-41 darker-41">
+              <img src="/w3images/avatar_g2.jpg" alt="Avatar" class="right-41">
+              <p>Hey! I'm fine. Thanks for asking!</p>
+              <span class="time-left-41">11:01</span>
+            </div>
+
+            <div class="contain-41">
+              <img src="/w3images/bandmember.jpg" alt="Avatar">
+              <p>Sweet! So, what do you wanna do today?</p>
+              <span class="time-right-41">11:02</span>
+            </div>
+
+            <div class="contain-41 darker-41">
+              <img src="/w3images/avatar_g2.jpg" alt="Avatar" class="right-41">
+              <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
+              <span class="time-left-41">11:05</span>
+            </div>
+          </div>
+          <script>
+
+          </script>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>42. Popup Chat Window</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-42">
+            <div class="chat-popup-42" id="myForm42">
+              <form action="/action_page.php" class="form-contain-42">
+                <h1>Chat</h1>
+
+                <label for="msg"><b>Message</b></label>
+                <textarea placeholder="Type message.." name="msg" required></textarea>
+
+                <button type="submit" class="btn-42">Send</button>
+                <button type="button" class="btn-42 cancel-42" onclick="closeForm42()">Close</button>
+              </form>
+            </div>
+          </div>
+          <script>
+            function openForm42() {
+              document.getElementById("myForm42").style.display = "block";
+            }
+            function closeForm42() {
+              document.getElementById("myForm42").style.display = "none";
+            }
+          </script>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>43. Split Screen 1/2</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-43" style="display: none;">
+            <div class="split-43 left-43">
+              <div class="centered-43">
+                <img src="img_avatar2.png" alt="Avatar woman">
+                <h2>Jane Flex</h2>
+                <p>Some text.</p>
+              </div>
+            </div>
+
+            <div class="split-43 right-43">
+              <div class="centered-43">
+                <img src="img_avatar.png" alt="Avatar man">
+                <h2>John Doe</h2>
+                <p>Some text here too.</p>
+              </div>
+            </div>
+          </div>
+          <script>
+
+          </script>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>44. Testimonials</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-44">
+            <div class="contain-44">
+              <img src="bandmember.jpg" alt="Avatar" style="width:90px">
+              <p><span>Chris Fox.</span> CEO at Mighty Schools.</p>
+              <p>John Doe saved us from a web disaster.</p>
+            </div>
+
+            <div class="contain-44">
+              <img src="avatar_g2.jpg" alt="Avatar" style="width:90px">
+              <p><span>Rebecca Flex.</span> CEO at Company.</p>
+              <p>No one is better than John Doe.</p>
+            </div>
+          </div>
+          <script>
+
+          </script>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>45. Section Counter</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-45">
+            <div class="row-45">
+              <div class="column-45">
+                <div class="card-45">
+                  <p><i class="fa-45 fa-user"></i></p>
+                  <h3>11+</h3>
+                  <p>Partners</p>
+                </div>
+              </div>
+
+              <div class="column-45">
+                <div class="card-45">
+                  <p><i class="fa-45 fa-check"></i></p>
+                  <h3>55+</h3>
+                  <p>Projects</p>
+                </div>
+              </div>
+
+              <div class="column-45">
+                <div class="card-45">
+                  <p><i class="fa-45 fa-smile-o"></i></p>
+                  <h3>100+</h3>
+                  <p>Happy Clients</p>
+                </div>
+              </div>
+
+              <div class="column-45">
+                <div class="card-45">
+                  <p><i class="fa-45 fa-coffee"></i></p>
+                  <h3>100+</h3>
+                  <p>Meetings</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <script>
+
+          </script>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>46. Closable List Items</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-46">
+            <ul>
+              <li>Adele</li>
+              <li>Agnes<span class="close-46">x</span></li>
+
+              <li>Billy<span class="close-46">x</span></li>
+              <li>Bob<span class="close-46">x</span></li>
+
+              <li>Calvin<span class="close-46">x</span></li>
+              <li>Christina<span class="close-46">x</span></li>
+              <li>Cindy</li>
+            </ul>
+          </div>
+          <script>
+            var closebtns46 = document.getElementsByClassName("close-46");
+            var i;
+            for (i = 0; i < closebtns46.length; i++) {
+              closebtns46[i].addEventListener("click", function() {
+                this.parentElement.style.display = 'none';
+              })
+            }
+          </script>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>47. Typical Device Breakpoints</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-47">
+
+          </div>
+          <script>
+
+          </script>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
+
+      <div class="hr-line-dashed"></div>
+
+      <div class="clearfix container align-center">
+        <h3>48. Create a Draggable HTML Element</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwayother">
+
+          <div class="container-48">
+            <div id="mydiv48">
+              <div id="mydivheader48">Click here to move</div>
+              <p>Move</p>
+              <p>this</p>
+              <p>DIV</p>
+            </div>
+          </div>
+          <script>
+            dragElement(document.getElementById("mydiv48"));
+            function dragElement(elmnt) {
+              var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+              if (document.getElementById(elmnt.id + "header")) {
+                document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+              } else {
+                elmnt.onmousedown = dragMouseDown;
+              }
+              function dragMouseDown(e) {
+                e = e || window.event;
+                e.preventDefault();
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                document.onmousemove = elementDrag;
+              }
+              function elementDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+              }
+              function closeDragElement() {
+                document.onmouseup = null;
+                document.onmousemove = null;
+              }
+            }
+          </script>
+
+        </div>
+        <!-- // Source Here -->
+      </div>
     </div>
 
     <div class="hr-line-dashed"></div>
@@ -522,15 +1771,6 @@
     </script>
 
   </div>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-  </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-  </script>
 </body>
 
 </html>

@@ -30,21 +30,19 @@
       s.parentNode.insertBefore(ga, s);
     })();
   </script>
-  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <style>
-    body {padding-top: 100px;}
-    .bs-component {position: relative;}
-    .bs-component .source-button {display: none;position: absolute;top: 0;right: 0;}
-    .bs-component:hover .source-button {display: block;}
-  </style>
 </head>
 
 <body>
-  <!-- Header-Area -->
-  <div class="header">
+  <div class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <!-- Header-Area -->
     <div class="container">
       <a href="/index.html" class="navbar-brand h1">Johnny's Theme</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item"><a class="nav-link" href="feelway-menus.html">F.T-Menus</a></li>
@@ -56,8 +54,8 @@
           <li class="nav-item"><a class="nav-link" href="feelway-other.html">F.T-Other</a></li>
         </ul>
       </div>
-    </div>
-  </div><!-- // Header-Area -->
+    </div><!-- // Header-Area -->
+  </div>
 
   <div class="container">
 
@@ -84,79 +82,46 @@
       <div class="clearfix container align-center">
         <h3>01. Create Tab</h3>
         <!-- Source Here -->
-        <div class="bs-component">
-          <style>
-            .container-01 .tab {
-              overflow: hidden;
-              border: 1px solid #ccc;
-              background-color: #f1f1f1;
-            }
-            .container-01 .tab button {
-              background-color: inherit;
-              float: left;
-              border: none;
-              outline: none;
-              cursor: pointer;
-              padding: 14px 16px;
-              transition: 0.3s;
-            }
-            .container-01 .tab button:hover {
-              background-color: #ddd;
-            }
-            .container-01 .tab button.active {
-              background-color: #ccc;
-            }
-            .container-01 .tabcontent {
-              display: none;
-              padding: 6px 12px;
-              border: 1px solid #ccc;
-              border-top: none;
-              animation: fadeEffect 1s;
-            }
 
-            @keyframes fadeEffect {
-              from {opacity: 0;}
-              to {opacity: 1;}
-            }
-          </style>
+        <div class="bs-component feelwaymenus">
 
           <div class="container-01">
             <!-- Tab links -->
-            <div class="tab">
-              <button class="tablinks" onclick="container01(event, 'London')" id="defaultOpen">London</button>
-              <button class="tablinks" onclick="container01(event, 'Paris')">Paris</button>
-              <button class="tablinks" onclick="container01(event, 'Tokyo')">Tokyo</button>
+            <div class="tab01">
+              <button class="tablinks01" onclick="container01(event, 'Seoul')" id="defaultOpen">Seoul</button>
+              <button class="tablinks01" onclick="container01(event, 'Busan')">Busan</button>
+              <button class="tablinks01" onclick="container01(event, 'Daegu')">Daegu</button>
             </div>
 
             <!-- Tab content -->
-            <div id="London" class="tabcontent">
-              <h4>London</h4>
-              <p>London is the capital city of England.</p>
+            <div id="Seoul" class="tabcontent01">
+              <h4>Seoul</h4>
+              <p>Seoul Seoul Seoul Seoul Seoul Seoul Seoul Seoul Seoul Seoul</p>
             </div>
 
-            <div id="Paris" class="tabcontent">
-              <h4>Paris</h4>
-              <p>Paris is the capital of France.</p>
+            <div id="Busan" class="tabcontent01">
+              <h4>Busan</h4>
+              <p>Busan Busan Busan Busan Busan Busan Busan Busan Busan Busan</p>
             </div>
 
-            <div id="Tokyo" class="tabcontent">
-              <h4>Tokyo</h4>
-              <p>Tokyo is the capital of Japan.</p>
+            <div id="Daegu" class="tabcontent01">
+              <h4>Daegu</h4>
+              <p>Daegu Daegu Daegu Daegu Daegu Daegu Daegu Daegu Daegu Daegu</p>
             </div>
           </div>
 
           <script>
             function container01(evt, cityName) {
-              var i, tabcontent, tablinks;
+              var i, tabcontent01, tablinks01;
 
-              tabcontent = document.getElementsByClassName("tabcontent");
-              for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
+              tabcontent01 = document.getElementsByClassName("tabcontent01");
+              for (i = 0; i < tabcontent01.length; i++) {
+                tabcontent01[i].style.display = "none";
               }
 
-              tablinks = document.getElementsByClassName("tablinks");
-              for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              tablinks01 = document.getElementsByClassName("tablinks01");
+              for (i = 0; i < tablinks01.length; i++) {
+                tablinks01[i].className = tablinks01[i].className.replace(" active", "");
               }
 
               document.getElementById(cityName).style.display = "block";
@@ -167,6 +132,7 @@
           </script>
 
         </div>
+
         <!-- // Source Here -->
       </div>
 
@@ -175,67 +141,16 @@
       <div class="clearfix container align-center">
         <h3>03. Responsive Navigation Bar</h3>
         <!-- Source Here -->
-        <div class="bs-component">
-          <style>
-            .container-03 .topnav {
-              background-color: #333;
-              overflow: hidden;
-            }
 
-            .container-03 .topnav a {
-              float: left;
-              display: block;
-              color: #f2f2f2;
-              text-align: center;
-              padding: 14px 16px;
-              text-decoration: none;
-              font-size: 17px;
-            }
-
-            .container-03 .topnav a:hover {
-              background-color: #ddd;
-              color: black;
-            }
-
-            .container-03 .topnav a.active {
-              background-color: #4CAF50;
-              color: white;
-            }
-
-            .container-03 .topnav .icon {
-              display: none;
-            }
-
-            @media screen and (max-width: 600px) {
-              .container-03 .topnav a:not(:first-child) {display: none;}
-              .container-03 .topnav a.icon {
-                float: right;
-                display: block;
-              }
-            }
-
-            @media screen and (max-width: 600px) {
-              .container-03 .topnav.responsive {position: relative;}
-              .container-03 .topnav.responsive a.icon {
-                position: absolute;
-                right: 0;
-                top: 0;
-              }
-              .container-03 .topnav.responsive a {
-                float: none;
-                display: block;
-                text-align: left;
-              }
-            }
-          </style>
+        <div class="bs-component feelwaymenus">
 
           <div class="container-03">
-            <div class="topnav" id="myTopnav">
+            <div class="topnav03" id="myTopnav03">
               <a href="#home" class="active">Home</a>
               <a href="#news">News</a>
               <a href="#contact">Contact</a>
               <a href="#about">About</a>
-              <a href="javascript:void(0);" class="icon" onclick="container03()">
+              <a href="javascript:void(0);" class="icon03" onclick="container03()">
                 <i class="fa fa-bars"></i>
               </a>
             </div>
@@ -243,16 +158,17 @@
 
           <script>
             function container03() {
-              var x = document.getElementById("myTopnav");
-              if (x.className === "topnav") {
-                x.className += " responsive";
+              var x = document.getElementById("myTopnav03");
+              if (x.className === "topnav03") {
+                x.className += " responsive03";
               } else {
-                x.className = "topnav";
+                x.className = "topnav03";
               }
             }
           </script>
 
         </div>
+
         <!-- // Source Here -->
       </div>
 
@@ -261,34 +177,13 @@
       <div class="clearfix container align-center">
         <h3>04. Search/Filter Menu *</h3>
         <!-- Source Here -->
-        <div class="bs-component">
-          <style>
-            .container-04 #mySearch {
-              width: 100%;
-              font-size: 18px;
-              padding: 11px;
-              border: 1px solid #ddd;
-            }
-            .container-04 #myMenu {
-              list-style-type: none;
-              padding: 0;
-              margin: 0;
-            }
-            .container-04 #myMenu li a {
-              padding: 12px;
-              text-decoration: none;
-              color: black;
-              display: block;
-            }
-            .container-04 #myMenu li a:hover {
-              background-color: #eee;
-            }
-          </style>
+
+        <div class="bs-component feelwaymenus">
 
           <div class="container-04">
-            <input type="text" id="mySearch" onkeyup="container04()" placeholder="Search.." title="Type in a category">
+            <input type="text" id="mySearch04" onkeyup="container04()" placeholder="Search.." title="Type in a category">
 
-            <ul id="myMenu">
+            <ul id="myMenu04">
               <li><a href="#">HTML</a></li>
               <li><a href="#">CSS</a></li>
               <li><a href="#">JavaScript</a></li>
@@ -303,14 +198,12 @@
 
 					<script>
             function container04() {
-              // Declare variables
               var input, filter, ul, li, a, i;
-              input = document.getElementById("mySearch");
+              input = document.getElementById("mySearch04");
               filter = input.value.toUpperCase();
-              ul = document.getElementById("myMenu");
+              ul = document.getElementById("myMenu04");
               li = ul.getElementsByTagName("li");
 
-              // Loop through all list items, and hide those who don't match the search query
               for (i = 0; i < li.length; i++) {
                 a = li[i].getElementsByTagName("a")[0];
                 if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
@@ -323,6 +216,7 @@
 					</script>
 
         </div>
+
         <!-- // Source Here -->
       </div>
 
@@ -331,55 +225,11 @@
       <div class="clearfix container align-center">
         <h3>05. Responsive Search Bar</h3>
         <!-- Source Here -->
-        <div class="bs-component">
-          <style>
-            .container-05 .topnav {
-              overflow: hidden;
-              background-color: #e9e9e9;
-            }
-            .container-05 .topnav a {
-              float: left;
-              display: block;
-              color: black;
-              text-align: center;
-              padding: 14px 16px;
-              text-decoration: none;
-              font-size: 17px;
-            }
-            .container-05 .topnav a:hover {
-              background-color: #ddd;
-              color: black;
-            }
-            .container-05 .topnav a.active {
-              background-color: #2196F3;
-              color: white;
-            }
-            .container-05 .topnav input[type=text] {
-              float: right;
-              padding: 6px;
-              border: none;
-              margin-top: 8px;
-              margin-right: 16px;
-              font-size: 17px;
-            }
-            @media screen and (max-width: 600px) {
-              .container-05 .topnav a,
-              .container-05 .topnav input[type=text] {
-                float: none;
-                display: block;
-                text-align: left;
-                width: 100%;
-                margin: 0;
-                padding: 14px;
-              }
-              .container-05 .topnav input[type=text] {
-                border: 1px solid #ccc;
-              }
-            }
-          </style>
+
+        <div class="bs-component feelwaymenus">
 
           <div class="container-05">
-            <div class="topnav">
+            <div class="topnav05">
               <a class="active" href="#home">Home</a>
               <a href="#about">About</a>
               <a href="#contact">Contact</a>
@@ -392,6 +242,7 @@
           </script>
 
         </div>
+
         <!-- // Source Here -->
       </div>
 
@@ -400,48 +251,12 @@
       <div class="clearfix container align-center">
         <h3>06. Fixed Sidebar</h3>
         <!-- Source Here -->
-        <div class="bs-component">
-          <style>
-            .container-06 .sidenav {
-              float: left;
-              height: 100%; /* Full-height: remove this if you want "auto" height */
-              width: 160px; /* Set the width of the sidebar */
-              /* position: fixed; */ /* Fixed Sidebar (stay in place on scroll) */
-              position: static;
-              z-index: 1; /* Stay on top */
-              top: 0; /* Stay at the top */
-              left: 0;
-              background-color: #111; /* Black */
-              overflow-x: hidden; /* Disable horizontal scroll */
-              padding-top: 20px;
-            }
-            .container-06 .sidenav a {
-              padding: 6px 8px 6px 16px;
-              text-decoration: none;
-              font-size: 25px;
-              color: #818181;
-              display: block;
-            }
-            .container-06 .sidenav a:hover {
-              color: #f1f1f1;
-            }
-            .container-06 .main {
-              margin-left: 160px; /* Same as the width of the sidebar */
-              padding: 0px 10px;
-            }
-            @media screen and (max-height: 450px) {
-              .container-06 .sidenav {
-                padding-top: 15px;
-              }
-              .container-06 .sidenav a {
-                font-size: 18px;
-              }
-            }
-          </style>
+
+        <div class="bs-component feelwaymenus">
 
           <div class="container-06">
             <!-- Side navigation -->
-            <div class="sidenav">
+            <div class="sidenav06">
               <a href="#">About</a>
               <a href="#">Services</a>
               <a href="#">Clients</a>
@@ -449,7 +264,7 @@
             </div>
 
             <!-- Page content -->
-            <div class="main">
+            <div class="main06">
               ...
             </div>
           </div>
@@ -459,6 +274,7 @@
           </script>
 
         </div>
+
         <!-- // Source Here -->
       </div>
 
@@ -467,83 +283,37 @@
       <div class="clearfix container align-center">
         <h3>07. Side Navigation</h3>
         <!-- Source Here -->
-        <div class="bs-component">
-          <style>
-            .container-07 .sidenav {
-              height: 100%; /* 100% Full-height */
-              width: 0; /* 0 width - change this with JavaScript */
-              position: fixed; /* Stay in place */
-              z-index: 1; /* Stay on top */
-              top: 0; /* Stay at the top */
-              left: 0;
-              background-color: #111; /* Black*/
-              overflow-x: hidden; /* Disable horizontal scroll */
-              padding-top: 60px; /* Place content 60px from the top */
-              transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-            }
-            .container-07 .sidenav a {
-              padding: 8px 8px 8px 32px;
-              text-decoration: none;
-              font-size: 25px;
-              color: #818181;
-              display: block;
-              transition: 0.3s;
-            }
-            .container-07 .sidenav a:hover {
-              color: #f1f1f1;
-            }
-            .container-07 .sidenav .closebtn {
-              position: absolute;
-              top: 0;
-              right: 25px;
-              font-size: 36px;
-              margin-left: 50px;
-            }
-            .container-07 #main {
-              transition: margin-left .5s;
-              padding: 20px;
-            }
-            @media screen and (max-height: 450px) {
-              .container-07 .sidenav {
-                padding-top: 15px;
-              }
-              .container-07 .sidenav a {
-                font-size: 18px;
-              }
-            }
-          </style>
+
+        <div class="bs-component feelwaymenus">
 
           <div class="container-07">
-            <div id="mySidenav" class="sidenav">
-              <a href="javascript:void(0)" class="closebtn" onclick="container07closeNav()">&times;</a>
+            <div id="mySidenav07" class="sidenav07">
+              <a href="javascript:void(0)" class="closebtn07" onclick="container07closeNav()">&times;</a>
               <a href="#">About</a>
               <a href="#">Services</a>
               <a href="#">Clients</a>
               <a href="#">Contact</a>
             </div>
 
-            <!-- Use any element to open the sidenav -->
             <span onclick="container07openNav()">open</span>
 
-            <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
-            <div id="main">
+            <div id="main07">
               ...
             </div>
           </div>
 
           <script>
-            /* Set the width of the side navigation to 250px */
             function container07openNav() {
-              document.getElementById("mySidenav").style.width = "250px";
+              document.getElementById("mySidenav07").style.width = "250px";
             }
 
-            /* Set the width of the side navigation to 0 */
             function container07closeNav() {
-              document.getElementById("mySidenav").style.width = "0";
+              document.getElementById("mySidenav07").style.width = "0";
             }
           </script>
 
         </div>
+
         <!-- // Source Here -->
       </div>
 
@@ -552,57 +322,12 @@
       <div class="clearfix container align-center">
         <h3>08. Responsive Sidebar</h3>
         <!-- Source Here -->
-        <div class="bs-component">
-          <style>
-            .container-08 .sidebar {
-              float: left;
-              margin: 0;
-              padding: 0;
-              width: 200px;
-              background-color: #f1f1f1;
-              position: statc;
-              height: 100%;
-              overflow: auto;
-            }
-            .container-08 .sidebar a {
-              display: block;
-              color: black;
-              padding: 16px;
-              text-decoration: none;
-            }
-            .container-08 .sidebar a.active {
-              background-color: #4CAF50;
-              color: white;
-            }
-            .container-08 .sidebar a:hover:not(.active) {
-              background-color: #555;
-              color: white;
-            }
-            div.content {
-              margin-left: 200px;
-              padding: 1px 16px;
-              height: auto;
-            }
-            @media screen and (max-width: 700px) {
-              .container-08 .sidebar {
-                width: 100%;
-                height: auto;
-                position: relative;
-              }
-              .container-08 .sidebar a {float: left;}
-              div.content {margin-left: 0;}
-            }
-            @media screen and (max-width: 400px) {
-              .container-08 .sidebar a {
-                text-align: center;
-                float: none;
-              }
-            }
-          </style>
+
+        <div class="bs-component feelwaymenus">
 
           <div class="container-08">
             <!-- The sidebar -->
-            <div class="sidebar">
+            <div class="sidebar08">
               <a class="active" href="#home">Home</a>
               <a href="#news">News</a>
               <a href="#contact">Contact</a>
@@ -610,7 +335,7 @@
             </div>
 
             <!-- Page content -->
-            <div class="content">
+            <div class="content08">
               ..
             </div>
           </div>
@@ -620,6 +345,7 @@
           </script>
 
         </div>
+
         <!-- // Source Here -->
       </div>
 
@@ -628,87 +354,34 @@
       <div class="clearfix container align-center">
         <h3>09. Full screen Overlay Navigation</h3>
         <!-- Source Here -->
-        <div class="bs-component">
-          <style>
-            .container-09 .overlay {
-              /* Height & width depends on how you want to reveal the overlay (see JS below) */
-              height: 100%;
-              width: 0;
-              position: fixed; /* Stay in place */
-              z-index: 1; /* Sit on top */
-              left: 0;
-              top: 0;
-              background-color: rgb(0,0,0); /* Black fallback color */
-              background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
-              overflow-x: hidden; /* Disable horizontal scroll */
-              transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
-            }
-            .container-09 .overlay-content {
-              position: relative;
-              top: 25%; /* 25% from the top */
-              width: 100%; /* 100% width */
-              text-align: center; /* Centered text/links */
-              margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
-            }
-            .container-09 .overlay a {
-              padding: 8px;
-              text-decoration: none;
-              font-size: 36px;
-              color: #818181;
-              display: block; /* Display block instead of inline */
-              transition: 0.3s; /* Transition effects on hover (color) */
-            }
-            .container-09 .overlay a:hover,
-            .container-09 .overlay a:focus {
-              color: #f1f1f1;
-            }
-            .container-09 .overlay .closebtn {
-              position: absolute;top: 20px;right: 45px;font-size: 60px;
-            }
-            @media screen and (max-height: 450px) {
-              .container-09 .overlay a {font-size: 20px}
-              .container-09 .overlay .closebtn {
-                font-size: 40px;
-                top: 15px;
-                right: 35px;
-              }
-            }
-          </style>
+
+        <div class="bs-component feelwaymenus">
 
           <div class="container-09">
-            <!-- The overlay -->
-            <div id="myNav" class="overlay">
-
-            <!-- Button to close the overlay navigation -->
-            <a href="javascript:void(0)" class="closebtn" onclick="container09closeNav()">&times;</a>
-
-            <!-- Overlay content -->
-            <div class="overlay-content">
-              <a href="#">About</a>
-              <a href="#">Services</a>
-              <a href="#">Clients</a>
-              <a href="#">Contact</a>
+            <div id="myNav09" class="overlay09">
+              <a href="javascript:void(0)" class="closebtn09" onclick="container09closeNav()">&times;</a>
+              <div class="overlay-content09">
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+              </div>
             </div>
-
-            </div>
-
-            <!-- Use any element to open/show the overlay navigation menu -->
             <span onclick="container09openNav()">open</span>
           </div>
 
           <script>
-            /* Open when someone clicks on the span element */
             function container09openNav() {
-              document.getElementById("myNav").style.width = "100%";
+              document.getElementById("myNav09").style.width = "100%";
             }
 
-            /* Close when someone clicks on the "x" symbol inside the overlay */
             function container09closeNav() {
-              document.getElementById("myNav").style.width = "0%";
+              document.getElementById("myNav09").style.width = "0%";
             }
           </script>
 
         </div>
+
         <!-- // Source Here -->
       </div>
 
@@ -717,85 +390,37 @@
       <div class="clearfix container align-center">
         <h3>10. Off-Canvas Menu</h3>
         <!-- Source Here -->
-        <div class="bs-component">
-          <style>
-            .container-10 .sidenav {
-              height: 100%; /* 100% Full-height */
-              width: 0; /* 0 width - change this with JavaScript */
-              position: fixed; /* Stay in place */
-              z-index: 1; /* Stay on top */
-              top: 0;
-              left: 0;
-              background-color: #111; /* Black*/
-              overflow-x: hidden; /* Disable horizontal scroll */
-              padding-top: 60px; /* Place content 60px from the top */
-              transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-            }
-            .container-10 .sidenav a {
-              padding: 8px 8px 8px 32px;
-              text-decoration: none;
-              font-size: 25px;
-              color: #818181;
-              display: block;
-              transition: 0.3s;
-            }
-            .container-10 .sidenav a:hover {
-              color: #f1f1f1;
-            }
-            .container-10 .sidenav .closebtn {
-              position: absolute;
-              top: 0;
-              right: 25px;
-              font-size: 36px;
-              margin-left: 50px;
-            }
-            #main {
-              transition: margin-left .5s;
-              padding: 20px;
-            }
-            @media screen and (max-height: 450px) {
-              .container-10 .sidenav {
-                padding-top: 15px;
-              }
-              .container-10 .sidenav a {
-                font-size: 18px;
-              }
-            }
-          </style>
+
+        <div class="bs-component feelwaymenus">
 
           <div class="container-10">
-            <div id="mySidenav" class="sidenav">
-              <a href="javascript:void(0)" class="closebtn" onclick="container10closeNav()">&times;</a>
+            <div id="mySidenav10" class="sidenav10">
+              <a href="javascript:void(0)" class="closebtn10" onclick="container10closeNav()">&times;</a>
               <a href="#">About</a>
               <a href="#">Services</a>
               <a href="#">Clients</a>
               <a href="#">Contact</a>
             </div>
-
-            <!-- Use any element to open the sidenav -->
             <span onclick="container10openNav()">open</span>
-
-            <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
-            <div id="main">
+            <div id="main10">
               ...
             </div>
           </div>
 
           <script>
-            /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
             function container10openNav() {
-              document.getElementById("mySidenav").style.width = "250px";
-              document.getElementById("main").style.marginLeft = "250px";
+              document.getElementById("mySidenav10").style.width = "250px";
+              document.getElementById("main10").style.marginLeft = "250px";
             }
 
-            /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
             function container10closeNav() {
-              document.getElementById("mySidenav").style.width = "0";
-              document.getElementById("main").style.marginLeft = "0";
+              document.getElementById("mySidenav10").style.width = "0";
+              document.getElementById("main10").style.marginLeft = "0";
             }
           </script>
 
         </div>
+
         <!-- // Source Here -->
       </div>
 
@@ -804,81 +429,32 @@
       <div class="clearfix container align-center">
         <h3>11. Responsive Bottom Navigation</h3>
         <!-- Source Here -->
-        <div class="bs-component">
-          <style>
-            .container-11 .navbar {
-              background-color: #333;
-              overflow: hidden;
-              position: fixed;
-              bottom: 0;
-              width: 100%;
-            }
-            .container-11 .navbar a {
-              float: left;
-              display: block;
-              color: #f2f2f2;
-              text-align: center;
-              padding: 14px 16px;
-              text-decoration: none;
-              font-size: 17px;
-            }
-            .container-11 .navbar a:hover {
-              background-color: #ddd;
-              color: black;
-            }
-            .container-11 .navbar a.active {
-              background-color: #4CAF50;
-              color: white;
-            }
-            .container-11 .navbar .icon {
-              display: none;
-            }
-            @media screen and (max-width: 600px) {
-              .container-11 .navbar a:not(:first-child) {
-                display: none;
-              }
-              .container-11 .navbar a.icon {
-                float: right;
-                display: block;
-              }
-            }
-            @media screen and (max-width: 600px) {
-              .container-11 .navbar.responsive a.icon {
-                position: absolute;
-                right: 0;
-                bottom: 0;
-              }
-              .container-11 .navbar.responsive a {
-                float: none;
-                display: block;
-                text-align: left;
-              }
-            }
-          </style>
+
+        <div class="bs-component feelwaymenus">
 
           <div class="container-11">
-            <div class="navbar" id="myNavbar">
+            <div class="navbar11" id="myNavbar11">
               <a href="#home">Home</a>
               <a href="#news">News</a>
               <a href="#contact">Contact</a>
               <a href="#about">About</a>
-              <a href="javascript:void(0);" class="icon" onclick="container11()">&#9776;</a>
+              <a href="javascript:void(0);" class="icon11" onclick="container11()">&#9776;</a>
             </div>
           </div>
 
           <script>
-            /* Toggle between adding and removing the "responsive" class to the navbar when the user clicks on the icon */
             function container11() {
-              var x = document.getElementById("myNavbar");
-              if (x.className === "navbar") {
+              var x = document.getElementById("myNavbar11");
+              if (x.className === "navbar11") {
                 x.className += " responsive";
               } else {
-                x.className = "navbar";
+                x.className = "navbar11";
               }
             }
           </script>
 
         </div>
+
         <!-- // Source Here -->
       </div>
 
@@ -887,41 +463,12 @@
       <div class="clearfix container align-center">
         <h3>12. Equal Width Navbar Links</h3>
         <!-- Source Here -->
-        <div class="bs-component">
-          <style>
-            .container-12 .navbar {
-              width: 100%;
-              background-color: #555;
-              overflow: auto;
-            }
-            .container-12 .navbar a {
-              float: left;
-              padding: 12px 0;
-              color: white;
-              text-decoration: none;
-              font-size: 17px;
-              width: 25%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
-              text-align: center; /* If you want the text to be centered */
-            }
-            .container-12 .navbar a:hover {
-              background-color: #000;
-            }
-            .container-12 .navbar a.active {
-              background-color: #4CAF50;
-            }
-            @media screen and (max-width: 500px) {
-              .container-12 .navbar a {
-                float: none;
-                display: block;
-                width: 100%;
-                text-align: left; /* If you want the text to be left-aligned on small screens */
-              }
-            }
-          </style>
+
+        <div class="bs-component feelwaymenus">
 
           <div class="container-12">
             <!-- The navigation menu -->
-            <div class="navbar">
+            <div class="navbar12">
               <a class="active" href="#">Home</a>
               <a href="#">Search</a>
               <a href="#">Contact</a>
@@ -934,6 +481,7 @@
           </script>
 
         </div>
+
         <!-- // Source Here -->
       </div>
 
@@ -942,40 +490,17 @@
       <div class="clearfix container align-center">
         <h3>13. Fixed Menu</h3>
         <!-- Source Here -->
-        <div class="bs-component">
-          <style>
-            .container-13 .navbar {
-              overflow: hidden;
-              background-color: #333;
-              position: fixed; /* Set the navbar to fixed position */
-              top: 0; /* Position the navbar at the top of the page */
-              width: 100%; /* Full width */
-            }
-            .container-13 .navbar a {
-              float: left;
-              display: block;
-              color: #f2f2f2;
-              text-align: center;
-              padding: 14px 16px;
-              text-decoration: none;
-            }
-            .container-13 .navbar a:hover {
-              background: #ddd;
-              color: black;
-            }
-            .container-13 .main {
-              margin-top: 30px; /* Add a top margin to avoid content overlay */
-            }
-          </style>
+
+        <div class="bs-component feelwaymenus">
 
           <div class="container-13">
-            <div class="navbar">
+            <div class="navbar13">
               <a href="#home">Home</a>
               <a href="#news">News</a>
               <a href="#contact">Contact</a>
             </div>
 
-            <div class="main">
+            <div class="main13">
               <p>Some text some text some text some text..</p>
             </div>
           </div>
@@ -985,6 +510,7 @@
           </script>
 
         </div>
+
         <!-- // Source Here -->
       </div>
 
@@ -993,31 +519,11 @@
       <div class="clearfix container align-center">
         <h3>14. Hide Menu on Scroll *</h3>
         <!-- Source Here -->
-        <div class="bs-component">
-          <style>
-            .container-14 #navbar {
-              background-color: #333; /* Black background color */
-              position: fixed; /* Make it stick/fixed */
-              top: 0; /* Stay on top */
-              width: 100%; /* Full width */
-              transition: top 0.3s; /* Transition effect when sliding down (and up) */
-            }
-            .container-14 #navbar a {
-              float: left;
-              display: block;
-              color: white;
-              text-align: center;
-              padding: 15px;
-              text-decoration: none;
-            }
-            .container-14 #navbar a:hover {
-              background-color: #ddd;
-              color: black;
-            }
-          </style>
+
+        <div class="bs-component feelwaymenus">
 
           <div class="container-14">
-            <div id="navbar">
+            <div id="navbar14">
               <a href="#home">Home</a>
               <a href="#news">News</a>
               <a href="#contact">Contact</a>
@@ -1025,85 +531,36 @@
           </div>
 
           <script>
-            /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
-            var prevScrollpos = window.pageYOffset;
+            var prevContainer14Scrollpos = window.pageYOffset;
             window.onscroll = function() {
-              var currentScrollPos = window.pageYOffset;
-              if (prevScrollpos > currentScrollPos) {
-                document.getElementById("navbar").style.top = "0";
+              var currentContainer14ScrollPos = window.pageYOffset;
+              if (prevContainer14Scrollpos > currentContainer14ScrollPos) {
+                document.getElementById("navbar14").style.top = "0";
               } else {
-                document.getElementById("navbar").style.top = "-50px";
+                document.getElementById("navbar14").style.top = "-50px";
               }
-              prevScrollpos = currentScrollPos;
+              prevContainer14Scrollpos = currentContainer14ScrollPos;
             }
           </script>
 
         </div>
+
         <!-- // Source Here -->
       </div>
 
       <div class="hr-line-dashed"></div>
 
       <div class="clearfix container align-center">
-        <h3>15. Shrink Navigation Menu on Scroll</h3>
         <!-- Source Here -->
-        <div class="bs-component">
-          <style>
-            .container-15 #navbar {
-              overflow: hidden;
-              background-color: #f1f1f1;
-              padding: 90px 10px; /* Large padding which will shrink on scroll (using JS) */
-              transition: 0.4s; /* Adds a transition effect when the padding is decreased */
-              position: fixed; /* Sticky/fixed navbar */
-              width: 100%;
-              top: 0; /* At the top */
-              z-index: 99;
-            }
-            .container-15 #navbar a {
-              float: left;
-              color: black;
-              text-align: center;
-              padding: 12px;
-              text-decoration: none;
-              font-size: 18px;
-               line-height: 25px;
-              border-radius: 4px;
-            }
-            .container-15 #navbar #logo {
-              font-size: 35px;
-              font-weight: bold;
-              transition: 0.4s;
-            }
-            .container-15 #navbar a:hover {
-              background-color: #ddd;
-              color: black;
-            }
-            .container-15 #navbar a.active {
-              background-color: dodgerblue;
-              color: white;
-            }
-            .container-15 #navbar-right {
-              float: right;
-            }
-            @media screen and (max-width: 580px) {
-              .container-15 #navbar {
-                padding: 20px 10px !important; /* Use !important to make sure that JavaScript doesn't override the padding on small screens */
-              }
-              .container-15 #navbar a {
-                float: none;
-                display: block;
-                text-align: left;
-              }
-              .container-15 #navbar-right {
-                float: none;
-              }
-            }
-          </style>
+
+        <!--
+        <h3>15. Shrink Navigation Menu on Scroll</h3>
+        <div class="bs-component feelwaymenus">
 
           <div class="container-15">
-            <div id="navbar">
-              <a href="#default" id="logo">CompanyLogo</a>
-              <div id="navbar-right">
+            <div id="navbar15">
+              <a href="#default" id="logo15">CompanyLogo</a>
+              <div id="navbar-right15">
                 <a class="active" href="#home">Home</a>
                 <a href="#contact">Contact</a>
                 <a href="#about">About</a>
@@ -1112,21 +569,22 @@
           </div>
 
           <script>
-            // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
             window.onscroll = function() {container15scrollFunction()};
 
             function container15scrollFunction() {
               if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-                document.getElementById("navbar").style.padding = "30px 10px";
-                document.getElementById("logo").style.fontSize = "25px";
+                document.getElementById("navbar15").style.padding = "30px 10px";
+                document.getElementById("logo15").style.fontSize = "25px";
               } else {
-                document.getElementById("navbar").style.padding = "80px 10px";
-                document.getElementById("logo").style.fontSize = "35px";
+                document.getElementById("navbar15").style.padding = "80px 10px";
+                document.getElementById("logo15").style.fontSize = "35px";
               }
             }
           </script>
 
         </div>
+        -->
+
         <!-- // Source Here -->
       </div>
 
@@ -1135,35 +593,11 @@
       <div class="clearfix container align-center">
         <h3>16. Sticky/Affix Navbar</h3>
         <!-- Source Here -->
-        <div class="bs-component">
-          <style>
-            .container-16 #navbar {
-              overflow: hidden;
-              background-color: #333;
-            }
-            .container-16 #navbar a {
-              float: left;
-              display: block;
-              color: #f2f2f2;
-              text-align: center;
-              padding: 14px;
-              text-decoration: none;
-            }
-            .container-16 .content {
-              padding: 16px;
-            }
-            .container-16 .sticky {
-              position: fixed;
-              top: 0;
-              width: 100%;
-            }
-            .container-16 .sticky + .content {
-              padding-top: 60px;
-            }
-          </style>
+
+        <div class="bs-component feelwaymenus">
 
           <div class="container-16">
-            <div id="navbar">
+            <div id="navbar16">
               <a href="#home">Home</a>
               <a href="#news">News</a>
               <a href="#contact">Contact</a>
@@ -1171,26 +605,20 @@
           </div>
 
           <script>
-            // When the user scrolls the page, execute myFunction
             window.onscroll = function() {container16()};
-
-            // Get the navbar
-            var navbar = document.getElementById("navbar");
-
-            // Get the offset position of the navbar
-            var sticky = navbar.offsetTop;
-
-            // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+            var navbar16 = document.getElementById("navbar16");
+            var sticky16 = navbar16.offsetTop;
             function container16() {
-              if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky")
+              if (window.pageYOffset >= sticky16) {
+                navbar16.classList.add("sticky16")
               } else {
-                navbar.classList.remove("sticky");
+                navbar16.classList.remove("sticky16");
               }
             }
           </script>
 
         </div>
+
         <!-- // Source Here -->
       </div>
 
@@ -1199,140 +627,40 @@
       <div class="clearfix container align-center">
         <h3>17. Responsive Navbar with Dropdown</h3>
         <!-- Source Here -->
-        <div class="bs-component">
-          <style>
-            .container-17 .topnav {
-              background-color: #333;
-              overflow: hidden;
-            }
-            .container-17 .topnav a {
-              float: left;
-              display: block;
-              color: #f2f2f2;
-              text-align: center;
-              padding: 14px 16px;
-              text-decoration: none;
-              font-size: 17px;
-            }
-            .container-17 .active {
-              background-color: #4CAF50;
-              color: white;
-            }
-            .container-17 .topnav .icon {
-              display: none;
-            }
-            .container-17 .dropdown {
-              float: left;
-              overflow: hidden;
-            }
-            .container-17 .dropdown .dropbtn {
-              font-size: 17px;
-               border: none;
-              outline: none;
-              color: white;
-              padding: 14px 16px;
-              background-color: inherit;
-              font-family: inherit;
-              margin: 0;
-            }
-            .container-17 .dropdown-content {
-              display: none;
-              position: absolute;
-              background-color: #f9f9f9;
-              min-width: 160px;
-              box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-              z-index: 1;
-            }
-            .container-17 .dropdown-content a {
-              float: none;
-              color: black;
-              padding: 12px 16px;
-              text-decoration: none;
-              display: block;
-              text-align: left;
-            }
-            .container-17 .topnav a:hover, .dropdown:hover .dropbtn {
-              background-color: #555;
-              color: white;
-            }
-            .container-17 .dropdown-content a:hover {
-              background-color: #ddd;
-              color: black;
-            }
-            .container-17 .dropdown:hover .dropdown-content {
-              display: block;
-            }
-            @media screen and (max-width: 600px) {
-              .container-17 .topnav a:not(:first-child),
-              .container-17 .dropdown .dropbtn {
-                display: none;
-              }
-              .container-17 .topnav a.icon {
-                float: right;
-                display: block;
-              }
-            }
-            @media screen and (max-width: 600px) {
-              .container-17 .topnav.responsive {
-                position: relative;
-              }
-              .container-17 .topnav.responsive a.icon {
-                position: absolute;
-                right: 0;
-                top: 0;
-              }
-              .container-17 .topnav.responsive a {
-                float: none;
-                display: block;
-                text-align: left;
-              }
-              .container-17 .topnav.responsive .dropdown {
-                float: none;
-              }
-              .container-17 .topnav.responsive .dropdown-content {
-                position: relative;
-              }
-              .container-17 .topnav.responsive .dropdown .dropbtn {
-                display: block;
-                width: 100%;
-                text-align: left;
-              }
-            }
-          </style>
+
+        <div class="bs-component feelwaymenus">
 
           <div class="container-17">
-            <div class="topnav" id="myTopnav">
+            <div class="topnav17" id="myTopnav17">
               <a href="#home" class="active">Home</a>
               <a href="#news">News</a>
               <a href="#contact">Contact</a>
-              <div class="dropdown">
-                <button class="dropbtn">Dropdown
-                  <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
+              <div class="dropdown17">
+                <button class="dropbtn17">Dropdown <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content17">
                   <a href="#">Link 1</a>
                   <a href="#">Link 2</a>
                   <a href="#">Link 3</a>
                 </div>
               </div>
               <a href="#about">About</a>
-              <a href="javascript:void(0);" class="icon" onclick="container17()">&#9776;</a>
+              <a href="javascript:void(0);" class="icon17" onclick="container17()">&#9776;</a>
             </div>
           </div>
 
           <script>
-            /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
             function container17() {
-              var x = document.getElementById("myTopnav");
-              if (x.className === "topnav") {
+              var x = document.getElementById("myTopnav17");
+              if (x.className === "topnav17") {
                 x.className += " responsive";
               } else {
-                x.className = "topnav";
+                x.className = "topnav17";
               }
             }
           </script>
 
         </div>
+
         <!-- // Source Here -->
       </div>
 
@@ -1341,84 +669,33 @@
       <div class="clearfix container align-center">
         <h3>18. Subnav</h3>
         <!-- Source Here -->
-        <div class="bs-component">
-          <style>
-            .container-18 .navbar {
-              overflow: hidden;
-              background-color: #333;
-            }
-            .container-18 .navbar a {
-              float: left;
-              font-size: 16px;
-              color: white;
-              text-align: center;
-              padding: 14px 16px;
-              text-decoration: none;
-            }
-            .container-18 .subnav {
-              float: left;
-              overflow: hidden;
-            }
-            .container-18 .subnav .subnavbtn {
-              font-size: 16px;
-               border: none;
-              outline: none;
-              color: white;
-              padding: 14px 16px;
-              background-color: inherit;
-              font-family: inherit;
-              margin: 0;
-            }
-            .container-18 .navbar a:hover,
-            .container-18 .subnav:hover .subnavbtn {
-              background-color: red;
-            }
-            .container-18 .subnav-content {
-              display: none;
-              position: absolute;
-              left: 0;
-              background-color: red;
-              width: 100%;
-              z-index: 1;
-            }
-            .container-18 .subnav-content a {
-              float: left;
-              color: white;
-              text-decoration: none;
-            }
-            .container-18 .subnav-content a:hover {
-              background-color: #eee;
-              color: black;
-            }
-            .container-18 .subnav:hover .subnav-content {
-              display: block;
-            }
-          </style>
+
+        <div class="bs-component feelwaymenus">
 
           <div class="container-18">
             <!-- The navigation menu -->
-            <div class="navbar">
+            <div class="navbar18">
               <a href="#home">Home</a>
-              <div class="subnav">
-                <button class="subnavbtn">About <i class="fa fa-caret-down"></i></button>
-                <div class="subnav-content">
+              <div class="subnav18">
+                <button class="subnavbtn18">About <i class="fa fa-caret-down"></i></button>
+                <div class="subnav-content18">
                   <a href="#company">Company</a>
                   <a href="#team">Team</a>
                   <a href="#careers">Careers</a>
                 </div>
               </div>
-              <div class="subnav">
-                <button class="subnavbtn">Services <i class="fa fa-caret-down"></i></button>
-                <div class="subnav-content">
+              <div class="subnav18">
+                <button class="subnavbtn18">Services <i class="fa fa-caret-down"></i></button>
+                <div class="subnav-content18">
                   <a href="#bring">Bring</a>
                   <a href="#deliver">Deliver</a>
                   <a href="#package">Package</a>
                   <a href="#express">Express</a>
                 </div>
               </div>
-              <div class="subnav">
-                <button class="subnavbtn">Partners <i class="fa fa-caret-down"></i></button>
-                <div class="subnav-content">
+              <div class="subnav18">
+                <button class="subnavbtn18">Partners <i class="fa fa-caret-down"></i></button>
+                <div class="subnav-content18">
                   <a href="#link1">Link 1</a>
                   <a href="#link2">Link 2</a>
                   <a href="#link3">Link 3</a>
@@ -1434,6 +711,7 @@
           </script>
 
         </div>
+
         <!-- // Source Here -->
       </div>
 
@@ -1442,107 +720,35 @@
       <div class="clearfix container align-center">
         <h3>19. Mega Menu</h3>
         <!-- Source Here -->
-        <div class="bs-component">
-          <style>
-            .container-19 .navbar {
-              overflow: hidden;
-              background-color: #333;
-              font-family: Arial;
-            }
-            .container-19 .navbar a {
-              float: left;
-              font-size: 16px;
-              color: white;
-              text-align: center;
-              padding: 14px 16px;
-              text-decoration: none;
-            }
-            .container-19 .dropdown {
-              float: left;
-              overflow: hidden;
-            }
-            .container-19 .dropdown .dropbtn {
-              font-size: 16px;
-              border: none;
-              outline: none;
-              color: white;
-              padding: 14px 16px;
-              background-color: inherit;
-              font: inherit; /* Important for vertical align on mobile phones */
-              margin: 0; /* Important for vertical align on mobile phones */
-            }
-            .container-19 .navbar a:hover,
-            .container-19 .dropdown:hover .dropbtn {
-              background-color: red;
-            }
-            .container-19 .dropdown-content {
-              display: none;
-              position: absolute;
-              background-color: #f9f9f9;
-              width: 100%;
-              left: 0;
-              box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-              z-index: 1;
-            }
-            .container-19 .dropdown-content .header {
-              background: red;
-              padding: 16px;
-              color: white;
-            }
-            .container-19 .dropdown:hover .dropdown-content {
-              display: block;
-            }
-            .container-19 .column {
-              float: left;
-              width: 33.33%;
-              padding: 10px;
-              background-color: #ccc;
-              height: 250px;
-            }
-            .container-19 .column a {
-              float: none;
-              color: black;
-              padding: 16px;
-              text-decoration: none;
-              display: block;
-              text-align: left;
-            }
-            .container-19 .column a:hover {
-              background-color: #ddd;
-            }
-            .container-19 .row:after {
-              content: "";
-              display: table;
-              clear: both;
-            }
-          </style>
+
+        <div class="bs-component feelwaymenus">
 
           <div class="container-19">
-            <div class="navbar">
+            <div class="navbar19">
               <a href="#home">Home</a>
               <a href="#news">News</a>
-              <div class="dropdown">
-                <button class="dropbtn">Dropdown
+              <div class="dropdown19">
+                <button class="dropbtn19">Dropdown
                 <i class="fa fa-caret-down"></i>
                 </button>
-                <div class="dropdown-content">
-                  <div class="header">
+                <div class="dropdown-content19">
+                  <div class="header19">
                     <h2>Mega Menu</h2>
                   </div>
-                  <div class="row">
-                    <div class="column">
+                  <div class="row19">
+                    <div class="column19">
                       <h3>Category 1</h3>
                       <a href="#">Link 1</a>
                       <a href="#">Link 2</a>
                       <a href="#">Link 3</a>
                     </div>
-                    <div class="column">
+                    <div class="column19">
                       <h3>Category 2</h3>
                       <a href="#">Link 1</a>
                       <a href="#">Link 2</a>
                       <a href="#">Link 3</a>
                     </div>
-                    <div class="column">
+                    <div class="column19">
                       <h3>Category 3</h3>
                       <a href="#">Link 1</a>
                       <a href="#">Link 2</a>
@@ -1559,6 +765,7 @@
           </script>
 
         </div>
+
         <!-- // Source Here -->
       </div>
 
@@ -1567,61 +774,26 @@
       <div class="clearfix container align-center">
         <h3>20. Mobile Navigation Menu</h3>
         <!-- Source Here -->
-        <div class="bs-component">
-          <style>
-            .container-20 .topnav {
-              overflow: hidden;
-              background-color: #333;
-              position: relative;
-            }
-            .container-20 .topnav #myLinks {
-              display: none;
-            }
-            .container-20 .topnav a {
-              color: white;
-              padding: 14px 16px;
-              text-decoration: none;
-              font-size: 17px;
-              display: block;
-            }
-            .container-20 .topnav a.icon {
-              background: black;
-              display: block;
-              position: absolute;
-              right: 0;
-              top: 0;
-            }
-            .container-20 .topnav a:hover {
-              background-color: #ddd;
-              color: black;
-            }
-            .container-20 .active {
-              background-color: #4CAF50;
-              color: white;
-            }
-          </style>
+
+        <div class="bs-component feelwaymenus">
 
           <div class="container-20">
-            <!-- Top Navigation Menu -->
-            <div class="topnav">
+            <div class="topnav20">
               <a href="#home" class="active">Logo</a>
-              <!-- Navigation links (hidden by default) -->
-              <div id="myLinks">
+              <div id="myLinks20">
                 <a href="#news">News</a>
                 <a href="#contact">Contact</a>
                 <a href="#about">About</a>
               </div>
-              <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-              <a href="javascript:void(0);" class="icon" onclick="container20()">
+              <a href="javascript:void(0);" class="icon20" onclick="container20()">
                 <i class="fa fa-bars"></i>
               </a>
             </div>
           </div>
 
           <script>
-            /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
             function container20() {
-              var x = document.getElementById("myLinks");
+              var x = document.getElementById("myLinks20");
               if (x.style.display === "block") {
                 x.style.display = "none";
               } else {
@@ -1631,6 +803,7 @@
           </script>
 
         </div>
+
         <!-- // Source Here -->
       </div>
 
@@ -1639,93 +812,39 @@
       <div class="clearfix container align-center">
         <h3>21. Collapse Sidebar</h3>
         <!-- Source Here -->
-        <div class="bs-component">
-          <style>
-            .container-21 .sidebar {
-              height: 100%; /* 100% Full-height */
-              width: 0; /* 0 width - change this with JavaScript */
-              position: fixed; /* Stay in place */
-              z-index: 1; /* Stay on top */
-              top: 0;
-              left: 0;
-              background-color: #111; /* Black*/
-              overflow-x: hidden; /* Disable horizontal scroll */
-              padding-top: 60px; /* Place content 60px from the top */
-              transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
-            }
-            .container-21 .sidebar a {
-              padding: 8px 8px 8px 32px;
-              text-decoration: none;
-              font-size: 25px;
-              color: #818181;
-              display: block;
-              transition: 0.3s;
-            }
-            .container-21 .sidebar a:hover {
-              color: #f1f1f1;
-            }
-            .container-21 .sidebar .closebtn {
-              position: absolute;
-              top: 0;
-              right: 25px;
-              font-size: 36px;
-              margin-left: 50px;
-            }
-            .container-21 .openbtn {
-              font-size: 20px;
-              cursor: pointer;
-              background-color: #111;
-              color: white;
-              padding: 10px 15px;
-              border: none;
-            }
-            .container-21 .openbtn:hover {
-              background-color: #444;
-            }
-            .container-21 #main {
-              transition: .5s; /* If you want a transition effect */
-            }
-            @media screen and (max-height: 450px) {
-              .container-21 .sidebar {
-                padding-top: 15px;
-              }
-              .container-21 .sidebar a {
-                font-size: 18px;
-              }
-            }
-          </style>
+
+        <div class="bs-component feelwaymenus">
 
           <div class="container-21">
-            <div id="mySidebar" class="sidebar">
-              <a href="javascript:void(0)" class="closebtn" onclick="container21closeNav()">&times;</a>
+            <div id="mySidebar21" class="sidebar21">
+              <a href="javascript:void(0)" class="closebtn21" onclick="container21closeNav()">&times;</a>
               <a href="#">About</a>
               <a href="#">Services</a>
               <a href="#">Clients</a>
               <a href="#">Contact</a>
             </div>
 
-            <div id="main">
-              <button class="openbtn" onclick="container21openNav()">&#9776; Toggle Sidebar</button>
+            <div id="main21">
+              <button class="openbtn21" onclick="container21openNav()">&#9776; Toggle Sidebar</button>
               <h2>Collapsed Sidebar</h2>
               <p>Content...</p>
             </div>
           </div>
 
           <script>
-            /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
             function container21openNav() {
-              document.getElementById("mySidebar").style.width = "250px";
-              document.getElementById("main").style.marginLeft = "250px";
+              document.getElementById("mySidebar21").style.width = "250px";
+              document.getElementById("main21").style.marginLeft = "250px";
             }
 
-            /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
             function container21closeNav() {
-              document.getElementById("mySidebar").style.width = "0";
-              document.getElementById("main").style.marginLeft = "0";
+              document.getElementById("mySidebar21").style.width = "0";
+              document.getElementById("main21").style.marginLeft = "0";
             }
           </script>
 
         </div>
+
         <!-- // Source Here -->
       </div>
 
@@ -1734,78 +853,35 @@
       <div class="clearfix container align-center">
         <h3>22. Collapse Sidepanel</h3>
         <!-- Source Here -->
-        <div class="bs-component">
-          <style>
-            .container-22 .sidepanel {
-              height: 250px; /* Specify a height */
-              width: 0; /* 0 width - change this with JavaScript */
-              position: fixed; /* Stay in place */
-              z-index: 1; /* Stay on top */
-              top: 0;
-              left: 0;
-              background-color: #111; /* Black*/
-              overflow-x: hidden; /* Disable horizontal scroll */
-              padding-top: 60px; /* Place content 60px from the top */
-              transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
-            }
-            .container-22 .sidepanel a {
-              padding: 8px 8px 8px 32px;
-              text-decoration: none;
-              font-size: 25px;
-              color: #818181;
-              display: block;
-              transition: 0.3s;
-            }
-            .container-22 .sidepanel a:hover {
-              color: #f1f1f1;
-            }
-            .container-22 .sidepanel .closebtn {
-              position: absolute;
-              top: 0;
-              right: 25px;
-              font-size: 36px;
-              margin-left: 50px;
-            }
-            .container-22 .openbtn {
-              font-size: 20px;
-              cursor: pointer;
-              background-color: #111;
-              color: white;
-              padding: 10px 15px;
-              border: none;
-            }
-            .container-22 .openbtn:hover {
-              background-color: #444;
-            }
-          </style>
+
+        <div class="bs-component feelwaymenus">
 
           <div class="container-22">
-            <div id="mySidepanel" class="sidepanel">
-              <a href="javascript:void(0)" class="closebtn" onclick="container22closeNav()">&times;</a>
+            <div id="mySidepanel22" class="sidepanel22">
+              <a href="javascript:void(0)" class="closebtn22" onclick="container22closeNav()">&times;</a>
               <a href="#">About</a>
               <a href="#">Services</a>
               <a href="#">Clients</a>
               <a href="#">Contact</a>
             </div>
 
-            <button class="openbtn" onclick="container22openNav()">&#9776; Toggle Sidepanel</button>
+            <button class="openbtn22" onclick="container22openNav()">&#9776; Toggle Sidepanel</button>
             <h2>Collapsed Sidepanel</h2>
             <p>Content...</p>
           </div>
 
           <script>
-            /* Set the width of the sidebar to 250px (show it) */
             function container22openNav() {
-              document.getElementById("mySidepanel").style.width = "250px";
+              document.getElementById("mySidepanel22").style.width = "250px";
             }
 
-            /* Set the width of the sidebar to 0 (hide it) */
             function container22closeNav() {
-              document.getElementById("mySidepanel").style.width = "0";
+              document.getElementById("mySidepanel22").style.width = "0";
             }
           </script>
 
         </div>
+
         <!-- // Source Here -->
       </div>
 
@@ -1814,26 +890,11 @@
       <div class="clearfix container align-center">
         <h3>23. CSS Pagination</h3>
         <!-- Source Here -->
-        <div class="bs-component">
-          <style>
-            .container-23 .pagination a {
-              color: black;
-              float: left;
-              padding: 8px 16px;
-              text-decoration: none;
-              transition: background-color .3s;
-            }
-            .container-23 .pagination a.active {
-              background-color: dodgerblue;
-              color: white;
-            }
-            .container-23 .pagination a:hover:not(.active) {
-              background-color: #ddd;
-            }
-          </style>
+
+        <div class="bs-component feelwaymenus">
 
           <div class="container-23">
-            <div class="pagination">
+            <div class="pagination23">
               <a href="#">&laquo;</a>
               <a href="#">1</a>
               <a class="active" href="#">2</a>
@@ -1850,6 +911,7 @@
           </script>
 
         </div>
+
         <!-- // Source Here -->
       </div>
 
@@ -1858,34 +920,11 @@
       <div class="clearfix container align-center">
         <h3>24. CSS Breadcrumbs</h3>
         <!-- Source Here -->
-        <div class="bs-component">
-          <style>
-            .container-24 ul.breadcrumb {
-              padding: 10px 16px;
-              list-style: none;
-              background-color: #eee;
-            }
-            .container-24 ul.breadcrumb li {
-              display: inline;
-              font-size: 18px;
-            }
-            .container-24 ul.breadcrumb li+li:before {
-              padding: 8px;
-              color: black;
-              content: "/\00a0";
-            }
-            .container-24 ul.breadcrumb li a {
-              color: #0275d8;
-              text-decoration: none;
-            }
-            .container-24 ul.breadcrumb li a:hover {
-              color: #01447e;
-              text-decoration: underline;
-            }
-          </style>
+
+        <div class="bs-component feelwaymenus">
 
           <div class="container-24">
-            <ul class="breadcrumb">
+            <ul class="breadcrumb24">
               <li><a href="#">Home</a></li>
               <li><a href="#">Pictures</a></li>
               <li><a href="#">Summer 15</a></li>
@@ -1898,6 +937,7 @@
           </script>
 
         </div>
+
         <!-- // Source Here -->
       </div>
 
@@ -1906,52 +946,17 @@
       <div class="clearfix container align-center">
         <h3>25. Sticky Social Bar</h3>
         <!-- Source Here -->
-        <div class="bs-component">
-          <style>
-            .container-25 .icon-bar {
-              position: fixed;
-              top: 50%;
-              right: 0%;
-              -webkit-transform: translateY(-50%);
-              -ms-transform: translateY(-50%);
-              transform: translateY(-50%);
-            }
-            .container-25 .icon-bar a {
-              display: block;
-              text-align: center;
-              padding: 16px;
-              transition: all 0.3s ease;
-              color: white;
-              font-size: 20px;
-            }
-            .container-25 .icon-bar a:hover {
-              background-color: #000;
-            }
-            .container-25 .facebook {
-              background: #3B5998;
-            }
-            .container-25 .twitter {
-              background: #55ACEE;
-            }
-            .container-25 .google {
-              background: #dd4b39;
-            }
-            .container-25 .linkedin {
-              background: #007bb5;
-            }
-            .container-25 .youtube {
-              background: #bb0000;
-            }
-          </style>
+
+        <div class="bs-component feelwaymenus">
 
           <div class="container-25">
             <!-- The social media icon bar -->
-              <div class="icon-bar">
-                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                <a href="#" class="google"><i class="fa fa-google"></i></a>
-                <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-                <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+              <div class="icon-bar25">
+                <a href="#" class="facebook25"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="twitter25"><i class="fa fa-twitter"></i></a>
+                <a href="#" class="google25"><i class="fa fa-google"></i></a>
+                <a href="#" class="linkedin25"><i class="fa fa-linkedin"></i></a>
+                <a href="#" class="youtube25"><i class="fa fa-youtube"></i></a>
               </div>
           </div>
 
@@ -1960,6 +965,7 @@
           </script>
 
         </div>
+
         <!-- // Source Here -->
       </div>
 
@@ -1968,29 +974,11 @@
       <div class="clearfix container align-center">
         <h3>26. Pill Navigation</h3>
         <!-- Source Here -->
-        <div class="bs-component">
-          <style>
-            .container-26 .pill-nav a {
-              display: inline-block;
-              color: black;
-              text-align: center;
-              padding: 14px;
-              text-decoration: none;
-              font-size: 17px;
-              border-radius: 5px;
-            }
-            .container-26 .pill-nav a:hover {
-              background-color: #ddd;
-              color: black;
-            }
-            .container-26 .pill-nav a.active {
-              background-color: dodgerblue;
-              color: white;
-            }
-          </style>
+
+        <div class="bs-component feelwaymenus">
 
           <div class="container-26">
-            <div class="pill-nav">
+            <div class="pill-nav26">
               <a class="active" href="#home">Home</a>
               <a href="#news">News</a>
               <a href="#contact">Contact</a>
@@ -2003,6 +991,7 @@
           </script>
 
         </div>
+
         <!-- // Source Here -->
       </div>
 
@@ -2011,54 +1000,13 @@
       <div class="clearfix container align-center">
         <h3>27. Responsive Header</h3>
         <!-- Source Here -->
-        <div class="bs-component">
-          <style>
-            .container-27 .header {
-              overflow: hidden;
-              background-color: #f1f1f1;
-              padding: 20px 10px;
-            }
-            .container-27 .header a {
-              float: left;
-              color: black;
-              text-align: center;
-              padding: 12px;
-              text-decoration: none;
-              font-size: 18px;
-               line-height: 25px;
-              border-radius: 4px;
-            }
-            .container-27 .header a.logo {
-              font-size: 25px;
-              font-weight: bold;
-            }
-            .container-27 .header a:hover {
-              background-color: #ddd;
-              color: black;
-            }
-            .container-27 .header a.active {
-              background-color: dodgerblue;
-              color: white;
-            }
-            .container-27 .header-right {
-              float: right;
-            }
-            @media screen and (max-width: 500px) {
-              .container-27 .header a {
-                float: none;
-                display: block;
-                text-align: left;
-              }
-              .container-27 .header-right {
-                float: none;
-              }
-            }
-          </style>
+
+        <div class="bs-component feelwaymenus">
 
           <div class="container-27">
-            <div class="header">
+            <div class="header27">
               <a href="#default" class="logo">CompanyLogo</a>
-              <div class="header-right">
+              <div class="header-right27">
                 <a class="active" href="#home">Home</a>
                 <a href="#contact">Contact</a>
                 <a href="#about">About</a>
@@ -2071,73 +1019,9 @@
           </script>
 
         </div>
+
         <!-- // Source Here -->
       </div>
-
-    </div>
-
-    <div class="hr-line-dashed"></div>
-
-    <!-- Example
-    ================================================== -->
-    <div class="bs-docs-section">
-
-      <h3 id="typography">Example</h3>
-      <h4>Example</h4>
-      <!-- Source Here -->
-      <div class="bs-component">
-
-      </div>
-      <!-- // Source Here -->
-
-    </div>
-
-    <div class="hr-line-dashed"></div>
-
-    <!-- Example
-    ================================================== -->
-    <div class="bs-docs-section">
-
-      <h3 id="typography">Example</h3>
-      <h4>Example</h4>
-      <!-- Source Here -->
-      <div class="bs-component">
-
-      </div>
-      <!-- // Source Here -->
-
-    </div>
-
-    <div class="hr-line-dashed"></div>
-
-    <!-- Example
-    ================================================== -->
-    <div class="bs-docs-section">
-
-      <h3 id="typography">Example</h3>
-      <h4>Example</h4>
-      <!-- Source Here -->
-      <div class="bs-component">
-
-      </div>
-      <!-- // Source Here -->
-
-    </div>
-
-    <div class="hr-line-dashed"></div>
-
-    <!-- Example
-    ================================================== -->
-    <div class="bs-docs-section">
-
-      <h3 id="typography">Example</h3>
-      <h4>Example</h4>
-      <!-- Source Here -->
-      <div class="bs-component">
-
-      </div>
-      <!-- // Source Here -->
-
     </div>
 
     <div class="hr-line-dashed"></div>
