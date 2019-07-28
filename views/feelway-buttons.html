@@ -30,35 +30,19 @@
       s.parentNode.insertBefore(ga, s);
     })();
   </script>
-  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <style>
-    body {
-      padding-top: 100px;
-    }
-
-    .bs-component {
-      position: relative;
-    }
-
-    .bs-component .source-button {
-      display: none;
-      position: absolute;
-      top: 0;
-      right: 0;
-    }
-
-    .bs-component:hover .source-button {
-      display: block;
-    }
-  </style>
 </head>
 
 <body>
-  <!-- Header-Area -->
-  <div class="header">
+  <div class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <!-- Header-Area -->
     <div class="container">
       <a href="/index.html" class="navbar-brand h1">Johnny's Theme</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item"><a class="nav-link" href="feelway-menus.html">F.T-Menus</a></li>
@@ -70,8 +54,8 @@
           <li class="nav-item"><a class="nav-link" href="feelway-other.html">F.T-Other</a></li>
         </ul>
       </div>
-    </div>
-  </div><!-- // Header-Area -->
+    </div><!-- // Header-Area -->
+  </div>
 
   <div class="container">
 
@@ -91,68 +75,170 @@
 
   <div class="container">
 
-    <!-- Menus
+    <!-- Buttons
     ================================================== -->
     <div class="bs-docs-section">
       <div class="clearfix container align-center">
-        <h3>01.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>01. Alert Buttons</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwaybuttons">
 
-          <!-- // Source Here -->
+          <div class="container-01">
+            <button class="btn-01 success-01">Success</button>
+            <button class="btn-01 info-01">Info</button>
+            <button class="btn-01 warning-01">Warning</button>
+            <button class="btn-01 danger-01">Danger</button>
+            <button class="btn-01 default-01">Default</button>
+          </div>
+          <script>
+
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>02.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>02. Outline Buttons</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwaybuttons">
 
-          <!-- // Source Here -->
+          <div class="container-02">
+            <button class="btn-02 success-02">Success</button>
+            <button class="btn-02 info-02">Info</button>
+            <button class="btn-02 warning-02">Warning</button>
+            <button class="btn-02 danger-02">Danger</button>
+            <button class="btn-02 default-02">Default</button>
+          </div>
+          <script>
+
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>03.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>03. Split Buttons</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwaybuttons">
 
-          <!-- // Source Here -->
+          <div class="container-03">
+            <button class="btn-03">Button</button>
+            <div class="dropdown-03">
+              <button class="btn-03" style="border-left:1px solid navy">
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content-03">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+            </div>
+          </div>
+          <script>
+
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>04.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>04. Read More Read Less Button</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwaybuttons">
 
-          <!-- // Source Here -->
+          <div class="container-04">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots-04">...</span><span id="more-04">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span>
+            </p>
+
+            <button onclick="container04()" id="myBtn-04">Read more</button>
+          </div>
+          <script>
+            function container04() {
+              var dots = document.getElementById("dots-04");
+              var moreText = document.getElementById("more-04");
+              var btnText = document.getElementById("myBtn-04");
+
+              if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Read more";
+                moreText.style.display = "none";
+              } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "Read less";
+                moreText.style.display = "inline";
+              }
+            }
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>05.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>05. Loading Buttons</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwaybuttons">
 
-          <!-- // Source Here -->
+          <div class="container-05">
+            <button class="buttonload-05"><i class="fa fa-spinner fa-spin"></i> Loading</button>
+
+            <button class="buttonload-05"><i class="fa fa-circle-o-notch fa-spin"></i> Loading</button>
+
+            <button class="buttonload-05"><i class="fa fa-refresh fa-spin"></i> Loading</button>
+          </div>
+          <script>
+
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>06.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>06. Next and Previous Buttons</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwaybuttons">
 
-          <!-- // Source Here -->
+          <div class="container-06">
+            <a href="#" class="previous-06">&laquo; Previous</a>
+            <a href="#" class="next-06">Next &raquo;</a>
+
+            <a href="#" class="previous-06 round-06">&#8249;</a>
+            <a href="#" class="next-06 round-06">&#8250;</a>
+          </div>
+          <script>
+
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
       <div class="clearfix container align-center">
-        <h3>07.</h3>
-        <div class="bs-component">
-          <!-- Source Here -->
+        <h3>07. Scroll Back To Top Button</h3>
+        <!-- Source Here -->
+        <div class="bs-component feelwaybuttons">
 
-          <!-- // Source Here -->
+          <div class="container-07">
+            <button onclick="topFunction()" id="myBtn-07" title="Go to top">Top</button>
+          </div>
+          <script>
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+              if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn-07").style.display = "block";
+              } else {
+                document.getElementById("myBtn-07").style.display = "none";
+              }
+            }
+            function topFunction() {
+              document.body.scrollTop = 0; // For Safari
+              document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
+          </script>
+
         </div>
+        <!-- // Source Here -->
       </div>
-
-      <div class="hr-line-dashed"></div>
-
     </div>
 
     <div class="hr-line-dashed"></div>

@@ -115,3 +115,22 @@
 .text-center {text-align: center !important;}
 
 .hr-line-dashed {margin-top: 1rem;margin-bottom: 1rem;border: dashed rgba(0,0,0,.1);border-width: 1px 0 0;}
+
+body {
+  padding-top: 100px;
+}
+
+.bs-component {
+  position: relative;
+
+  .source-button {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &:hover .source-button {
+    display: block;
+  }
+}
